@@ -42,14 +42,14 @@ const Footer = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true, margin: "-100px" }}
-      className='w-full px-4 py-6'
+      className='w-full'
     >
       <motion.footer 
         initial={{ scale: 0.95 }}
         whileInView={{ scale: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}
         viewport={{ once: true }}
-        className="max-w-8xl mx-auto bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-lg p-4 md:p-6 transition-colors duration-300"
+        className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg p-4 md:p-6 transition-colors duration-300"
       >
         
         {/* Main Footer Content */}

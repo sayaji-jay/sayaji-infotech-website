@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
       >
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <Header />
-          <main className="flex-1 pt-20">
+          <main className="flex-1">
             {children}
           </main>
           <Footer />
