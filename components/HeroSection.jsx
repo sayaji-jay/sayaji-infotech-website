@@ -1,8 +1,9 @@
 'use client';
 import React, { useRef } from 'react';
+import Link from 'next/link';
 import Blocks from '@/components/uilayouts/blocks';
 
-const BlockOne = () => {
+const HeroSection = () => {
   const containerRef = useRef(null);
 
   return (
@@ -46,17 +47,22 @@ const BlockOne = () => {
           Specializing in Website Development, ERP Solutions, Frappe Software, IoT Applications, and cutting-edge technology solutions for modern businesses.
         </p>
         <div className="mt-8 flex gap-4">
-          <button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-teal-500 dark:from-teal-500 dark:to-blue-600 text-white rounded-full font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+          <Link 
+            href="/services"
+            className="px-8 py-3 bg-gradient-to-r from-blue-500 to-teal-500 dark:from-teal-500 dark:to-blue-600 text-white rounded-full font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
+          >
             Our Services
-          </button>
-          <button className="px-8 py-3 border-2 border-blue-500 dark:border-teal-400 text-blue-600 dark:text-teal-400 rounded-full font-semibold hover:bg-blue-50 dark:hover:bg-slate-800 transition-all duration-300">
+          </Link>
+          <Link 
+            href="/contact"
+            className="px-8 py-3 border-2 border-blue-500 dark:border-teal-400 text-blue-600 dark:text-teal-400 rounded-full font-semibold hover:bg-blue-50 dark:hover:bg-slate-800 transition-all duration-300"
+          >
             Get in Touch
-          </button>
+          </Link>
         </div>
       </div>
     </div>
-    
   );
 };
 
-export default BlockOne;
+export default HeroSection;
