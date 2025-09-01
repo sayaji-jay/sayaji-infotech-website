@@ -1,10 +1,9 @@
 'use client';
 
-import { Globe, Code, Settings, Zap, Database, Smartphone } from 'lucide-react';
-
+import ServicesGallery from './ServicesGallery';
 export default function AboutSection() {
   return (
-    <section className="py-20 bg-white dark:bg-slate-900 transition-colors duration-500">
+    <section className="py-20 transition-colors duration-500">
       <div className="max-w-6xl mx-auto px-6 text-center">
         {/* Main Intro */}
         <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-teal-600 to-blue-800 dark:from-teal-400 dark:via-blue-400 dark:to-teal-300 bg-clip-text text-transparent">
@@ -43,55 +42,7 @@ export default function AboutSection() {
         </p>
 
         {/* Services Grid */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-8">
-          <div className="flex flex-col items-center text-center space-y-4 p-6 rounded-xl bg-slate-50 dark:bg-slate-800 hover:shadow-lg transition-all duration-300">
-            <Globe className="w-12 h-12 text-blue-600 dark:text-teal-400" />
-            <h3 className="font-semibold text-gray-800 dark:text-slate-200">Website Development</h3>
-            <p className="text-sm text-gray-600 dark:text-slate-400">
-              Modern, responsive, and high-performance websites
-            </p>
-          </div>
-
-          <div className="flex flex-col items-center text-center space-y-4 p-6 rounded-xl bg-slate-50 dark:bg-slate-800 hover:shadow-lg transition-all duration-300">
-            <Settings className="w-12 h-12 text-teal-600 dark:text-blue-400" />
-            <h3 className="font-semibold text-gray-800 dark:text-slate-200">ERP Solutions</h3>
-            <p className="text-sm text-gray-600 dark:text-slate-400">
-              Comprehensive business management systems
-            </p>
-          </div>
-
-          <div className="flex flex-col items-center text-center space-y-4 p-6 rounded-xl bg-slate-50 dark:bg-slate-800 hover:shadow-lg transition-all duration-300">
-            <Code className="w-12 h-12 text-blue-600 dark:text-teal-400" />
-            <h3 className="font-semibold text-gray-800 dark:text-slate-200">Frappe Development</h3>
-            <p className="text-sm text-gray-600 dark:text-slate-400">
-              Custom applications on Frappe framework
-            </p>
-          </div>
-
-          <div className="flex flex-col items-center text-center space-y-4 p-6 rounded-xl bg-slate-50 dark:bg-slate-800 hover:shadow-lg transition-all duration-300">
-            <Smartphone className="w-12 h-12 text-teal-600 dark:text-blue-400" />
-            <h3 className="font-semibold text-gray-800 dark:text-slate-200">IoT Applications</h3>
-            <p className="text-sm text-gray-600 dark:text-slate-400">
-              Smart device integration and control systems
-            </p>
-          </div>
-
-          <div className="flex flex-col items-center text-center space-y-4 p-6 rounded-xl bg-slate-50 dark:bg-slate-800 hover:shadow-lg transition-all duration-300">
-            <Zap className="w-12 h-12 text-blue-600 dark:text-teal-400" />
-            <h3 className="font-semibold text-gray-800 dark:text-slate-200">AI Solutions</h3>
-            <p className="text-sm text-gray-600 dark:text-slate-400">
-              Intelligent automation and machine learning
-            </p>
-          </div>
-
-          <div className="flex flex-col items-center text-center space-y-4 p-6 rounded-xl bg-slate-50 dark:bg-slate-800 hover:shadow-lg transition-all duration-300">
-            <Database className="w-12 h-12 text-teal-600 dark:text-blue-400" />
-            <h3 className="font-semibold text-gray-800 dark:text-slate-200">Database Solutions</h3>
-            <p className="text-sm text-gray-600 dark:text-slate-400">
-              Robust data management and analytics
-            </p>
-          </div>
-        </div>
+        <ServicesGallery />
 
         {/* Call to Action */}
         <div className="mt-16">

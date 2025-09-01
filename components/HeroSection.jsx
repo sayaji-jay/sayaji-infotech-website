@@ -8,7 +8,7 @@ const HeroSection = () => {
 
   return (
     <div
-      className="relative h-[550px] overflow-hidden bg-gradient-to-br from-white via-blue-50 to-slate-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 before:absolute before:w-full before:h-full before:bg-gradient-to-t before:from-white/60 before:to-transparent dark:before:from-slate-900/80 dark:before:to-transparent before:z-[1] w-full transition-colors duration-500"
+      className="relative h-[550px] overflow-hidden before:absolute before:w-full before:h-full before:z-[1] w-full transition-colors duration-500"
       ref={containerRef}
     >
       {/* Background Blocks */}

@@ -19,7 +19,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-lg bg-white/90 dark:bg-slate-900/90 border-b border-slate-200/50 dark:border-slate-700/50 transition-all duration-300">
+    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/10 dark:bg-black/10 border-b border-white/10 dark:border-white/10 transition-all duration-300">
       <nav className="flex items-center justify-between px-8 py-4">
         
         {/* Left: Logo */}
