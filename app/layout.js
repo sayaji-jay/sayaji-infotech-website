@@ -1,9 +1,5 @@
 import { Geist, Geist_Mono, Kalam } from "next/font/google";
 import "./globals.css";
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import { ThemeProvider } from '@/context/ThemeContext';
-import AnimatedBlobBackground from '@/components/AnimatedBlobBackground';
 
 
 const geistSans = Geist({
@@ -23,22 +19,17 @@ const kalam = Kalam({
 });
 
 export const metadata = {
-  title: "Sayaji Infotech - AI Powered Solutions",
-  description: "Create Smarter, Faster, and Effortless AI Tools, Products and Startups with Sayaji Infotech AI solutions.",
+  title: "AI Tool - Next.js Template for AI Tools",
+  description: "Build SaaS AI applications using OpenAI and Next.js, this kit comes with pre-configured and pre-built examples.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${kalam.variable} antialiased bg-background text-foreground min-h-screen flex flex-col`}
+        className={`${geistSans.variable} ${geistMono.variable} ${kalam.variable} antialiased min-h-screen`}
       >
-        <ThemeProvider>
-          <Header />
-          <AnimatedBlobBackground />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );

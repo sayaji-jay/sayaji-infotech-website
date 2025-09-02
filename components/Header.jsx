@@ -1,90 +1,109 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { useTheme } from '@/context/ThemeContext';
-import { Moon, Sun } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Header = () => {
-  const pathname = usePathname();
-  const { isDarkMode, toggleTheme } = useTheme();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const menuItems = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' }
+  const navItems = [
+    { name: 'Home', href: '#home' },
+    { name: 'Features', href: '#features' },
+    { name: 'Pricing', href: '#pricing' },
+    { name: 'OpenAI Examples', href: '/ai-examples' },
+    { name: 'Blog', href: '/blog' }
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/10 dark:bg-black/10 border-b border-white/10 dark:border-white/10 transition-all duration-300">
-      <nav className="flex items-center justify-between px-8 py-4">
-        
-        {/* Left: Logo */}
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          className="flex items-center space-x-2"
-        >
-          <div className="w-10 h-10 bg-gradient-to-br from-blue-500 via-teal-500 to-blue-600 dark:from-teal-500 dark:via-blue-600 dark:to-teal-600 rounded-lg flex items-center justify-center shadow-lg">
-            <div className="w-6 h-6 bg-white dark:bg-slate-900 rounded-sm transform rotate-45"></div>
-          </div>
-          <span className="font-bold text-lg text-gray-800 dark:text-teal-400">Sayaji Infotech</span>
-        </motion.div>
-
-        {/* Center: Menu */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-          className="hidden md:flex items-center space-x-8 text-sm font-semibold"
-        >
-          {menuItems.map((item, idx) => (
-            <Link
-              key={idx}
-              href={item.href}
-              className={`transition-colors hover:text-blue-600 dark:hover:text-teal-400 ${
-                pathname === item.href
-                  ? 'text-blue-600 dark:text-teal-400 font-bold'
-                  : 'text-gray-700 dark:text-slate-300'
-              }`}
-            >
-              {item.name}
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0b23]/80 backdrop-blur-lg border-b border-white/10">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between">
+          
+          {/* Logo */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex-shrink-0"
+          >
+            <Link href="/" className="text-xl font-bold text-white">
+              AI Tool
             </Link>
-          ))}
-        </motion.div>
+          </motion.div>
 
-        {/* Right: Theme Toggle + CTA */}
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex space-x-8">
+            {navItems.map((item, index) => (
+              <motion.div
+                key={item.name}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Link
+                  href={item.href}
+                  className="text-gray-300 hover:text-white transition-colors duration-300 text-sm font-medium"
+                >
+                  {item.name}
+                </Link>
+              </motion.div>
+            ))}
+          </nav>
+
+          {/* CTA Button */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="hidden md:block"
+          >
+            <Link
+              href="/auth/signup"
+              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
+            >
+              Get Started
+            </Link>
+          </motion.div>
+
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden text-gray-300 hover:text-white transition-colors duration-300"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.4, duration: 0.6 }}
-          className="flex items-center space-x-4"
+          initial={false}
+          animate={isMenuOpen ? { opacity: 1, height: 'auto' } : { opacity: 0, height: 0 }}
+          transition={{ duration: 0.3 }}
+          className="md:hidden overflow-hidden"
         >
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={toggleTheme}
-            className="p-2 rounded-full hover:bg-blue-100 dark:hover:bg-slate-800 text-gray-700 dark:text-slate-300 transition-colors"
-          >
-            {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-          </Button>
-          <Button
-            variant="outline"
-            className="border-blue-500 text-blue-600 hover:bg-blue-50 dark:border-teal-500 dark:text-teal-400 dark:hover:bg-slate-800 px-6 py-2 rounded-full font-semibold shadow-md transition-colors"
-          >
-            Login
-          </Button>
-          <Button
-            className="bg-gradient-to-r from-blue-500 to-teal-500 hover:from-blue-600 hover:to-teal-600 dark:from-teal-500 dark:to-blue-600 dark:hover:from-teal-600 dark:hover:to-blue-700 text-white px-6 py-2 rounded-full font-bold shadow-lg transition-all duration-300"
-          >
-            Get in Touch
-          </Button>
+          <div className="px-2 pt-2 pb-3 space-y-1 bg-[#0a0b23]/95 rounded-lg mt-2">
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
+            <Link
+              href="/auth/signup"
+              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 mt-4"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Get Started
+            </Link>
+          </div>
         </motion.div>
-      </nav>
+      </div>
     </header>
   );
 };
