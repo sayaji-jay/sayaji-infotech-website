@@ -100,14 +100,14 @@ const Pricing = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium border border-purple-500/20 bg-gradient-to-r from-purple-900/20 to-blue-900/20 backdrop-blur-sm text-gray-300 mb-4">
-            <Star className="w-4 h-4 text-purple-400" />
+          <span className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium border border-green-500/20 bg-gradient-to-r from-green-900/20 to-blue-900/20 backdrop-blur-sm text-gray-300 mb-4">
+            <Star className="w-4 h-4 text-green-400" />
             Pricing Plans
           </span>
           
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
             Our{' '}
-            <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
               Pricing Plan
             </span>
           </h2>
@@ -132,14 +132,14 @@ const Pricing = () => {
               variants={cardVariants}
               className={`relative rounded-3xl p-8 ${
                 plan.popular
-                  ? 'bg-gradient-to-b from-purple-900/20 to-blue-900/20 border-2 border-purple-500/30 shadow-2xl scale-105'
+                  ? 'bg-gradient-to-b from-green-900/20 to-blue-900/20 border-2 border-green-500/30 shadow-2xl scale-105'
                   : 'bg-gradient-to-b from-white/5 to-white/[0.02] border border-white/10'
               } backdrop-blur-sm hover:shadow-2xl transition-all duration-500`}
             >
               {/* Popular Badge */}
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-medium">
+                  <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-medium">
                     Most Popular
                   </span>
                 </div>
@@ -159,7 +159,7 @@ const Pricing = () => {
                 <div className="mb-6">
                   <span className={`text-5xl font-bold ${
                     plan.popular 
-                      ? 'bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent' 
+                      ? 'bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent' 
                       : 'text-white'
                   }`}>
                     ${plan.price}
@@ -173,7 +173,7 @@ const Pricing = () => {
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start gap-3">
                     <Check className={`w-5 h-5 mt-0.5 flex-shrink-0 ${
-                      plan.popular ? 'text-purple-400' : 'text-green-400'
+                      plan.popular ? 'text-green-400' : 'text-green-400'
                     }`} />
                     <span className="text-gray-300 text-sm leading-relaxed">{feature}</span>
                   </li>
@@ -186,7 +186,7 @@ const Pricing = () => {
                 whileTap={{ scale: 0.98 }}
                 className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${
                   plan.popular
-                    ? 'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg hover:shadow-xl'
+                    ? 'bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white shadow-lg hover:shadow-xl'
                     : 'bg-white/10 hover:bg-white/20 text-white border border-white/20 hover:border-white/30'
                 }`}
               >
@@ -196,7 +196,7 @@ const Pricing = () => {
 
               {/* Background Effects */}
               {plan.popular && (
-                <div className="absolute inset-0 -z-10 bg-gradient-to-r from-purple-600/10 via-blue-600/10 to-purple-600/10 rounded-3xl blur-xl" />
+                <div className="absolute inset-0 -z-10 bg-gradient-to-r from-green-600/10 via-blue-600/10 to-green-600/10 rounded-3xl blur-xl" />
               )}
             </motion.div>
           ))}
@@ -216,7 +216,7 @@ const Pricing = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             Contact Us
             <ArrowRight className="w-4 h-4" />

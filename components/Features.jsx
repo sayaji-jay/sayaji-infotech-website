@@ -85,14 +85,14 @@ const Features = () => {
           viewport={{ once: true }}
           className="relative z-10 mb-16 text-center"
         >
-          <span className="hero-subtitle-gradient relative mb-4 inline-flex items-center gap-2 rounded-full px-4.5 py-2 text-sm font-medium border border-purple-500/20 bg-gradient-to-r from-purple-900/20 to-blue-900/20 backdrop-blur-sm">
-            <Sparkles className="w-4 h-4 text-purple-400" />
+          <span className="hero-subtitle-gradient relative mb-4 inline-flex items-center gap-2 rounded-full px-4.5 py-2 text-sm font-medium border border-green-500/20 bg-gradient-to-r from-green-900/20 to-blue-900/20 backdrop-blur-sm">
+            <Sparkles className="w-4 h-4 text-green-400" />
             <span className="text-gray-300">Main Features</span>
           </span>
           
           <h2 className="mb-4.5 text-2xl font-extrabold text-white sm:text-4xl xl:text-5xl">
             Key Features of{' '}
-            <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
               AI Tool
             </span>
           </h2>
@@ -105,8 +105,8 @@ const Features = () => {
         {/* Features Grid */}
         <div className="relative">
           {/* Grid Border Lines */}
-          <div className="features-row-border absolute left-1/2 top-1/2 hidden h-[1px] w-1/2 -translate-y-1/2 rotate-90 lg:left-1/4 lg:block lg:-translate-x-1/3 bg-gradient-to-r from-transparent via-purple-500/20 to-transparent" />
-          <div className="features-row-border absolute right-1/2 top-1/2 hidden h-[1px] w-1/2 -translate-y-1/2 rotate-90 lg:right-[8.3%] lg:block bg-gradient-to-r from-transparent via-purple-500/20 to-transparent" />
+          <div className="features-row-border absolute left-1/2 top-1/2 hidden h-[1px] w-1/2 -translate-y-1/2 rotate-90 lg:left-1/4 lg:block lg:-translate-x-1/3 bg-gradient-to-r from-transparent via-green-500/20 to-transparent" />
+          <div className="features-row-border absolute right-1/2 top-1/2 hidden h-[1px] w-1/2 -translate-y-1/2 rotate-90 lg:right-[8.3%] lg:block bg-gradient-to-r from-transparent via-green-500/20 to-transparent" />
           
           <motion.div
             variants={containerVariants}
@@ -119,18 +119,18 @@ const Features = () => {
               <motion.div
                 key={feature.title}
                 variants={itemVariants}
-                className="group relative overflow-hidden rounded-2xl p-8 text-center bg-gradient-to-b from-white/5 to-white/[0.02] border border-white/10 backdrop-blur-sm hover:bg-gradient-to-b hover:from-purple-900/10 hover:to-blue-900/10 hover:border-purple-500/20 transition-all duration-500"
+                className="group relative overflow-hidden rounded-2xl p-8 text-center bg-gradient-to-b from-white/5 to-white/[0.02] border border-white/10 backdrop-blur-sm hover:bg-gradient-to-b hover:from-green-900/10 hover:to-blue-900/10 hover:border-green-500/20 transition-all duration-500"
               >
                 {/* Background Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/0 via-purple-600/5 to-blue-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-r from-green-600/0 via-green-600/5 to-blue-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
                 {/* Icon */}
-                <div className="relative mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="h-8 w-8 text-purple-400 group-hover:text-blue-400 transition-colors duration-300" />
+                <div className="relative mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/20 group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="h-8 w-8 text-green-400 group-hover:text-blue-400 transition-colors duration-300" />
                 </div>
 
                 {/* Content */}
-                <h3 className="mb-4 text-lg font-semibold text-white group-hover:text-purple-300 transition-colors duration-300">
+                <h3 className="mb-4 text-lg font-semibold text-white group-hover:text-green-300 transition-colors duration-300">
                   {feature.title}
                 </h3>
                 
@@ -139,13 +139,13 @@ const Features = () => {
                 </p>
 
                 {/* Hover Effect */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-600/0 via-purple-600/5 to-blue-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-green-600/0 via-green-600/5 to-blue-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </motion.div>
             ))}
           </motion.div>
           
           {/* Horizontal Divider */}
-          <div className="mt-16 h-[1px] w-full bg-gradient-to-r from-transparent via-purple-500/20 to-transparent" />
+          <div className="mt-16 h-[1px] w-full bg-gradient-to-r from-transparent via-green-500/20 to-transparent" />
         </div>
 
         {/* Large Feature Box */}
@@ -162,14 +162,14 @@ const Features = () => {
                 
                 {/* Content */}
                 <div className="w-full max-w-[477px] text-center lg:text-left">
-                  <span className="hero-subtitle-gradient relative mb-4 inline-flex items-center gap-2 rounded-full px-4.5 py-2 text-sm font-medium border border-purple-500/20 bg-gradient-to-r from-purple-900/20 to-blue-900/20 backdrop-blur-sm">
-                    <Shield className="w-4 h-4 text-purple-400" />
+                  <span className="hero-subtitle-gradient relative mb-4 inline-flex items-center gap-2 rounded-full px-4.5 py-2 text-sm font-medium border border-green-500/20 bg-gradient-to-r from-green-900/20 to-blue-900/20 backdrop-blur-sm">
+                    <Shield className="w-4 h-4 text-green-400" />
                     <span className="text-gray-300">Kickstart your AI Startup</span>
                   </span>
                   
                   <h3 className="mb-4.5 text-2xl lg:text-4xl font-bold text-white">
                     Seamless{' '}
-                    <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
                       OpenAI Integration
                     </span>
                   </h3>
@@ -184,7 +184,7 @@ const Features = () => {
                     href="/#"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="relative inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                    className="relative inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm text-white bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
                   >
                     Learn more
                     <svg width="14" height="12" viewBox="0 0 14 12" fill="none">
@@ -195,9 +195,9 @@ const Features = () => {
 
                 {/* Icon/Image */}
                 <div className="relative w-full max-w-[428px] aspect-square">
-                  <div className="w-full h-full bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-3xl border border-purple-500/20 flex items-center justify-center">
+                  <div className="w-full h-full bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-3xl border border-green-500/20 flex items-center justify-center">
                     <div className="text-center">
-                      <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center">
+                      <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl flex items-center justify-center">
                         <Brain className="w-12 h-12 text-white" />
                       </div>
                       <h4 className="text-xl font-semibold text-white mb-2">AI Integration</h4>
@@ -209,9 +209,9 @@ const Features = () => {
 
               {/* Background Effects */}
               <div className="pointer-events-none absolute inset-0 -z-10 -mx-28 overflow-hidden">
-                <div className="absolute bottom-0 right-0 w-72 h-56 bg-gradient-to-l from-purple-600/10 to-transparent rounded-full blur-3xl" />
-                <div className="absolute left-0 top-0 w-full h-48 bg-gradient-to-r from-purple-600/5 to-blue-600/5 blur-2xl" />
-                <div className="absolute bottom-0 left-1/2 w-full h-full -translate-x-1/2 bg-gradient-to-t from-purple-900/10 to-transparent blur-3xl" />
+                <div className="absolute bottom-0 right-0 w-72 h-56 bg-gradient-to-l from-green-600/10 to-transparent rounded-full blur-3xl" />
+                <div className="absolute left-0 top-0 w-full h-48 bg-gradient-to-r from-green-600/5 to-blue-600/5 blur-2xl" />
+                <div className="absolute bottom-0 left-1/2 w-full h-full -translate-x-1/2 bg-gradient-to-t from-green-900/10 to-transparent blur-3xl" />
               </div>
             </div>
           </div>

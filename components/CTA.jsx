@@ -37,7 +37,7 @@ const CTA = () => {
           viewport={{ once: true }}
           className="relative"
         >
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-purple-900/20 border border-purple-500/20 backdrop-blur-sm p-12 lg:p-20">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-green-900/20 via-blue-900/20 to-green-900/20 border border-green-500/20 backdrop-blur-sm p-12 lg:p-20">
             
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-10">
@@ -70,7 +70,7 @@ const CTA = () => {
                 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6"
               >
                 Ready to Build Your{' '}
-                <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-purple-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-green-400 via-blue-400 to-green-600 bg-clip-text text-transparent">
                   AI SaaS?
                 </span>
               </motion.h2>
@@ -117,7 +117,7 @@ const CTA = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white rounded-full font-semibold text-lg transition-all duration-300 shadow-2xl hover:shadow-purple-500/25"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white rounded-full font-semibold text-lg transition-all duration-300 shadow-2xl hover:shadow-green-500/25"
                 >
                   <Zap className="w-5 h-5" />
                   Get Started Now
@@ -156,13 +156,13 @@ const CTA = () => {
             </div>
 
             {/* Decorative Elements */}
-            <div className="absolute top-10 left-10 w-20 h-20 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-full blur-xl" />
-            <div className="absolute bottom-10 right-10 w-32 h-32 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-xl" />
-            <div className="absolute top-1/2 left-1/2 w-16 h-16 bg-gradient-to-r from-purple-400/20 to-blue-400/20 rounded-full blur-lg -translate-x-1/2 -translate-y-1/2" />
+            <div className="absolute top-10 left-10 w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-full blur-xl" />
+            <div className="absolute bottom-10 right-10 w-32 h-32 bg-gradient-to-r from-blue-500/20 to-green-500/20 rounded-full blur-xl" />
+            <div className="absolute top-1/2 left-1/2 w-16 h-16 bg-gradient-to-r from-green-400/20 to-blue-400/20 rounded-full blur-lg -translate-x-1/2 -translate-y-1/2" />
           </div>
 
           {/* Background Effects */}
-          <div className="absolute inset-0 -z-10 bg-gradient-to-r from-purple-600/10 via-blue-600/10 to-purple-600/10 rounded-3xl blur-xl" />
+          <div className="absolute inset-0 -z-10 bg-gradient-to-r from-green-600/10 via-blue-600/10 to-green-600/10 rounded-3xl blur-xl" />
         </motion.div>
 
         {/* Trust Indicators */}
@@ -207,7 +207,7 @@ const CTA = () => {
 
       {/* Background Effects */}
       <div className="absolute inset-0 -z-20 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-0 w-96 h-96 bg-gradient-to-r from-purple-600/5 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-0 w-96 h-96 bg-gradient-to-r from-green-600/5 to-transparent rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-gradient-to-l from-blue-600/5 to-transparent rounded-full blur-3xl" />
       </div>
     </section>

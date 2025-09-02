@@ -137,14 +137,14 @@ const Blog = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium border border-purple-500/20 bg-gradient-to-r from-purple-900/20 to-blue-900/20 backdrop-blur-sm text-gray-300 mb-4">
-            <BookOpen className="w-4 h-4 text-purple-400" />
+          <span className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium border border-green-500/20 bg-gradient-to-r from-green-900/20 to-blue-900/20 backdrop-blur-sm text-gray-300 mb-4">
+            <BookOpen className="w-4 h-4 text-green-400" />
             Latest Blogs & News
           </span>
           
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
             Insights &{' '}
-            <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
               Resources
             </span>
           </h2>
@@ -171,8 +171,8 @@ const Blog = () => {
               whileTap={{ scale: 0.95 }}
               className={`flex items-center gap-2 px-6 py-3 rounded-full border transition-all duration-300 ${
                 index === 0 
-                  ? 'bg-gradient-to-r from-purple-600 to-blue-600 border-purple-500/50 text-white shadow-lg' 
-                  : 'bg-white/5 border-white/20 text-gray-300 hover:bg-white/10 hover:border-purple-500/30'
+                  ? 'bg-gradient-to-r from-green-600 to-blue-600 border-green-500/50 text-white shadow-lg' 
+                  : 'bg-white/5 border-white/20 text-gray-300 hover:bg-white/10 hover:border-green-500/30'
               }`}
             >
               <category.icon className="w-4 h-4" />
@@ -194,14 +194,14 @@ const Blog = () => {
             <motion.article
               key={post.id}
               variants={cardVariants}
-              className={`group relative rounded-2xl bg-gradient-to-b from-white/5 to-white/[0.02] border border-white/10 backdrop-blur-sm overflow-hidden hover:bg-gradient-to-b hover:from-purple-900/10 hover:to-blue-900/10 hover:border-purple-500/20 transition-all duration-500 ${
+              className={`group relative rounded-2xl bg-gradient-to-b from-white/5 to-white/[0.02] border border-white/10 backdrop-blur-sm overflow-hidden hover:bg-gradient-to-b hover:from-green-900/10 hover:to-blue-900/10 hover:border-green-500/20 transition-all duration-500 ${
                 post.featured && index === 0 ? 'md:col-span-2 lg:col-span-2' : ''
               }`}
             >
               {/* Featured Badge */}
               {post.featured && (
                 <div className="absolute top-4 left-4 z-10">
-                  <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+                  <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-green-600 to-blue-600 text-white">
                     <TrendingUp className="w-3 h-3" />
                     Featured
                   </span>
@@ -209,13 +209,13 @@ const Blog = () => {
               )}
 
               {/* Image Placeholder */}
-              <div className={`relative overflow-hidden bg-gradient-to-br from-purple-900/20 to-blue-900/20 ${
+              <div className={`relative overflow-hidden bg-gradient-to-br from-green-900/20 to-blue-900/20 ${
                 post.featured && index === 0 ? 'h-64' : 'h-48'
               }`}>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center">
-                    <BookOpen className="w-8 h-8 text-purple-400" />
+                    <BookOpen className="w-8 h-8 text-green-400" />
                   </div>
                 </div>
               </div>
@@ -224,7 +224,7 @@ const Blog = () => {
               <div className="p-6">
                 {/* Meta Information */}
                 <div className="flex items-center justify-between mb-3">
-                  <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium bg-purple-500/10 border border-purple-500/20 text-purple-400">
+                  <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium bg-green-500/10 border border-green-500/20 text-green-400">
                     <Tag className="w-3 h-3" />
                     {post.category}
                   </span>
@@ -245,7 +245,7 @@ const Blog = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className={`font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300 ${
+                <h3 className={`font-bold text-white mb-3 group-hover:text-green-400 transition-colors duration-300 ${
                   post.featured && index === 0 ? 'text-xl' : 'text-lg'
                 }`}>
                   {post.title}
@@ -259,14 +259,14 @@ const Blog = () => {
                 {/* Author and Read More */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
+                    <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center">
                       <User className="w-4 h-4 text-white" />
                     </div>
                     <span className="text-xs text-gray-400">{post.author}</span>
                   </div>
                   <motion.button
                     whileHover={{ x: 5 }}
-                    className="flex items-center gap-1 text-xs text-purple-400 hover:text-blue-400 transition-colors duration-300 font-medium"
+                    className="flex items-center gap-1 text-xs text-green-400 hover:text-blue-400 transition-colors duration-300 font-medium"
                   >
                     Read More
                     <ArrowRight className="w-3 h-3" />
@@ -275,7 +275,7 @@ const Blog = () => {
               </div>
 
               {/* Background Effect */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-600/0 via-purple-600/5 to-blue-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-green-600/0 via-green-600/5 to-blue-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             </motion.article>
           ))}
         </motion.div>
@@ -291,7 +291,7 @@ const Blog = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             Load More Articles
             <ArrowRight className="w-4 h-4" />
@@ -301,7 +301,7 @@ const Blog = () => {
 
       {/* Background Effects */}
       <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-purple-600/5 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-green-600/5 to-transparent rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-l from-blue-600/5 to-transparent rounded-full blur-3xl" />
       </div>
     </section>

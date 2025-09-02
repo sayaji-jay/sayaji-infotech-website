@@ -69,15 +69,15 @@ const Footer = () => {
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-gray-400">
-                <Mail className="w-4 h-4 text-purple-400" />
+                <Mail className="w-4 h-4 text-green-400" />
                 <span className="text-sm">support@aitool.com</span>
               </div>
               <div className="flex items-center gap-3 text-gray-400">
-                <Phone className="w-4 h-4 text-purple-400" />
+                <Phone className="w-4 h-4 text-green-400" />
                 <span className="text-sm">+1 (555) 123-4567</span>
               </div>
               <div className="flex items-center gap-3 text-gray-400">
-                <MapPin className="w-4 h-4 text-purple-400" />
+                <MapPin className="w-4 h-4 text-green-400" />
                 <span className="text-sm">San Francisco, CA</span>
               </div>
             </div>
@@ -96,7 +96,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm"
+                    className="text-gray-400 hover:text-green-400 transition-colors duration-300 text-sm"
                   >
                     {link.name}
                   </Link>
@@ -118,7 +118,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm"
+                    className="text-gray-400 hover:text-green-400 transition-colors duration-300 text-sm"
                   >
                     {link.name}
                   </Link>
@@ -140,7 +140,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm"
+                    className="text-gray-400 hover:text-green-400 transition-colors duration-300 text-sm"
                   >
                     {link.name}
                   </Link>
@@ -156,7 +156,7 @@ const Footer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-purple-900/20 to-blue-900/20 rounded-2xl border border-purple-500/20 p-8 mb-12"
+          className="bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-2xl border border-green-500/20 p-8 mb-12"
         >
           <div className="text-center max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
@@ -170,12 +170,12 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20"
+                className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-green-500/50 focus:ring-2 focus:ring-green-500/20"
               />
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
+                className="px-6 py-3 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
               >
                 Subscribe
                 <ArrowRight className="w-4 h-4" />
@@ -204,7 +204,7 @@ const Footer = () => {
                 href={social.href}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-gray-400 hover:text-white hover:border-purple-500/50 transition-all duration-300"
+                className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-gray-400 hover:text-white hover:border-green-500/50 transition-all duration-300"
               >
                 <social.icon className="w-4 h-4" />
               </motion.a>
@@ -215,8 +215,8 @@ const Footer = () => {
 
       {/* Background Effects */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute bottom-0 left-0 w-full h-96 bg-gradient-to-t from-purple-900/10 via-blue-900/5 to-transparent" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-purple-600/5 to-transparent rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-full h-96 bg-gradient-to-t from-green-900/10 via-blue-900/5 to-transparent" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-green-600/5 to-transparent rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-600/5 to-transparent rounded-full blur-3xl" />
       </div>
     </footer>

@@ -61,7 +61,7 @@ const Header = () => {
           >
             <Link
               href="/auth/signup"
-              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
             >
               Get Started
             </Link>
@@ -96,7 +96,7 @@ const Header = () => {
             ))}
             <Link
               href="/auth/signup"
-              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 mt-4"
+              className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 mt-4"
               onClick={() => setIsMenuOpen(false)}
             >
               Get Started

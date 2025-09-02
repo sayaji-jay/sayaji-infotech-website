@@ -88,14 +88,14 @@ const Testimonials = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium border border-purple-500/20 bg-gradient-to-r from-purple-900/20 to-blue-900/20 backdrop-blur-sm text-gray-300 mb-4">
-            <Quote className="w-4 h-4 text-purple-400" />
+          <span className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium border border-green-500/20 bg-gradient-to-r from-green-900/20 to-blue-900/20 backdrop-blur-sm text-gray-300 mb-4">
+            <Quote className="w-4 h-4 text-green-400" />
             User Testimonials
           </span>
           
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
             What Our{' '}
-            <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
               Users Say
             </span>
           </h2>
@@ -118,11 +118,11 @@ const Testimonials = () => {
             <motion.div
               key={testimonial.name}
               variants={cardVariants}
-              className="relative p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/[0.02] border border-white/10 backdrop-blur-sm hover:bg-gradient-to-b hover:from-purple-900/10 hover:to-blue-900/10 hover:border-purple-500/20 transition-all duration-500 group"
+              className="relative p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/[0.02] border border-white/10 backdrop-blur-sm hover:bg-gradient-to-b hover:from-green-900/10 hover:to-blue-900/10 hover:border-green-500/20 transition-all duration-500 group"
             >
               {/* Quote Icon */}
               <div className="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition-opacity duration-300">
-                <Quote className="w-8 h-8 text-purple-400" />
+                <Quote className="w-8 h-8 text-green-400" />
               </div>
 
               {/* Rating */}
@@ -142,7 +142,7 @@ const Testimonials = () => {
 
               {/* User Info */}
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center">
                   <span className="text-white font-semibold text-lg">
                     {testimonial.name.split(' ').map(n => n[0]).join('')}
                   </span>
@@ -158,7 +158,7 @@ const Testimonials = () => {
               </div>
 
               {/* Background Effect */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-600/0 via-purple-600/5 to-blue-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-green-600/0 via-green-600/5 to-blue-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             </motion.div>
           ))}
         </motion.div>
@@ -192,7 +192,7 @@ const Testimonials = () => {
 
       {/* Background Effects */}
       <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/2 left-0 w-96 h-96 bg-gradient-to-r from-purple-600/5 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-0 w-96 h-96 bg-gradient-to-r from-green-600/5 to-transparent rounded-full blur-3xl" />
         <div className="absolute top-1/2 right-0 w-96 h-96 bg-gradient-to-l from-blue-600/5 to-transparent rounded-full blur-3xl" />
       </div>
     </section>
