@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Kalam } from "next/font/google";
 import "./globals.css";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -16,6 +16,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const kalam = Kalam({
+  variable: "--font-kalam",
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
+});
+
 export const metadata = {
   title: "Sayaji Infotech - AI Powered Solutions",
   description: "Create Smarter, Faster, and Effortless AI Tools, Products and Startups with Sayaji Infotech AI solutions.",
@@ -25,7 +31,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground min-h-screen flex flex-col`}
+        className={`${geistSans.variable} ${geistMono.variable} ${kalam.variable} antialiased bg-background text-foreground min-h-screen flex flex-col`}
       >
         <ThemeProvider>
           <Header />

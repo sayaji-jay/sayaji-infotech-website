@@ -1,6 +1,7 @@
 'use client';
 
 import ServicesGallery from './ServicesGallery';
+import ScrollBaseAnimation from '@/components/ui/scroll-text-marque';
 export default function AboutSection() {
   return (
     <section className="py-20 transition-colors duration-500">
