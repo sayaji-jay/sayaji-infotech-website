@@ -10,7 +10,8 @@ import Blog from '@/components/Blog';
 import Contact from '@/components/Contact';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
-
+import ITSolutionsSection from '@/components/ITSolutionsSection';
+import TextMarque from '@/components/TextMarque';
 export default function Home() {
   return (
     <ReactLenis root>
@@ -19,6 +20,8 @@ export default function Home() {
         
         <main className="relative">
           <HeroSection />
+          <TextMarque text="Insights & Resources • IT Solutions • Enterprise Grade •" />
+          <ITSolutionsSection />
           <Features />
           <Pricing />
           <Testimonials />

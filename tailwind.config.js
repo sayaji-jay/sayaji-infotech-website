@@ -65,6 +65,7 @@ module.exports = {
       },
       animation: {
         spotlight: "spotlight 2s ease .75s 1 forwards",
+        border: 'border 4s linear infinite',
       },
       keyframes: {
         spotlight: {
@@ -76,9 +77,13 @@ module.exports = {
             opacity: 1,
             transform: "translate(-50%,-40%) scale(1)",
           }
-        }
+        },
+        border: {
+          to: { '--border-angle': '360deg' },
+        },
       },
     }
   },
   plugins: [require("tailwindcss-animate")],
 }
+

@@ -166,3 +166,11 @@ body {
 html, body {
   overflow-x: hidden;
 }
+
+
+
+@property --border-angle {
+  inherits: false;
+  initial-value: 0deg;
+  syntax: '<angle>';
+}
