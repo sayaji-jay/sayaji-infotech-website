@@ -6,7 +6,6 @@ import HeroSection from '@/components/HeroSection';
 import Features from '@/components/Features';
 import Pricing from '@/components/Pricing';
 import Testimonials from '@/components/Testimonials';
-import Blog from '@/components/Blog';
 import Contact from '@/components/Contact';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
@@ -22,10 +21,9 @@ export default function Home() {
           <HeroSection />
           <TextMarque text="Insights & Resources • IT Solutions • Enterprise Grade •" />
           <ITSolutionsSection />
-          <Features />
-          <Pricing />
+          {/* <Features /> */}
+          {/* <Pricing /> */}
           <Testimonials />
-          <Blog />
           <Contact />
           <CTA />
         </main>

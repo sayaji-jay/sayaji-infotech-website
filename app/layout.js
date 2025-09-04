@@ -20,7 +20,7 @@ const kalam = Kalam({
 
 export const metadata = {
   title: "AI Tool - Next.js Template for AI Tools",
-  description: "Build SaaS AI applications using OpenAI and Next.js, this kit comes with pre-configured and pre-built examples.",
+  description: "Build SaaS AI applications using OpenAI and Next.js, this kit Kickstart your AI Startuplt examples.",
 };
 
 export default function RootLayout({ children }) {

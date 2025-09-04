@@ -3,7 +3,7 @@ import ScrollBaseAnimation from './uilayouts/scroll-text-marque';
 
 const TextMarque = ({text = "Insights & Resources • IT Solutions • Enterprise Grade •"}) => {
   return (
-      <div className="relative overflow-hidden mb-16">
+      <div className="relative overflow-hidden m-3">
         {/* Left Fade */}
         <div className="absolute left-0 top-0 w-32 h-full to-transparent z-10"></div>
         {/* Right Fade */}
