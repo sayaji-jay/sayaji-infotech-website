@@ -53,16 +53,7 @@ const ERPVisual = () => (
 // Main bento grid layout
 function ITSolutionsSection() {
   return (
-    <div className="relative bg-[#0a0b23] py-20">
-      {/* Background Grid Pattern - matching HeroSection */}
-      <div className="pointer-events-none absolute inset-0 [background-size:40px_40px] select-none [background-image:linear-gradient(to_right,rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.1)_1px,transparent_1px)]" />
-      
-      {/* Fade Effect Bottom */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0b23] via-transparent to-transparent" />
-      
-      {/* Fade Effect Top */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0b23] via-transparent to-transparent" />
-      
+    <div className="relative py-20">
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 md:px-8">
 
         {/* Bento Grid */}

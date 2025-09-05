@@ -5,21 +5,7 @@ import { Spotlight } from "@/components/ui/spotlight";
 const HeroSection = () => {
   return (
     <div
-      className="relative flex h-[40rem] w-full overflow-hidden rounded-md antialiased md:items-center md:justify-center bg-[#0a192f]">
-      
-      {/* Box Grid Background */}
-      <div
-        className={cn(
-          "pointer-events-none absolute inset-0 [background-size:40px_40px] select-none",
-          "[background-image:linear-gradient(to_right,rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.1)_1px,transparent_1px)]"
-        )}
-      />
-
-      {/* Fade Effect Bottom */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent" />
-      
-      {/* Fade Effect Top */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a192f] via-transparent to-transparent" />
+      className="relative flex h-[40rem] w-full overflow-hidden rounded-md antialiased md:items-center md:justify-center">
       
       {/* Spotlight Effect */}
       <Spotlight className="-top-40 left-0 md:-top-20 md:left-60" fill="white" />

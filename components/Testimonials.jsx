@@ -116,33 +116,6 @@ const Testimonials = () => {
   return (
     <section className="py-20 lg:py-32 overflow-hidden relative">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <motion.div
-            initial={{ opacity: 0, filter: 'blur(10px)' }}
-            whileInView={{ opacity: 1, filter: 'blur(0px)' }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="max-w-3xl mx-auto"
-          >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              What{' '}
-              <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
-                Others Say
-              </span>
-            </h2>
-            <p className="text-lg text-gray-300">
-              Trusted by many, check our reviews below
-            </p>
-          </motion.div>
-        </motion.div>
-
         {/* Testimonials Grid */}
         <motion.div
           initial={{ opacity: 0, filter: 'blur(10px)' }}
