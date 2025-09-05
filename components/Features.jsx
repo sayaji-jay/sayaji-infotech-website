@@ -124,38 +124,6 @@ const Features = () => {
 
   return (
     <div ref={container} className="relative">
-      {/* Fixed Section Header */}
-      <section
-        id="features"
-        className="scroll-mt-17 overflow-hidden pt-17.5 pb-10 sticky top-0 z-30 bg-[#0a0b23]/90 backdrop-blur-sm"
-      >
-        <div className="mx-auto max-w-[1222px] px-4 sm:px-8 xl:px-0">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="relative z-10 text-center"
-          >
-            <span className="relative mb-4 inline-flex items-center gap-2 rounded-full px-4.5 py-2 text-sm font-medium border border-green-500/20 bg-gradient-to-r from-green-900/20 to-blue-900/20 backdrop-blur-sm">
-              <Sparkles className="w-4 h-4 text-green-400" />
-              <span className="text-gray-300">Main Features</span>
-            </span>
-
-            <h2 className="mb-4.5 text-2xl font-extrabold text-white sm:text-4xl xl:text-5xl">
-              Key Features of{" "}
-              <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
-                AI Tool
-              </span>
-            </h2>
-
-            <p className="mx-auto max-w-[714px] font-medium text-gray-300">
-              A Complete Solution for AI SaaS Startups
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Stacking Cards Container */}
       <div className="relative">
         {features.map((feature, i) => {

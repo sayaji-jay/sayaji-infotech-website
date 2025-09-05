@@ -30,24 +30,16 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} ${kalam.variable} antialiased min-h-screen bg-gradient-to-br from-[#0a0b23] via-[#1a1b3a] to-[#0a0b23] relative`}
       >
         {/* Global Background Grid Pattern */}
-        <div className="pointer-events-none fixed inset-0 [background-size:40px_40px] select-none [background-image:linear-gradient(to_right,rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.1)_1px,transparent_1px)]" />
-        
-        {/* Fade Effect Bottom */}
-        <div className="fixed inset-0 bg-gradient-to-t from-[#0a0b23] via-transparent to-transparent pointer-events-none" />
-        
-        {/* Fade Effect Top */}
-        <div className="fixed inset-0 bg-gradient-to-b from-[#0a0b23] via-transparent to-transparent pointer-events-none" />
+        <div className="pointer-events-none absolute inset-0 [background-size:40px_40px] select-none [background-image:linear-gradient(to_right,rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.1)_1px,transparent_1px)] z-[-1]" />
         
         {/* Global Background Effects */}
-        <div className="fixed inset-0 -z-50 overflow-hidden pointer-events-none">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none z-[-2]">
           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-green-600/5 rounded-full blur-3xl animate-pulse" />
           <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-600/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
           <div className="absolute top-1/2 left-1/2 w-[400px] h-[400px] bg-indigo-600/5 rounded-full blur-3xl animate-pulse -translate-x-1/2 -translate-y-1/2" style={{ animationDelay: '4s' }} />
         </div>
         
-        <div className="relative z-10">
-          {children}
-        </div>
+        {children}
       </body>
     </html>
   );

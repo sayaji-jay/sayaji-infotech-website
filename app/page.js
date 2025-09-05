@@ -21,12 +21,14 @@ export default function Home() {
           <HeroSection />
           <TextMarque text="Insights & Resources • IT Solutions • Enterprise Grade •" />
           <ITSolutionsSection />
-          <Features />
+          {/* <TextMarque text="Key Features of Our IT Solutions • What We Serves •" /> */}
+          {/* <Features /> */}
+          <CTA />
           {/* <Pricing /> */}
-          <TextMarque text="What our clients say about us • Testimonials" />
+
+          <TextMarque text="What our clients say about us • Testimonials •" />
           <Testimonials />
           <Contact />
-          <CTA />
         </main>
         
         <Footer />
