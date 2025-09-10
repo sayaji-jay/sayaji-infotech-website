@@ -176,11 +176,11 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+    <section className="py-24 bg-gradient-to-br from-slate-950 via-purple-950/20 to-slate-950 relative overflow-hidden">
+      {/* Purple Grid Background Pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
       
-      {/* Gradient Overlays */}
+      {/* Purple Gradient Overlays */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"></div>
       
@@ -227,6 +227,10 @@ const Testimonials = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true }}
           className="relative h-[600px] overflow-hidden rounded-2xl"
+          style={{
+            maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)'
+          }}
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 h-full">
             {testimonials.map((column, columnIndex) => (
@@ -258,13 +262,17 @@ const Testimonials = () => {
             ))}
           </div>
 
-          {/* Gradient Fades */}
-          <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-slate-950 via-slate-950/80 to-transparent pointer-events-none z-20"></div>
-          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent pointer-events-none z-20"></div>
+          {/* Enhanced Gradient Fades with better visibility */}
+          <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-slate-950 via-slate-950/95 via-slate-950/80 to-transparent pointer-events-none z-20"></div>
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-slate-950 via-slate-950/95 via-slate-950/80 to-transparent pointer-events-none z-20"></div>
           
-          {/* Solid edges */}
-          <div className="absolute inset-x-0 top-0 h-2 bg-slate-950 pointer-events-none z-30"></div>
-          <div className="absolute inset-x-0 bottom-0 h-2 bg-slate-950 pointer-events-none z-30"></div>
+          {/* Additional stronger fade overlays */}
+          <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-slate-950 via-slate-950/90 to-transparent pointer-events-none z-25"></div>
+          <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-slate-950 via-slate-950/90 to-transparent pointer-events-none z-25"></div>
+          
+          {/* Solid edges to ensure clean cut */}
+          <div className="absolute inset-x-0 top-0 h-3 bg-slate-950 pointer-events-none z-30"></div>
+          <div className="absolute inset-x-0 bottom-0 h-3 bg-slate-950 pointer-events-none z-30"></div>
         </motion.div>
 
         {/* CTA Section */}

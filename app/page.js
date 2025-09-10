@@ -3,6 +3,7 @@
 import { ReactLenis } from 'lenis/react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
+import ClientLogos from '@/components/ClientLogos';
 import Services from '@/components/Services';
 import Portfolio from '@/components/Portfolio';
 import Testimonials from '@/components/Testimonials';
@@ -21,6 +22,9 @@ export default function Home() {
           <section id="home">
             <HeroSection />
           </section>
+
+          {/* Client Logos Section */}
+          <ClientLogos />
 
           {/* Services Section */}
           <section id="services">
