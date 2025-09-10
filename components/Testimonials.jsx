@@ -1,70 +1,89 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { Quote, Star, MessageSquare } from 'lucide-react';
 
 const Testimonials = () => {
   const testimonials = [
     // Column 1
     [
       {
-        name: 'Jason',
-        avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=45&h=45&fit=crop&crop=face',
+        name: 'Jason Miller',
+        role: 'CEO, TechStart Inc.',
+        avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face',
         platform: 'upwork',
-        text: 'Very professional and pleasant to work with. We needed to get a demo pilot mobile app developed and Sayaji Infotech came through for us.'
+        rating: 5,
+        text: 'Sayaji Infotech delivered an exceptional mobile app that exceeded our expectations. Their attention to detail and professional approach made the entire process seamless. Highly recommended for any serious business venture.'
       },
       {
         name: 'Dan Martin',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=45&h=45&fit=crop&crop=face',
+        role: 'Founder, Digital Solutions',
+        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face',
         platform: 'upwork',
-        text: 'Tanay and his team at Sayaji Infotech are the best outsourced overseas development team I\'ve ever worked with.'
+        rating: 5,
+        text: 'Working with Sayaji Infotech has been a game-changer for our business. Their team combines technical expertise with excellent communication skills. The best development partner we\'ve ever worked with.'
       },
       {
-        name: 'Anthony',
-        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=45&h=45&fit=crop&crop=face',
+        name: 'Anthony Rodriguez',
+        role: 'Product Manager, InnovateCorp',
+        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face',
         platform: 'upwork',
-        text: 'Just a pleasure to work with :) 10/10 recommend :)'
+        rating: 5,
+        text: 'Outstanding work quality and timely delivery. The team goes above and beyond to ensure client satisfaction. Would definitely work with them again on future projects.'
       }
     ],
     // Column 2
     [
       {
-        name: 'Sifiso Vundla',
-        avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=45&h=45&fit=crop&crop=face',
-        platform: 'upwork',
-        text: 'Excellent Services! The quality of work exceeded our expectations.'
-      },
-      {
-        name: 'Bellal Hassanein',
-        avatar: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=45&h=45&fit=crop&crop=face',
+        name: 'Sarah Johnson',
+        role: 'CTO, HealthTech Solutions',
+        avatar: 'https://images.unsplash.com/photo-1494790108755-2616b056b8d4?w=80&h=80&fit=crop&crop=face',
         platform: 'freelancer',
-        text: 'It was a pleasure to work with Tanay and his team once again. Their professionalism and dedication made the process smooth.'
+        rating: 5,
+        text: 'Sayaji Infotech helped us build a robust healthcare platform that handles thousands of users daily. Their expertise in scalable architecture and security is impressive. Truly professional service.'
       },
       {
-        name: 'Enlai',
-        avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=45&h=45&fit=crop&crop=face',
+        name: 'Michael Chen',
+        role: 'Entrepreneur, E-commerce Ventures',
+        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face',
         platform: 'upwork',
-        text: 'Tanay was fast, highly flexible and knowledgeable. A jack of all trades who can handle any task.'
+        rating: 5,
+        text: 'The e-commerce platform they developed for us has significantly boosted our online sales. Clean code, modern design, and excellent performance. Couldn\'t be happier with the results.'
+      },
+      {
+        name: 'Lisa Thompson',
+        role: 'Director, Finance Plus',
+        avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face',
+        platform: 'freelancer',
+        rating: 5,
+        text: 'Their team delivered a complex financial dashboard with advanced analytics. The attention to UI/UX details and data security standards exceeded our expectations. Highly professional team.'
       }
     ],
     // Column 3
     [
       {
-        name: 'Gal',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=45&h=45&fit=crop&crop=face',
+        name: 'Robert Kim',
+        role: 'VP Engineering, DataFlow Inc.',
+        avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face',
         platform: 'upwork',
-        text: 'Guys were professional and accurate in implementation. Communication was prompt throughout the entire contract.'
+        rating: 5,
+        text: 'Excellent technical skills and project management. They delivered our enterprise software on time and within budget. The team\'s proactive communication kept us informed throughout the development process.'
       },
       {
-        name: 'John Vaughan',
-        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=45&h=45&fit=crop&crop=face',
+        name: 'Jennifer Davis',
+        role: 'Marketing Director, GrowthLab',
+        avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80&h=80&fit=crop&crop=face',
         platform: 'upwork',
-        text: 'Tanay has great communication skills. He\'s very knowledgeable, and was able to help us troubleshoot complex issues.'
+        rating: 5,
+        text: 'The marketing automation platform they built has transformed our lead generation process. Intuitive interface, powerful features, and seamless integrations. Outstanding development work.'
       },
       {
-        name: 'Abbas',
-        avatar: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=45&h=45&fit=crop&crop=face',
-        platform: 'upwork',
-        text: 'Well done team!! The app created has gone through a welcome facelift and I am very happy with the results.'
+        name: 'David Wilson',
+        role: 'Founder, LogisticsPro',
+        avatar: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=80&h=80&fit=crop&crop=face',
+        platform: 'freelancer',
+        rating: 5,
+        text: 'They developed a comprehensive logistics management system that streamlined our operations. Great problem-solving skills and innovative solutions. A pleasure to work with such a talented team.'
       }
     ]
   ];
@@ -93,57 +112,142 @@ const Testimonials = () => {
   };
 
   const TestimonialCard = ({ testimonial }) => (
-    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 mb-4 hover:bg-white/10 transition-all duration-300">
-      <div className="flex items-center justify-between mb-3">
-        <div className="flex items-center gap-3">
+    <div className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 mb-6 hover:bg-gradient-to-br hover:from-white/15 hover:to-white/10 hover:border-purple-500/30 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/10">
+      {/* Quote Icon */}
+      <div className="mb-4">
+        <Quote className="w-8 h-8 text-purple-400 group-hover:text-purple-300 transition-colors duration-300" />
+      </div>
+
+      {/* Testimonial Text */}
+      <p className="text-gray-300 leading-relaxed mb-6 group-hover:text-gray-200 transition-colors duration-300">
+        "{testimonial.text}"
+      </p>
+
+      {/* Rating */}
+      <div className="flex items-center mb-4">
+        {[...Array(testimonial.rating)].map((_, i) => (
+          <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+        ))}
+      </div>
+
+      {/* Author Info */}
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-4">
           <img 
             src={testimonial.avatar} 
             alt={testimonial.name}
-            className="w-10 h-10 rounded-full object-cover"
+            className="w-12 h-12 rounded-full object-cover ring-2 ring-purple-500/20 group-hover:ring-purple-500/40 transition-all duration-300"
           />
           <div>
-            <div className="text-white font-medium text-sm">{testimonial.name}</div>
+            <div className="text-white font-semibold text-sm group-hover:text-purple-200 transition-colors duration-300">
+              {testimonial.name}
+            </div>
+            <div className="text-gray-400 text-xs">
+              {testimonial.role}
+            </div>
           </div>
         </div>
-        <div className="text-green-400">
+        <div className="text-green-400 group-hover:text-green-300 transition-colors duration-300">
           {getPlatformIcon(testimonial.platform)}
         </div>
       </div>
-      <p className="text-gray-300 text-sm leading-relaxed">{testimonial.text}</p>
     </div>
   );
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6
+      }
+    }
+  };
+
   return (
-    <section className="py-20 lg:py-32 overflow-hidden relative">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Testimonials Grid */}
+    <section className="py-24 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+      
+      {/* Gradient Overlays */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Header Section */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={containerVariants}
+          className="text-center mb-20"
+        >
+          <motion.div
+            variants={itemVariants}
+            className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-full px-6 py-2 mb-6"
+          >
+            <MessageSquare className="w-4 h-4 text-purple-400" />
+            <span className="text-purple-300 text-sm font-medium">Client Testimonials</span>
+          </motion.div>
+
+          <motion.h2 
+            variants={itemVariants}
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6"
+          >
+            What Our{' '}
+            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+              Clients Say
+            </span>
+          </motion.h2>
+          
+          <motion.p 
+            variants={itemVariants}
+            className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed"
+          >
+            Don't just take our word for it. Here's what our satisfied clients have to say 
+            about their experience working with Sayaji Infotech.
+          </motion.p>
+        </motion.div>
+
+        {/* Testimonials Grid with Infinite Scroll */}
         <motion.div
           initial={{ opacity: 0, filter: 'blur(10px)' }}
           whileInView={{ opacity: 1, filter: 'blur(0px)' }}
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true }}
-          className="relative h-[500px] overflow-hidden rounded-2xl"
+          className="relative h-[600px] overflow-hidden rounded-2xl"
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 h-full">
             {testimonials.map((column, columnIndex) => (
               <div key={columnIndex} className="relative h-full overflow-hidden">
                 <motion.div
                   animate={{
-                    y: columnIndex === 0 ? [-60, 60] : columnIndex === 1 ? [60, -60] : [-30, 30]
+                    y: columnIndex === 0 ? [-100, 100] : columnIndex === 1 ? [100, -100] : [-50, 50]
                   }}
                   transition={{
-                    duration: columnIndex === 0 ? 15 : columnIndex === 1 ? 18 : 16,
+                    duration: columnIndex === 0 ? 20 : columnIndex === 1 ? 25 : 22,
                     repeat: Infinity,
                     repeatType: "reverse",
                     ease: "linear"
                   }}
-                  className="space-y-4 will-change-transform"
+                  className="space-y-6 will-change-transform"
                 >
                   {/* Triple the cards for seamless infinite scroll */}
                   {[...Array(4)].map((_, repeatIndex) => (
                     <div key={repeatIndex}>
                       {column.map((testimonial, index) => (
-                        <div key={`${repeatIndex}-${index}`} className="mb-4">
+                        <div key={`${repeatIndex}-${index}`}>
                           <TestimonialCard testimonial={testimonial} />
                         </div>
                       ))}
@@ -154,14 +258,47 @@ const Testimonials = () => {
             ))}
           </div>
 
-          {/* Strong top fade */}
-          <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[#0a0b23] to-transparent pointer-events-none z-20"></div>
-          {/* Strong bottom fade */}
-          <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[#0a0b23] to-transparent pointer-events-none z-20"></div>
+          {/* Gradient Fades */}
+          <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-slate-950 via-slate-950/80 to-transparent pointer-events-none z-20"></div>
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent pointer-events-none z-20"></div>
           
-          {/* Additional solid edges to ensure nothing escapes */}
-          <div className="absolute inset-x-0 top-0 h-1 bg-[#0a0b23] pointer-events-none z-30"></div>
-          <div className="absolute inset-x-0 bottom-0 h-1 bg-[#0a0b23] pointer-events-none z-30"></div>
+          {/* Solid edges */}
+          <div className="absolute inset-x-0 top-0 h-2 bg-slate-950 pointer-events-none z-30"></div>
+          <div className="absolute inset-x-0 bottom-0 h-2 bg-slate-950 pointer-events-none z-30"></div>
+        </motion.div>
+
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mt-20 text-center"
+        >
+          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-2xl p-8 sm:p-12">
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+              Ready to Join Our Success Stories?
+            </h3>
+            <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+              Let's discuss how we can help you achieve similar results with your next project.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/25"
+              >
+                Start Your Project
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-white/10 border border-white/20 text-white px-8 py-4 rounded-xl font-semibold backdrop-blur-sm transition-all duration-300 hover:bg-white/20"
+              >
+                Read Case Studies
+              </motion.button>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

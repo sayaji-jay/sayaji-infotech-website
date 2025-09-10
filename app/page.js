@@ -3,32 +3,47 @@
 import { ReactLenis } from 'lenis/react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
-import Features from '@/components/Features';
-import Pricing from '@/components/Pricing';
+import Services from '@/components/Services';
+import Portfolio from '@/components/Portfolio';
 import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
-import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
-import ITSolutionsSection from '@/components/ITSolutionsSection';
 import TextMarque from '@/components/TextMarque';
+
 export default function Home() {
   return (
     <ReactLenis root>
-      <div className="relative min-h-screen">
+      <div className="relative min-h-screen bg-slate-950">
         <Header />
         
         <main className="relative">
-          <HeroSection />
-          <TextMarque text="Insights & Resources • IT Solutions • Enterprise Grade •" />
-          <ITSolutionsSection />
-          {/* <TextMarque text="Key Features of Our IT Solutions • What We Serves •" /> */}
-          {/* <Features /> */}
-          <CTA />
-          {/* <Pricing /> */}
+          {/* Hero Section */}
+          <section id="home">
+            <HeroSection />
+          </section>
 
-          <TextMarque text="What our clients say about us • Testimonials •" />
-          <Testimonials />
-          <Contact />
+          {/* Services Section */}
+          <section id="services">
+            <TextMarque text="Our Services • Digital Solutions • Technology Excellence •" />
+            <Services />
+          </section>
+
+          {/* Portfolio Section */}
+          <section id="portfolio">
+            <TextMarque text="Our Work • Project Showcase • Success Stories •" />
+            <Portfolio />
+          </section>
+
+          {/* Testimonials Section */}
+          <section id="testimonials">
+            <TextMarque text="What our clients say • Testimonials • Reviews •" />
+            <Testimonials />
+          </section>
+
+          {/* Contact Section */}
+          <section id="contact">
+            <Contact />
+          </section>
         </main>
         
         <Footer />

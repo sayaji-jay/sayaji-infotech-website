@@ -10,14 +10,14 @@ const Header = () => {
 
   const navItems = [
     { name: 'Home', href: '#home' },
-    { name: 'Features', href: '#features' },
-    { name: 'Pricing', href: '#pricing' },
-    { name: 'OpenAI Examples', href: '/ai-examples' },
-    { name: 'Blog', href: '/blog' }
+    { name: 'Services', href: '#services' },
+    { name: 'Portfolio', href: '#portfolio' },
+    { name: 'About', href: '#about' },
+    { name: 'Contact', href: '#contact' }
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0b23]/80 backdrop-blur-lg border-b border-white/10">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-lg border-b border-white/10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           
@@ -28,8 +28,8 @@ const Header = () => {
             transition={{ duration: 0.5 }}
             className="flex-shrink-0"
           >
-            <Link href="/" className="text-xl font-bold text-white">
-              AI Tool
+            <Link href="/" className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Sayaji Infotech
             </Link>
           </motion.div>
 
@@ -60,8 +60,8 @@ const Header = () => {
             className="hidden md:block"
           >
             <Link
-              href="/auth/signup"
-              className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
+              href="#contact"
+              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
             >
               Get Started
             </Link>
@@ -83,7 +83,7 @@ const Header = () => {
           transition={{ duration: 0.3 }}
           className="md:hidden overflow-hidden"
         >
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-[#0a0b23]/95 rounded-lg mt-2">
+          <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-950/95 rounded-lg mt-2">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -95,8 +95,8 @@ const Header = () => {
               </Link>
             ))}
             <Link
-              href="/auth/signup"
-              className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 mt-4"
+              href="#contact"
+              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 mt-4"
               onClick={() => setIsMenuOpen(false)}
             >
               Get Started

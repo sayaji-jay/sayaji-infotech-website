@@ -14,24 +14,24 @@ import {
 
 const Footer = () => {
   const footerLinks = {
-    features: [
-      { name: 'OpenAI Integration', href: '#' },
-      { name: 'Next.js Framework', href: '#' },
-      { name: 'Authentication', href: '#' },
-      { name: 'Database Setup', href: '#' },
-      { name: 'AI Examples', href: '#' }
+    services: [
+      { name: 'Web Development', href: '#services' },
+      { name: 'Mobile Apps', href: '#services' },
+      { name: 'Cloud Solutions', href: '#services' },
+      { name: 'Enterprise Software', href: '#services' },
+      { name: 'Consulting', href: '#contact' }
     ],
     resources: [
-      { name: 'Documentation', href: '#' },
-      { name: 'API Reference', href: '#' },
-      { name: 'Tutorials', href: '#' },
+      { name: 'Portfolio', href: '#portfolio' },
+      { name: 'Case Studies', href: '#portfolio' },
+      { name: 'Testimonials', href: '#testimonials' },
       { name: 'Blog', href: '#' },
-      { name: 'Support', href: '#' }
+      { name: 'Support', href: '#contact' }
     ],
     company: [
       { name: 'About Us', href: '#' },
       { name: 'Careers', href: '#' },
-      { name: 'Contact', href: '#' },
+      { name: 'Contact', href: '#contact' },
       { name: 'Privacy Policy', href: '#' },
       { name: 'Terms of Service', href: '#' }
     ]
@@ -44,7 +44,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-[#0a0b23] border-t border-white/10">
+    <footer className="relative bg-slate-950 border-t border-white/10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         
         {/* Main Footer Content */}
@@ -58,27 +58,27 @@ const Footer = () => {
             viewport={{ once: true }}
             className="lg:col-span-1"
           >
-            <Link href="/" className="text-2xl font-bold text-white mb-4 inline-block">
-              AI Tool
+            <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-4 inline-block">
+              Sayaji Infotech
             </Link>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Build SaaS AI applications using OpenAI and Next.js. Complete starter kit 
-              with everything you need to launch your AI startup.
+              We transform ideas into powerful digital solutions. From web applications to 
+              enterprise software, we deliver cutting-edge technology that drives business growth.
             </p>
             
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-gray-400">
-                <Mail className="w-4 h-4 text-green-400" />
-                <span className="text-sm">support@aitool.com</span>
+                <Mail className="w-4 h-4 text-purple-400" />
+                <span className="text-sm">hello@sayajiinfotech.com</span>
               </div>
               <div className="flex items-center gap-3 text-gray-400">
-                <Phone className="w-4 h-4 text-green-400" />
-                <span className="text-sm">+1 (555) 123-4567</span>
+                <Phone className="w-4 h-4 text-purple-400" />
+                <span className="text-sm">+91 98765 43210</span>
               </div>
               <div className="flex items-center gap-3 text-gray-400">
-                <MapPin className="w-4 h-4 text-green-400" />
-                <span className="text-sm">San Francisco, CA</span>
+                <MapPin className="w-4 h-4 text-purple-400" />
+                <span className="text-sm">Pune, Maharashtra, India</span>
               </div>
             </div>
           </motion.div>
@@ -90,13 +90,13 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-white font-semibold mb-6">Features</h3>
+            <h3 className="text-white font-semibold mb-6">Services</h3>
             <ul className="space-y-4">
-              {footerLinks.features.map((link) => (
+              {footerLinks.services.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-green-400 transition-colors duration-300 text-sm"
+                    className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm"
                   >
                     {link.name}
                   </Link>
@@ -118,7 +118,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-green-400 transition-colors duration-300 text-sm"
+                    className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm"
                   >
                     {link.name}
                   </Link>
@@ -140,7 +140,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-green-400 transition-colors duration-300 text-sm"
+                    className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm"
                   >
                     {link.name}
                   </Link>
@@ -156,14 +156,14 @@ const Footer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-2xl border border-green-500/20 p-8 mb-12"
+          className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 rounded-2xl border border-purple-500/20 p-8 mb-12"
         >
           <div className="text-center max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Stay Updated with AI Tool
+              Stay Updated with Sayaji Infotech
             </h3>
             <p className="text-gray-400 mb-6">
-              Get the latest updates, AI tips, and exclusive content delivered to your inbox.
+              Get the latest tech insights, project updates, and industry trends delivered to your inbox.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
