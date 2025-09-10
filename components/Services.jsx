@@ -225,39 +225,6 @@ const Services = () => {
           </motion.div>
         </motion.div>
 
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-20 text-center"
-        >
-          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-2xl p-8 sm:p-12">
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-              Ready to Start Your Project?
-            </h3>
-            <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-              Let's discuss how we can help transform your ideas into powerful digital solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/25"
-              >
-                Start a Project
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-white/10 border border-white/20 text-white px-8 py-4 rounded-xl font-semibold backdrop-blur-sm transition-all duration-300 hover:bg-white/20"
-              >
-                View Portfolio
-              </motion.button>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

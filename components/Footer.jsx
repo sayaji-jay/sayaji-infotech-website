@@ -157,39 +157,6 @@ const Footer = () => {
           </motion.div>
         </div>
 
-        {/* Newsletter Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 rounded-2xl border border-purple-500/20 p-8 mb-12"
-        >
-          <div className="text-center max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Stay Updated with Sayaji Infotech
-            </h3>
-            <p className="text-gray-400 mb-6">
-              Get the latest tech insights, project updates, and industry trends delivered to your inbox.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-green-500/50 focus:ring-2 focus:ring-green-500/20"
-              />
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="px-6 py-3 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
-              >
-                Subscribe
-                <ArrowRight className="w-4 h-4" />
-              </motion.button>
-            </div>
-          </div>
-        </motion.div>
 
         {/* Bottom Section */}
         <motion.div
