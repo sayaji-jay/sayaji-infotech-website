@@ -108,20 +108,20 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="relative"
+            viewport={{ once: true, margin: "-50px" }}
+            className="relative h-full"
           >
-            <div className="bg-gradient-to-b from-white/5 to-white/[0.02] border border-white/10 backdrop-blur-sm rounded-3xl p-8">
+            <div className="bg-gradient-to-b from-white/5 to-white/[0.02] border border-white/10 backdrop-blur-sm rounded-3xl p-6 lg:p-8 h-full flex flex-col">
               <h3 className="text-2xl font-bold text-white mb-6">Send us a message</h3>
               
-              <form className="space-y-6">
+              <form className="space-y-4 lg:space-y-6 flex-1 flex flex-col">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -182,7 +182,7 @@ const Contact = () => {
                   type="submit"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full py-3 px-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
+                  className="w-full py-3 px-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl mt-auto"
                 >
                   Send Message
                   <Send className="w-4 h-4" />
@@ -199,24 +199,24 @@ const Contact = () => {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            className="space-y-6"
+            viewport={{ once: true, margin: "-50px" }}
+            className="space-y-4 lg:space-y-6"
           >
             {contactInfo.map((info, index) => (
               <motion.div
                 key={info.title}
                 variants={itemVariants}
-                className="group relative p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/[0.02] border border-white/10 backdrop-blur-sm hover:bg-gradient-to-b hover:from-purple-900/10 hover:to-pink-900/10 hover:border-purple-500/20 transition-all duration-500"
+                className="group relative p-4 lg:p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/[0.02] border border-white/10 backdrop-blur-sm hover:bg-gradient-to-b hover:from-purple-900/10 hover:to-pink-900/10 hover:border-purple-500/20 transition-all duration-500"
               >
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <info.icon className="w-6 h-6 text-purple-400 group-hover:text-pink-400 transition-colors duration-300" />
+                  <div className="flex-shrink-0 w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <info.icon className="w-5 h-5 lg:w-6 lg:h-6 text-purple-400 group-hover:text-pink-400 transition-colors duration-300" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-white mb-1">
+                    <h3 className="text-base lg:text-lg font-semibold text-white mb-1">
                       {info.title}
                     </h3>
-                    <p className="text-gray-400 text-sm mb-2">
+                    <p className="text-gray-400 text-xs lg:text-sm mb-2">
                       {info.description}
                     </p>
                     <a

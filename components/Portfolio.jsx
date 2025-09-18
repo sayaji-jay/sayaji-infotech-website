@@ -197,15 +197,15 @@ const Portfolio = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16"
+          viewport={{ once: true, margin: "-50px" }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16"
         >
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
               variants={cardVariants}
-              whileHover={{ y: -10 }}
-              className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm hover:bg-white/10 transition-all duration-500"
+              whileHover={{ y: -10, scale: 1.02 }}
+              className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm hover:bg-white/10 transition-all duration-500 h-full flex flex-col"
             >
               {/* Project Image */}
               <div className="relative h-48 overflow-hidden">
@@ -237,7 +237,7 @@ const Portfolio = () => {
               </div>
 
               {/* Project Content */}
-              <div className="p-6">
+              <div className="p-6 flex-1 flex flex-col">
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
                   {project.title}
                 </h3>
@@ -277,11 +277,11 @@ const Portfolio = () => {
                 </div>
 
                 {/* Features */}
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-2 gap-2 mt-auto">
                   {project.features.slice(0, 4).map((feature, idx) => (
                     <div key={idx} className="flex items-center space-x-2">
                       <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${project.color}`}></div>
-                      <span className="text-xs text-gray-400">{feature}</span>
+                      <span className="text-xs text-gray-400 truncate">{feature}</span>
                     </div>
                   ))}
                 </div>
