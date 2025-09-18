@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from 'framer-motion';
 
 const ClientLogos = () => {
   // Client logos with clean, recognizable brands
@@ -35,21 +36,37 @@ const ClientLogos = () => {
       <div className="w-full relative z-10">
         {/* Header */}
         <div className="text-center mb-12 px-4">
-          <p className="text-gray-400 text-lg font-medium">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-gray-400 text-lg font-medium"
+          >
             Trusted by industry leaders worldwide
-          </p>
+          </motion.p>
         </div>
 
         {/* Full Width Logos Carousel */}
         <div className="relative w-full overflow-hidden">
           {/* First Row - Left to Right */}
           <div className="relative h-24 overflow-hidden">
-            <div
+            <motion.div
+              animate={{
+                x: [0, -100 * clients.length]
+              }}
+              transition={{
+                x: {
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  duration: 30,
+                  ease: "linear"
+                }
+              }}
               className="flex items-center space-x-20 absolute top-0 whitespace-nowrap"
               style={{
                 maskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)',
-                WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)',
-                animation: 'scroll-left 30s linear infinite'
+                WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)'
               }}
             >
               {/* Duplicate logos for seamless loop */}
@@ -63,17 +80,27 @@ const ClientLogos = () => {
                   </div>
                 </div>
               ))}
-            </div>
+            </motion.div>
           </div>
 
           {/* Second Row - Right to Left (offset) */}
           <div className="relative h-24 overflow-hidden mt-8">
-            <div
+            <motion.div
+              animate={{
+                x: [-100 * clients.length, 0]
+              }}
+              transition={{
+                x: {
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  duration: 35,
+                  ease: "linear"
+                }
+              }}
               className="flex items-center space-x-20 absolute top-0 whitespace-nowrap"
               style={{
                 maskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)',
-                WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)',
-                animation: 'scroll-right 35s linear infinite'
+                WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)'
               }}
             >
               {/* Reverse order for opposite direction */}
@@ -87,16 +114,22 @@ const ClientLogos = () => {
                   </div>
                 </div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
 
         {/* Bottom Text */}
-        <div className="text-center mt-12 px-4">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="text-center mt-12 px-4"
+        >
           <p className="text-gray-500 text-sm">
             Join 500+ companies that trust us with their digital transformation
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
