@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { 
   Code2, 
   Smartphone, 
@@ -59,37 +58,6 @@ const Services = () => {
     { name: "GraphQL", category: "API" }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6
-      }
-    }
-  };
-
-  const cardVariants = {
-    hidden: { y: 50, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.8
-      }
-    }
-  };
 
   return (
     <section className="py-24 bg-gradient-to-br from-slate-950 via-purple-950/20 to-slate-950 relative overflow-hidden">
@@ -102,54 +70,31 @@ const Services = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header Section */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={containerVariants}
-          className="text-center mb-20"
-        >
-          <motion.div
-            variants={itemVariants}
-            className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-full px-6 py-2 mb-6"
-          >
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-full px-6 py-2 mb-6">
             <Zap className="w-4 h-4 text-purple-400" />
             <span className="text-purple-300 text-sm font-medium">Our Services</span>
-          </motion.div>
+          </div>
 
-          <motion.h2 
-            variants={itemVariants}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6"
-          >
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
             Comprehensive{' '}
             <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
               Digital Solutions
             </span>
-          </motion.h2>
-          
-          <motion.p 
-            variants={itemVariants}
-            className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed"
-          >
-            From concept to deployment, we provide end-to-end technology solutions 
+          </h2>
+
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+            From concept to deployment, we provide end-to-end technology solutions
             that help businesses thrive in the digital landscape.
-          </motion.p>
-        </motion.div>
+          </p>
+        </div>
 
         {/* Services Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20"
-        >
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
           {services.map((service, index) => (
-            <motion.div
+            <div
               key={index}
-              variants={cardVariants}
-              whileHover={{ y: -10 }}
-              className="group relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-500"
+              className="group relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 hover:-translate-y-2 transition-all duration-500"
             >
               {/* Hover Effect */}
               <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
@@ -185,45 +130,31 @@ const Services = () => {
                   <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                 </button>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Technologies Section */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={containerVariants}
-          className="text-center"
-        >
-          <motion.h3 
-            variants={itemVariants}
-            className="text-2xl sm:text-3xl font-bold text-white mb-12"
-          >
+        <div className="text-center">
+          <h3 className="text-2xl sm:text-3xl font-bold text-white mb-12">
             Technologies We Master
-          </motion.h3>
-          
-          <motion.div
-            variants={containerVariants}
-            className="flex flex-wrap justify-center gap-4"
-          >
+          </h3>
+
+          <div className="flex flex-wrap justify-center gap-4">
             {technologies.map((tech, index) => (
-              <motion.div
+              <div
                 key={index}
-                variants={itemVariants}
-                whileHover={{ scale: 1.05 }}
-                className="group px-6 py-3 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
+                className="group px-6 py-3 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 hover:scale-105 transition-all duration-300"
               >
                 <div className="flex items-center space-x-2">
                   <span className="text-white font-medium">{tech.name}</span>
                   <span className="text-gray-500 text-sm">•</span>
                   <span className="text-gray-400 text-sm">{tech.category}</span>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
 
       </div>
     </section>

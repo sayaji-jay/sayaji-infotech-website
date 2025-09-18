@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { 
   ExternalLink, 
   Github, 
@@ -115,37 +114,6 @@ const Portfolio = () => {
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6
-      }
-    }
-  };
-
-  const cardVariants = {
-    hidden: { y: 50, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.8
-      }
-    }
-  };
 
   return (
     <section className="py-24 bg-gradient-to-br from-slate-950 via-purple-950/20 to-slate-950 relative overflow-hidden">
@@ -158,54 +126,31 @@ const Portfolio = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header Section */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={containerVariants}
-          className="text-center mb-20"
-        >
-          <motion.div
-            variants={itemVariants}
-            className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-full px-6 py-2 mb-6"
-          >
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-full px-6 py-2 mb-6">
             <Code2 className="w-4 h-4 text-purple-400" />
             <span className="text-purple-300 text-sm font-medium">Our Portfolio</span>
-          </motion.div>
+          </div>
 
-          <motion.h2 
-            variants={itemVariants}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6"
-          >
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
             Featured{' '}
             <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
               Projects
             </span>
-          </motion.h2>
-          
-          <motion.p 
-            variants={itemVariants}
-            className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed"
-          >
-            Explore our latest work and see how we've helped businesses transform 
+          </h2>
+
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+            Explore our latest work and see how we've helped businesses transform
             their digital presence with innovative solutions.
-          </motion.p>
-        </motion.div>
+          </p>
+        </div>
 
         {/* Projects Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
           {projects.map((project, index) => (
-            <motion.div
+            <div
               key={project.id}
-              variants={cardVariants}
-              whileHover={{ y: -10, scale: 1.02 }}
-              className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm hover:bg-white/10 transition-all duration-500 h-full flex flex-col"
+              className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm hover:bg-white/10 hover:-translate-y-2 hover:scale-105 transition-all duration-500 h-full flex flex-col"
             >
               {/* Project Image */}
               <div className="relative h-48 overflow-hidden">
@@ -286,9 +231,9 @@ const Portfolio = () => {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
       </div>
     </section>

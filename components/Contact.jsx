@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { 
   Mail, 
   Phone, 
@@ -44,32 +43,6 @@ const Contact = () => {
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { 
-      opacity: 0, 
-      y: 30,
-      scale: 0.9
-    },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
-  };
 
   return (
     <section className="py-24 bg-gradient-to-br from-slate-950 via-purple-950/20 to-slate-950 relative overflow-hidden">
@@ -83,13 +56,7 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <span className="inline-flex items-center gap-2 rounded-full px-6 py-2 text-sm font-medium border border-purple-500/30 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm text-purple-300 mb-6">
             <MessageCircle className="w-4 h-4 text-purple-400" />
             Get in Touch
@@ -103,21 +70,15 @@ const Contact = () => {
           </h2>
           
           <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Ready to transform your ideas into reality? Get in touch with our team of experts 
+            Ready to transform your ideas into reality? Get in touch with our team of experts
             and let's discuss how we can help your business grow.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           
           {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true, margin: "-50px" }}
-            className="relative h-full"
-          >
+          <div className="relative h-full">
             <div className="bg-gradient-to-b from-white/5 to-white/[0.02] border border-white/10 backdrop-blur-sm rounded-3xl p-6 lg:p-8 h-full flex flex-col">
               <h3 className="text-2xl font-bold text-white mb-6">Send us a message</h3>
               
@@ -178,34 +139,25 @@ const Contact = () => {
                   ></textarea>
                 </div>
                 
-                <motion.button
+                <button
                   type="submit"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full py-3 px-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl mt-auto"
+                  className="w-full py-3 px-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 mt-auto"
                 >
                   Send Message
                   <Send className="w-4 h-4" />
-                </motion.button>
+                </button>
               </form>
             </div>
 
             {/* Background Effect */}
             <div className="absolute inset-0 -z-10 bg-gradient-to-r from-purple-600/10 via-pink-600/10 to-purple-600/10 rounded-3xl blur-xl" />
-          </motion.div>
+          </div>
 
           {/* Contact Information */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            className="space-y-4 lg:space-y-6"
-          >
+          <div className="space-y-4 lg:space-y-6">
             {contactInfo.map((info, index) => (
-              <motion.div
+              <div
                 key={info.title}
-                variants={itemVariants}
                 className="group relative p-4 lg:p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/[0.02] border border-white/10 backdrop-blur-sm hover:bg-gradient-to-b hover:from-purple-900/10 hover:to-pink-900/10 hover:border-purple-500/20 transition-all duration-500"
               >
                 <div className="flex items-start gap-4">
@@ -230,14 +182,11 @@ const Contact = () => {
 
                 {/* Background Effect */}
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-green-600/0 via-green-600/5 to-blue-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-              </motion.div>
+              </div>
             ))}
 
             {/* Additional Info */}
-            <motion.div
-              variants={itemVariants}
-              className="grid grid-cols-2 gap-4 mt-8"
-            >
+            <div className="grid grid-cols-2 gap-4 mt-8">
               <div className="text-center p-4 rounded-xl bg-gradient-to-b from-white/5 to-white/[0.02] border border-white/10">
                 <Clock className="w-8 h-8 text-green-400 mx-auto mb-2" />
                 <h4 className="text-white font-semibold text-sm mb-1">Response Time</h4>
@@ -248,8 +197,8 @@ const Contact = () => {
                 <h4 className="text-white font-semibold text-sm mb-1">Team Size</h4>
                 <p className="text-gray-400 text-xs">50+ Experts</p>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </div>
 

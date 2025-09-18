@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import {
   Github,
@@ -59,13 +58,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           
           {/* Company Info */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="lg:col-span-1"
-          >
+          <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-4">
               <div className="w-14 h-14  p-2.5 flex items-center justify-center ">
                 <Image
@@ -97,15 +90,10 @@ const Footer = () => {
                 <span className="text-sm">Vadodara, Gujarat, India</span>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Features Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: true }}
-          >
+          <div>
             <h3 className="text-white font-semibold mb-6">Services</h3>
             <ul className="space-y-4">
               {footerLinks.services.map((link) => (
@@ -119,15 +107,10 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
           {/* Resources Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
+          <div>
             <h3 className="text-white font-semibold mb-6">Resources</h3>
             <ul className="space-y-4">
               {footerLinks.resources.map((link) => (
@@ -141,15 +124,10 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
           {/* Company Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-          >
+          <div>
             <h3 className="text-white font-semibold mb-6">Company</h3>
             <ul className="space-y-4">
               {footerLinks.company.map((link) => (
@@ -163,18 +141,12 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
         </div>
 
 
         {/* Bottom Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          viewport={{ once: true }}
-          className="flex flex-col sm:flex-row justify-between items-center pt-8 border-t border-white/10"
-        >
+        <div className="flex flex-col sm:flex-row justify-between items-center pt-8 border-t border-white/10">
           <p className="text-gray-300 text-sm mb-4 sm:mb-0">
             © 2024 Sayaji Infotech. All rights reserved.
           </p>
@@ -182,18 +154,16 @@ const Footer = () => {
           {/* Social Links */}
           <div className="flex items-center gap-4">
             {socialLinks.map((social) => (
-              <motion.a
+              <a
                 key={social.name}
                 href={social.href}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-gray-300 hover:text-white hover:border-purple-500/50 transition-all duration-300"
+                className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-gray-300 hover:text-white hover:border-purple-500/50 transition-all duration-300 hover:scale-110"
               >
                 <social.icon className="w-4 h-4" />
-              </motion.a>
+              </a>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
 
     </footer>
