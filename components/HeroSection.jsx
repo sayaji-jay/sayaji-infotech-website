@@ -16,25 +16,6 @@ const HeroSection = () => {
       <Spotlight className="top-10 left-full h-[80vh] w-[50vw]" fill="rgb(79, 70, 229)" />
       <Spotlight className="top-28 left-80 h-[80vh] w-[50vw]" fill="rgb(236, 72, 153)" />
       
-      {/* Floating Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[Code2, Database, Globe, Smartphone].map((Icon, index) => (
-          <div
-            key={index}
-            className="absolute animate-bounce"
-            style={{
-              top: `${20 + index * 20}%`,
-              left: `${10 + index * 15}%`,
-              animationDelay: `${index * 0.5}s`,
-              animationDuration: '6s'
-            }}
-          >
-            <div className="p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
-              <Icon className="w-6 h-6 text-purple-400" />
-            </div>
-          </div>
-        ))}
-      </div>
 
       {/* Main Content */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
@@ -89,9 +70,9 @@ const HeroSection = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-16 max-w-3xl mx-auto">
             {[
-              { number: 500, suffix: "+", label: "Projects Delivered" },
-              { number: 50, suffix: "+", label: "Happy Clients" },
-              { number: 5, suffix: "+", label: "Years Experience" },
+              { number: 20, suffix: "+", label: "Projects Delivered" },
+              { number: 30, suffix: "+", label: "Happy Clients" },
+              { number: 9, suffix: "+", label: "Years Experience" },
               { number: 24, suffix: "/7", label: "Support Available" },
             ].map((stat, index) => (
               <div key={index} className="text-center">
@@ -102,7 +83,7 @@ const HeroSection = () => {
                     <AnimatedCounter
                       value={stat.number}
                       suffix={stat.suffix}
-                      delay={0.8 + index * 0.15}
+                      delay={0.2 + index * 0.50}
                       duration={1.2}
                       className="inline-block"
                     />

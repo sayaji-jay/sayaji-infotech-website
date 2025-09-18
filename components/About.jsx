@@ -10,31 +10,36 @@ import {
   Quote
 } from 'lucide-react';
 import Image from 'next/image';
+import { AnimatedCounter } from '@/components/ui/animated-counter';
 
 const About = () => {
 
   const stats = [
     {
       icon: Calendar,
-      number: "9+",
+      number: 9,
+      suffix: "+",
       label: "Years Experience",
       description: "Building digital solutions"
     },
     {
       icon: Users,
-      number: "50+",
+      number: 50,
+      suffix: "+",
       label: "Happy Clients",
       description: "Across various industries"
     },
     {
       icon: Award,
-      number: "15+",
+      number: 15,
+      suffix: "+",
       label: "Frappe ERP Projects",
       description: "Enterprise solutions"
     },
     {
       icon: Star,
-      number: "4.9",
+      number: 4.9,
+      suffix: "",
       label: "Client Rating",
       description: "Based on feedback"
     }
@@ -72,14 +77,14 @@ const About = () => {
             <span className="text-purple-300 text-sm font-medium">About Sayaji Infotech</span>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
             Crafting Digital{' '}
             <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
               Excellence
             </span>
           </h2>
 
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
             Based in Vadodara, we bring 9+ years of expertise in IT industry, specializing in
             Frappe ERP solutions and modern web technologies to transform businesses.
           </p>
@@ -105,12 +110,16 @@ const About = () => {
               {/* Text Content - 50% */}
               <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
                 <div>
-                  <h3 className="text-4xl lg:text-5xl font-extrabold text-white mb-4">
+                  <h3 className="text-3xl lg:text-4xl font-extrabold text-white mb-2">
                     Sayaji Infotech
                   </h3>
-                  <p className="text-gray-400 text-base lg:text-lg opacity-80 font-medium">
+                  <p className="text-gray-400 text-sm lg:text-base opacity-80 font-medium mb-2">
                     Crafting Digital Excellence Since 2015
                   </p>
+                  <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-full px-4 py-2">
+                    <MapPin className="w-4 h-4 text-green-400" />
+                    <span className="text-green-300 font-medium text-xs lg:text-sm">Vadodara, Gujarat</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -121,7 +130,7 @@ const About = () => {
                 {/* Quote Icon */}
                 <Quote className="w-12 h-12 text-purple-400 mb-6" />
 
-                <blockquote className="text-lg lg:text-xl text-gray-200 font-medium leading-relaxed mb-6">
+                <blockquote className="text-base lg:text-lg text-gray-200 font-medium leading-relaxed mb-6">
                   "{motivationalQuote.text}"
                 </blockquote>
 
@@ -148,8 +157,14 @@ const About = () => {
                   <stat.icon className="w-6 h-6 text-purple-400" />
                 </div>
 
-                <h3 className="text-2xl lg:text-3xl font-bold text-white mb-2">
-                  {stat.number}
+                <h3 className="text-xl lg:text-2xl font-bold text-white mb-2">
+                  <AnimatedCounter
+                    value={stat.number}
+                    suffix={stat.suffix}
+                    delay={0.2 + index * 0.3}
+                    duration={1.2}
+                    className="inline-block"
+                  />
                 </h3>
 
                 <h4 className="text-sm lg:text-base font-semibold text-gray-200 mb-1">
@@ -166,7 +181,7 @@ const About = () => {
 
         {/* Expertise Section */}
         <div className="text-center">
-          <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8">
+          <h3 className="text-xl sm:text-2xl font-bold text-white mb-8">
             Our Expertise
           </h3>
 
@@ -184,11 +199,6 @@ const About = () => {
             ))}
           </div>
 
-          {/* Location Badge */}
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-full px-6 py-3">
-            <MapPin className="w-5 h-5 text-green-400" />
-            <span className="text-green-300 font-medium">Proudly based in Vadodara, Gujarat</span>
-          </div>
         </div>
 
       </div>
