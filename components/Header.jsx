@@ -1,12 +1,13 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
   const navItems = [
     { name: 'Home', href: '#home' },
@@ -16,9 +17,30 @@ const Header = () => {
     { name: 'Contact', href: '#contact' }
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = navItems.map(item => item.href.substring(1));
+      const currentSection = sections.find(section => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          return rect.top <= 100 && rect.bottom >= 100;
+        }
+        return false;
+      });
+      if (currentSection) {
+        setActiveSection(currentSection);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-lg border-b border-white/10">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <header className="fixed top-4 left-4 right-4 z-50">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 bg-slate-950/80 backdrop-blur-lg border border-white/10 rounded-2xl shadow-2xl shadow-purple-500/10 ring-1 ring-white/5 hover:shadow-purple-500/20 transition-all duration-500">
         <div className="flex h-16 items-center justify-between">
           
           {/* Logo */}
@@ -39,13 +61,20 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            {navItems.map((item, index) => (
+            {navItems.map((item) => (
               <div key={item.name}>
                 <Link
                   href={item.href}
-                  className="text-gray-300 hover:text-white transition-colors duration-300 text-sm font-medium"
+                  className={`relative px-3 py-2 rounded-full text-sm font-medium transition-all duration-300 group ${
+                    activeSection === item.href.substring(1)
+                      ? 'text-white bg-gradient-to-r from-purple-600/20 to-pink-600/20 ring-1 ring-purple-500/30 shadow-lg shadow-purple-500/25'
+                      : 'text-gray-300 hover:text-white hover:bg-white/5'
+                  }`}
                 >
-                  {item.name}
+                  <span className="relative z-10">{item.name}</span>
+                  {activeSection === item.href.substring(1) && (
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600/10 to-pink-600/10 animate-pulse"></div>
+                  )}
                 </Link>
               </div>
             ))}
@@ -79,7 +108,11 @@ const Header = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+                className={`relative block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
+                  activeSection === item.href.substring(1)
+                    ? 'text-white bg-gradient-to-r from-purple-600/20 to-pink-600/20 ring-1 ring-purple-500/30'
+                    : 'text-gray-300 hover:text-white hover:bg-white/5'
+                }`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
