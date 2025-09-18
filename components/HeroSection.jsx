@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Play, Code2, Database, Globe, Smartphone } from "lucide-react";
 import { Spotlight } from "@/components/ui/spotlight";
+import { AnimatedCounter } from "@/components/ui/animated-counter";
 
 const HeroSection = () => {
   return (
@@ -139,14 +140,24 @@ const HeroSection = () => {
             className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-16 max-w-3xl mx-auto"
           >
             {[
-              { number: "500+", label: "Projects Delivered" },
-              { number: "50+", label: "Happy Clients" },
-              { number: "5+", label: "Years Experience" },
-              { number: "24/7", label: "Support Available" },
+              { number: 500, suffix: "+", label: "Projects Delivered" },
+              { number: 50, suffix: "+", label: "Happy Clients" },
+              { number: 5, suffix: "+", label: "Years Experience" },
+              { number: 24, suffix: "/7", label: "Support Available" },
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  {stat.number}
+                  {typeof stat.number === 'string' ? (
+                    stat.number
+                  ) : (
+                    <AnimatedCounter
+                      value={stat.number}
+                      suffix={stat.suffix}
+                      delay={0.8 + index * 0.15}
+                      duration={1.2}
+                      className="inline-block"
+                    />
+                  )}
                 </div>
                 <div className="text-sm text-gray-400 mt-1">{stat.label}</div>
               </div>
