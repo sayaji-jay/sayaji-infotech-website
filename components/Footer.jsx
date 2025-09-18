@@ -2,12 +2,13 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Github, 
-  Twitter, 
-  Linkedin, 
-  Mail, 
-  Phone, 
+import Image from 'next/image';
+import {
+  Github,
+  Twitter,
+  Linkedin,
+  Mail,
+  Phone,
   MapPin,
   ArrowRight
 } from 'lucide-react';
@@ -65,27 +66,35 @@ const Footer = () => {
             viewport={{ once: true }}
             className="lg:col-span-1"
           >
-            <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-4 inline-block">
-              Sayaji Infotech
+            <Link href="/" className="inline-block mb-4">
+              <div className="w-14 h-14  p-2.5 flex items-center justify-center ">
+                <Image
+                  src="/images/logo.png"
+                  alt="Sayaji Infotech Logo"
+                  width={48}
+                  height={48}
+                  className="w-full h-full object-contain filter brightness-110"
+                />
+              </div>
             </Link>
-            <p className="text-gray-400 mb-6 leading-relaxed">
-              We transform ideas into powerful digital solutions. From web applications to 
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              We transform ideas into powerful digital solutions. From web applications to
               enterprise software, we deliver cutting-edge technology that drives business growth.
             </p>
             
             {/* Contact Info */}
             <div className="space-y-3">
-              <div className="flex items-center gap-3 text-gray-400">
+              <div className="flex items-center gap-3 text-gray-300">
                 <Mail className="w-4 h-4 text-purple-400" />
                 <span className="text-sm">hello@sayajiinfotech.com</span>
               </div>
-              <div className="flex items-center gap-3 text-gray-400">
+              <div className="flex items-center gap-3 text-gray-300">
                 <Phone className="w-4 h-4 text-purple-400" />
                 <span className="text-sm">+91 98765 43210</span>
               </div>
-              <div className="flex items-center gap-3 text-gray-400">
+              <div className="flex items-center gap-3 text-gray-300">
                 <MapPin className="w-4 h-4 text-purple-400" />
-                <span className="text-sm">Pune, Maharashtra, India</span>
+                <span className="text-sm">Vadodara, Gujarat, India</span>
               </div>
             </div>
           </motion.div>
@@ -103,7 +112,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm"
+                    className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm"
                   >
                     {link.name}
                   </Link>
@@ -125,7 +134,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm"
+                    className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm"
                   >
                     {link.name}
                   </Link>
@@ -147,7 +156,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm"
+                    className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm"
                   >
                     {link.name}
                   </Link>
@@ -166,8 +175,8 @@ const Footer = () => {
           viewport={{ once: true }}
           className="flex flex-col sm:flex-row justify-between items-center pt-8 border-t border-white/10"
         >
-          <p className="text-gray-400 text-sm mb-4 sm:mb-0">
-            © 2024 AI Tool. All rights reserved.
+          <p className="text-gray-300 text-sm mb-4 sm:mb-0">
+            © 2024 Sayaji Infotech. All rights reserved.
           </p>
           
           {/* Social Links */}
@@ -178,7 +187,7 @@ const Footer = () => {
                 href={social.href}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-gray-400 hover:text-white hover:border-green-500/50 transition-all duration-300"
+                className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-gray-300 hover:text-white hover:border-purple-500/50 transition-all duration-300"
               >
                 <social.icon className="w-4 h-4" />
               </motion.a>

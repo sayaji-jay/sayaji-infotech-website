@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,8 +29,17 @@ const Header = () => {
             transition={{ duration: 0.5 }}
             className="flex-shrink-0"
           >
-            <Link href="/" className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Sayaji Infotech
+            <Link href="/" className="flex items-center">
+              <div className="w-12 h-12 p-2 flex items-center justify-center">
+                <Image
+                  src="/images/logo.png"
+                  alt="Sayaji Infotech Logo"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-contain filter brightness-110"
+                  priority
+                />
+              </div>
             </Link>
           </motion.div>
 

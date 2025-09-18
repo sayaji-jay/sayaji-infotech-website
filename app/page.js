@@ -6,6 +6,7 @@ import HeroSection from '@/components/HeroSection';
 import ClientLogos from '@/components/ClientLogos';
 import Services from '@/components/Services';
 import Portfolio from '@/components/Portfolio';
+import About from '@/components/About';
 import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -36,6 +37,12 @@ export default function Home() {
           <section id="portfolio">
             <TextMarque text="Our Work • Project Showcase • Success Stories •" />
             <Portfolio />
+          </section>
+
+          {/* About Section */}
+          <section id="about">
+            <TextMarque text="About Us • Our Story • Company Vision •" />
+            <About />
           </section>
 
           {/* Testimonials Section */}
