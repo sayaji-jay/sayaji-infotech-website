@@ -5,22 +5,12 @@ import { motion } from 'framer-motion';
 const ClientLogos = () => {
   // Client logos with clean, recognizable brands
   const clients = [
-    { name: "Microsoft", text: "Microsoft" },
-    { name: "Google", text: "Google" },
-    { name: "Amazon", text: "Amazon" },
-    { name: "Meta", text: "Meta" },
-    { name: "Apple", text: "Apple" },
-    { name: "Netflix", text: "Netflix" },
-    { name: "Spotify", text: "Spotify" },
-    { name: "Uber", text: "Uber" },
-    { name: "Airbnb", text: "Airbnb" },
-    { name: "Tesla", text: "Tesla" },
-    { name: "Adobe", text: "Adobe" },
-    { name: "Shopify", text: "Shopify" },
-    { name: "IBM", text: "IBM" },
-    { name: "Oracle", text: "Oracle" },
-    { name: "Samsung", text: "Samsung" },
-    { name: "Intel", text: "Intel" }
+    { name: "Force Trance", text: "Force Trance" },
+    { name: "Elite", text: "Elite" },
+    { name: "L&T", text: "L&T" },
+    { name: "Get Floor plan", text: "Get Floor plan" },
+    { name: "Sayaji Laminates", text: "Sayaji Laminates" },
+
   ];
 
   return (
