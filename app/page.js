@@ -12,12 +12,13 @@ import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import TextMarque from '@/components/TextMarque';
+import GridLayout from '@/components/ui/GridLayout';
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-slate-950">
+    <GridLayout className="min-h-screen">
         <Header />
-        
+
         <main className="relative">
           {/* Hero Section */}
           <section id="home">
@@ -62,8 +63,8 @@ export default function Home() {
             <Contact />
           </section>
         </main>
-        
+
         <Footer />
-      </div>
+    </GridLayout>
   );
 }
