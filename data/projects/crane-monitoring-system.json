@@ -2,7 +2,7 @@
   "id": 3,
   "category": "Industrial IoT",
   "description": "Intelligent crane monitoring system with real-time tracking, safety alerts, and advanced anti-collision technology at L&T Hazira Plant.",
-  "image": "/images/blog/CraneMonSS/crane_mon.png",
+  "image": "/images/blogs/elite/feature.png",
   "technologies": ["React", "Node.js", "LimeCore Pro", "VFD Monitoring", "Real-time Analytics"],
   "features": ["Real-time Monitoring", "Anti-Collision System", "VFD Parameters Tracking", "Safety Alerts"],
   "icon": "Activity",

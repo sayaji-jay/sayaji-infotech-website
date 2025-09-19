@@ -2,7 +2,7 @@
   "id": 4,
   "category": "Enterprise Software",
   "description": "Comprehensive Enterprise Resource Planning system with modern React frontend, ERPNext backend, and advanced task management capabilities.",
-  "image": "/images/blog/elite/feature.png",
+  "image": "/images/blogs/elite/feature.png",
   "technologies": ["React 19", "ERPNext", "Frappe", "Tailwind CSS", "Python"],
   "features": ["Task Management", "Real-time Dashboard", "Workflow Automation", "Custom Print Formats"],
   "icon": "Building",
@@ -33,7 +33,7 @@
       {
         "title": "📊 Advanced Dashboard System",
         "content": "Real-time analytics dashboard with live data visualization, performance metrics, and interactive charts showing business insights and custom KPIs with configurable thresholds.",
-        "image": "/images/blog/elite/feature.png",
+        "image": "/images/blogs/elite/kanban.png",
         "features": [
           "Real-time Analytics Dashboard with live data visualization",
           "Performance Metrics including customer growth and sales trends",
@@ -44,7 +44,7 @@
       {
         "title": "✅ Intelligent Task Management",
         "content": "Kanban board system with drag-and-drop functionality, automated task creation triggered by business events, and smart task routing based on user roles and workload.",
-        "image": "/images/blog/elite/kanban.png",
+        "image": "/images/blogs/elite/orderTask.png",
         "features": [
           "Kanban Board System with drag-and-drop functionality",
           "Automated Task Creation triggered by business events",
@@ -55,7 +55,6 @@
       {
         "title": "🔄 Business Process Automation",
         "content": "Automated conversion workflows from quotation to sales order, delivery tracking with status updates, and customer survey integration with comprehensive feedback collection.",
-        "image": "/images/blog/elite/orderTask.png",
         "features": [
           "Quotation-to-Sales Order automated conversion workflow",
           "Sales Order-to-Delivery tracking and status updates",

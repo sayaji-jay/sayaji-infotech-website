@@ -13,29 +13,6 @@ import {
 } from 'lucide-react';
 
 const Footer = () => {
-  const footerLinks = {
-    services: [
-      { name: 'Web Development', href: '#services' },
-      { name: 'Mobile Apps', href: '#services' },
-      { name: 'Cloud Solutions', href: '#services' },
-      { name: 'Enterprise Software', href: '#services' },
-      { name: 'Consulting', href: '#contact' }
-    ],
-    resources: [
-      { name: 'Portfolio', href: '#portfolio' },
-      { name: 'Case Studies', href: '#portfolio' },
-      { name: 'Testimonials', href: '#testimonials' },
-      { name: 'Blog', href: '#' },
-      { name: 'Support', href: '#contact' }
-    ],
-    company: [
-      { name: 'About Us', href: '#' },
-      { name: 'Careers', href: '#' },
-      { name: 'Contact', href: '#contact' },
-      { name: 'Privacy Policy', href: '#' },
-      { name: 'Terms of Service', href: '#' }
-    ]
-  };
 
   const socialLinks = [
     { name: 'Twitter', icon: Twitter, href: '#' },
@@ -49,92 +26,44 @@ const Footer = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 relative z-10 bg-slate-950/80 backdrop-blur-lg border border-white/10 rounded-2xl shadow-2xl shadow-purple-500/10 ring-1 ring-white/5 hover:shadow-purple-500/20 transition-all duration-500 mb-4">
         
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          
-          {/* Company Info */}
-          <div className="lg:col-span-1">
-            <Link href="/" className="inline-block mb-4">
-              <div className="w-40 h-20  p-2.5 flex items-center justify-center ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+
+          {/* Left Side - Logo and Company Info */}
+          <div className="flex flex-col">
+            <Link href="/" className="inline-block mb-6">
+              <div className="w-48 h-24 p-2.5 flex items-center justify-center">
                 <Image
                   src="/images/logo.png"
                   alt="Sayaji Infotech Logo"
-                  width={100}
-                  height={100}
+                  width={120}
+                  height={120}
                   className="w-full h-full object-contain filter brightness-110"
                 />
               </div>
             </Link>
-            <p className="text-gray-300 mb-6 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed text-base">
               We transform ideas into powerful digital solutions. From web applications to
               enterprise software, we deliver cutting-edge technology that drives business growth.
             </p>
-            
-            {/* Contact Info */}
-            <div className="space-y-3">
+          </div>
+
+          {/* Right Side - Contact Info */}
+          <div className="flex flex-col">
+            <h3 className="text-white font-semibold mb-6 text-lg">Get In Touch</h3>
+            <div className="space-y-4">
               <div className="flex items-center gap-3 text-gray-300">
-                <Mail className="w-4 h-4 text-purple-400" />
-                <span className="text-sm">office@sayajiinfotech.com</span>
+                <Mail className="w-5 h-5 text-purple-400" />
+                <span className="text-base">office@sayajiinfotech.com</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
-                <Phone className="w-4 h-4 text-purple-400" />
-                <span className="text-sm">+87329 92181</span>
+                <Phone className="w-5 h-5 text-purple-400" />
+                <span className="text-base">+87329 92181</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
-                <MapPin className="w-4 h-4 text-purple-400" />
-                <span className="text-sm">Vadodara, Gujarat, India</span>
+                <MapPin className="w-5 h-5 text-purple-400" />
+                <span className="text-base">Vadodara, Gujarat, India</span>
               </div>
             </div>
-          </div>
-
-          {/* Features Links */}
-          <div>
-            <h3 className="text-white font-semibold mb-6">Services</h3>
-            <ul className="space-y-4">
-              {footerLinks.services.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Resources Links */}
-          <div>
-            <h3 className="text-white font-semibold mb-6">Resources</h3>
-            <ul className="space-y-4">
-              {footerLinks.resources.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company Links */}
-          <div>
-            <h3 className="text-white font-semibold mb-6">Company</h3>
-            <ul className="space-y-4">
-              {footerLinks.company.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
 

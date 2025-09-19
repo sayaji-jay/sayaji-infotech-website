@@ -2,7 +2,7 @@
   "id": 8,
   "category": "Testing Solutions",
   "description": "Comprehensive transformer testing suite with automated protocols, real-time monitoring, and detailed analytics for Moon Light Electricals.",
-  "image": "/images/blog/transformer-testing/3.png",
+  "image": "/images/blogs/transformer-testing/1.png",
   "technologies": ["Python", "React", "Automated Testing", "Data Analytics", "Real-time Monitoring"],
   "features": ["Automated Testing", "Real-time Monitoring", "Comprehensive Reporting", "User-friendly Interface"],
   "icon": "Zap",
@@ -23,7 +23,7 @@
       {
         "title": "🔬 Automated Testing Protocols",
         "content": "The suite offers predefined testing procedures, ensuring consistency across all units. Automated protocols eliminate human error and guarantee reproducible results for every transformer tested.",
-        "image": "/images/blog/transformer-testing/1.png",
+        "image": "/images/blogs/transformer-testing/2.png",
         "features": [
           "Predefined testing procedures for consistency",
           "Automated test execution with minimal manual intervention",
@@ -45,7 +45,7 @@
       {
         "title": "📋 Comprehensive Reporting",
         "content": "Post-test reports are generated automatically, providing insights into performance metrics and highlighting any areas of concern. Detailed analytics ensure complete traceability.",
-        "image": "/images/blog/transformer-testing/3.png",
+        "image": "/images/blogs/transformer-testing/3.png",
         "features": [
           "Automated report generation with detailed insights",
           "Performance metrics analysis and documentation",

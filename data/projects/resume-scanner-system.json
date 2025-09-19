@@ -2,7 +2,7 @@
   "id": 7,
   "category": "AI Solutions",
   "description": "Intelligent resume scanning and candidate matching system powered by AI, automation, and semantic search for revolutionizing recruitment processes.",
-  "image": "/images/blog/resume_parser/resume_parser.png",
+  "image": "/images/blogs/resume_parser/resume_parser.png",
   "technologies": ["React", "Frappe", "Gemini AI", "OpenSearch", "Python"],
   "features": ["AI Data Extraction", "Semantic Search", "Automated Processing", "Candidate Matching"],
   "icon": "FileSearch",
@@ -23,7 +23,7 @@
       {
         "title": "🤖 AI-Powered Data Extraction",
         "content": "By integrating Gemini AI, the system intelligently extracts critical information from diverse resume formats, transforming unstructured data into standardized schema capturing names, skills, experience, and other relevant details.",
-        "image": "/images/blog/resume_parser/resume_parser.png",
+        "image": "/images/blogs/resume_parser/search-res.png",
         "features": [
           "Gemini AI integration for intelligent data extraction",
           "Support for diverse resume formats and layouts",
@@ -34,7 +34,7 @@
       {
         "title": "🔍 Advanced Semantic Search",
         "content": "The platform leverages OpenSearch to provide powerful semantic search functionality, enabling hiring managers to find candidates whose experience and skills align closely with job requirements, going beyond basic keyword matching.",
-        "image": "/images/blog/resume_parser/ss_search.png",
+        "image": "/images/blogs/resume_parser/search-res.png",
         "features": [
           "OpenSearch-powered semantic search capabilities",
           "Context-aware candidate matching algorithms",
@@ -45,7 +45,7 @@
       {
         "title": "⚡ Automated Resume Processing",
         "content": "The system efficiently processes large volumes of PDF resumes from designated folders. A scheduler automatically scans and analyzes resumes, saving valuable time for HR teams and ensuring no potential candidate is overlooked.",
-        "image": "/images/blog/resume_parser/search-res.png",
+        "image": "/images/blogs/resume_parser/share_candidate.png",
         "features": [
           "Automated batch processing of PDF resumes",
           "Scheduled scanning and analysis workflows",
@@ -56,7 +56,7 @@
       {
         "title": "📊 Intuitive User Interface",
         "content": "A custom-built React frontend displays detailed insights and analytics. The user-friendly interface empowers hiring managers to define search criteria, view comprehensive candidate profiles, and make informed decisions.",
-        "image": "/images/blog/resume_parser/share_candidate.png",
+        "image": "/images/blogs/resume_parser/search-res.png",
         "features": [
           "React-based responsive user interface",
           "Dynamic search forms with custom criteria",

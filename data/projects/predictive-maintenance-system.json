@@ -2,7 +2,7 @@
   "id": 6,
   "category": "Industrial IoT",
   "description": "Predictive maintenance system leveraging sensors, smart algorithms, and real-time monitoring to prevent machine failures at L&T Hazira Plant.",
-  "image": "/images/blog/PdMSS/pdm.png",
+    "image": "/images/blogs/elite/feature.png",
   "technologies": ["Python", "LimePi Zero", "React", "IoT Sensors", "Machine Learning"],
   "features": ["Anomaly Detection", "Real-time Monitoring", "Predictive Analytics", "Sensor Integration"],
   "icon": "Settings",

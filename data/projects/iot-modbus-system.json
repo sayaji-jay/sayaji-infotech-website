@@ -2,7 +2,7 @@
   "id": 5,
   "category": "IoT Solutions",
   "description": "Comprehensive IoT data collection system integrating Modbus TCP communication with REST API endpoints for industrial device monitoring.",
-  "image": "/images/blog/iot-modbus-system/feature.webp",
+  "image": "/images/blogs/elite/feature.png",
   "technologies": ["FastAPI", "Python", "Modbus TCP", "REST API", "Shell Scripting"],
   "features": ["Real-time Communication", "Offline Data Persistence", "Network Resilience", "Bulk Data Processing"],
   "icon": "Wifi",
