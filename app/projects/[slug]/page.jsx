@@ -5,6 +5,7 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import GridLayout from '@/components/ui/GridLayout';
 import {
   ArrowLeft,
   ExternalLink,
@@ -123,12 +124,8 @@ const ProjectDetail = () => {
   return (
     <>
       <Header />
-      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950/20 to-slate-950 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"></div>
-
-        <div className="relative z-10 pt-24">
+      <GridLayout className="min-h-screen">
+        <div className="pt-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Navigation */}
           <div className="flex items-center justify-between mb-8">
@@ -310,7 +307,7 @@ const ProjectDetail = () => {
           </div>
         </div>
         </div>
-      </div>
+      </GridLayout>
       <Footer />
     </>
   );

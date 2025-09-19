@@ -9,7 +9,10 @@ const ClientLogos = () => {
 
   return (
     <section className="py-16 bg-transparent relative overflow-hidden">
-      
+      {/* Gradient Fade Effects */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950/20 via-transparent to-slate-950/30 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-tl from-slate-950/20 via-transparent to-slate-950/30 pointer-events-none"></div>
+
       {/* Full Width Container */}
       <div className="w-full relative z-10">
         {/* Header */}

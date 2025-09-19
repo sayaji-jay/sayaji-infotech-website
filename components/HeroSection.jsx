@@ -8,7 +8,10 @@ import { AnimatedCounter } from "@/components/ui/animated-counter";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-transparent">
-      
+      {/* Gradient Fade Effects */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950/20 via-transparent to-slate-950/30 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-tl from-slate-950/20 via-transparent to-slate-950/30 pointer-events-none"></div>
+
       {/* Spotlight Effects */}
       <Spotlight className="-top-40 left-0 md:-top-20 md:left-60" fill="rgb(147, 51, 234)" />
       <Spotlight className="top-10 left-full h-[80vh] w-[50vw]" fill="rgb(79, 70, 229)" />

@@ -122,7 +122,11 @@ export default function WebsiteShowcase() {
 
   return (
     <section className="py-20 bg-transparent relative overflow-hidden">
-      <div className="container mx-auto px-4">
+      {/* Gradient Fade Effects */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950/20 via-transparent to-slate-950/30 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-tl from-slate-950/20 via-transparent to-slate-950/30 pointer-events-none"></div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">
             Have a look beautiful websites
