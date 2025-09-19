@@ -7,41 +7,49 @@ const websiteImages = [
     id: 1,
     title: "TraxBee IoT Solutions",
     image: "/images/screenshot/slider1.jpeg",
+    url: "http://traxbee.in/",
   },
   {
     id: 2,
-    title: "Modern Web Design",
+    title: "Deval Polymers",
     image: "/images/screenshot/slider2.jpeg",
+    url: "https://devalpolymers.com/",
   },
   {
     id: 3,
-    title: "Professional Portfolio",
+    title: "Lime Pi Site",
     image: "/images/screenshot/slider3.jpeg",
+    url: "https://lime-pi-site-five.vercel.app/",
   },
   {
     id: 4,
-    title: "Business Solution",
+    title: "Sayaji Bio",
     image: "/images/screenshot/slider4.jpeg",
+    url: "https://sayajibio.com/",
   },
   {
     id: 5,
-    title: "Creative Design",
+    title: "Search Ends",
     image: "/images/screenshot/slider5.jpeg",
+    url: "https://searchends.com/",
   },
   {
     id: 6,
-    title: "Enterprise Platform",
+    title: "Ruchit Dev",
     image: "/images/screenshot/slider7.jpeg",
+    url: "-",
   },
   {
     id: 7,
-    title: "Digital Innovation",
+    title: "FGG Projects",
     image: "/images/screenshot/slider8.jpeg",
+    url: "https://www.fggprojects.com/",
   },
   {
     id: 8,
-    title: "Tech Solutions",
+    title: "Linemark Crop Care",
     image: "/images/screenshot/slider9.jpeg",
+    url: "https://www.linemarkcropcare.com/",
   },
 ]
 
@@ -167,28 +175,29 @@ export default function WebsiteShowcase() {
                   <div
                     className={`relative bg-black rounded-[2.5rem] p-2 transition-all duration-2000 ${
                       item.distance === 0
-                        ? "shadow-2xl shadow-blue-500/30 ring-4 ring-blue-400/40 ring-offset-2 ring-offset-transparent"
-                        : "shadow-xl shadow-black/20"
+                        ? "shadow-lg shadow-blue-500/20 ring-2 ring-blue-400/30 ring-offset-1 ring-offset-transparent"
+                        : "shadow-md shadow-black/10"
                     }`}
                   >
                     <div className="bg-white rounded-[2rem] overflow-hidden">
                       {/* Phone Screen */}
                       <div className="relative h-[400px] w-[200px]">
-
+                        {/* Browser Chrome - Fixed to top */}
+                        <div className="absolute top-0 left-0 right-0 h-10 bg-gray-100 border-b flex items-center px-4 z-10">
+                          <div
+                            className="flex-1 bg-white rounded px-2 py-1 text-xs text-gray-600 cursor-pointer hover:bg-gray-50 transition-colors"
+                            onClick={() => window.open(item.url, '_blank')}
+                          >
+                            {item.title.toLowerCase().replace(/\s+/g, "")}.com
+                          </div>
+                        </div>
 
                         {/* Website Content */}
                         <img
                           src={item.image || "/placeholder.svg"}
                           alt={item.title}
-                          className="w-full h-full object-cover object-center transition-all duration-2000"
+                          className="w-full h-full object-cover object-center transition-all duration-2000 pt-10"
                         />
-
-                        {/* Browser Chrome */}
-                        <div className="absolute top-8 left-0 right-0 h-10 bg-gray-100 border-b flex items-center px-4 z-10">
-                          <div className="flex-1 bg-white rounded px-2 py-1 text-xs text-gray-600">
-                            {item.title.toLowerCase().replace(/\s+/g, "")}.com
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -214,8 +223,8 @@ export default function WebsiteShowcase() {
               onClick={() => setCurrentIndex(index)}
               className={`rounded-full transition-all duration-500 hover:scale-110 ${
                 index === currentIndex
-                  ? "bg-blue-500 w-8 h-3 shadow-lg shadow-blue-500/30"
-                  : "bg-muted hover:bg-muted-foreground/20 w-3 h-3"
+                  ? "bg-white w-8 h-3 shadow-lg shadow-white/30"
+                  : "bg-white/50 hover:bg-white/70 w-3 h-3"
               }`}
             />
           ))}
