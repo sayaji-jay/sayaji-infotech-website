@@ -1,12 +1,38 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Quote, Star, MessageSquare } from 'lucide-react';
+import { Quote, Star, MessageSquare, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState, useEffect } from 'react';
 import websiteData from '../data/website-data.json';
 
 const Testimonials = () => {
   // Get testimonials data from JSON
   const testimonials = websiteData.testimonials.testimonialColumns;
+
+  // Flatten all testimonials for mobile slider
+  const allTestimonials = testimonials.flat();
+
+  // Mobile slider state
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % allTestimonials.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + allTestimonials.length) % allTestimonials.length);
+  };
 
   const getPlatformIcon = (platform) => {
     switch (platform) {
@@ -138,13 +164,62 @@ const Testimonials = () => {
           </motion.p>
         </div>
 
-        {/* Testimonials Grid with Infinite Scroll */}
+        {/* Mobile Slider */}
+        <div className="md:hidden">
+          <div className="relative">
+            <div className="overflow-hidden rounded-2xl">
+              <motion.div
+                className="flex transition-transform duration-300 ease-in-out"
+                style={{
+                  transform: `translateX(-${currentSlide * 100}%)`
+                }}
+              >
+                {allTestimonials.map((testimonial, index) => (
+                  <div key={index} className="w-full flex-shrink-0 px-4">
+                    <TestimonialCard testimonial={testimonial} />
+                  </div>
+                ))}
+              </motion.div>
+            </div>
+
+            {/* Navigation Buttons */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center transition-all duration-300"
+            >
+              <ChevronLeft className="w-5 h-5 text-white" />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center transition-all duration-300"
+            >
+              <ChevronRight className="w-5 h-5 text-white" />
+            </button>
+
+            {/* Dots Indicator */}
+            <div className="flex justify-center mt-6 space-x-2">
+              {allTestimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === currentSlide
+                      ? 'bg-purple-500 w-6'
+                      : 'bg-white/30 hover:bg-white/50'
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop Grid with Infinite Scroll */}
         <motion.div
           initial={{ opacity: 0, filter: 'blur(10px)' }}
           whileInView={{ opacity: 1, filter: 'blur(0px)' }}
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true }}
-          className="relative h-[600px] overflow-hidden rounded-2xl"
+          className="hidden md:block relative h-[600px] overflow-hidden rounded-2xl"
           style={{
             maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)',
             WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)'
@@ -183,11 +258,11 @@ const Testimonials = () => {
           {/* Enhanced Gradient Fades with better visibility */}
           <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-slate-950 via-slate-950/95 via-slate-950/80 to-transparent pointer-events-none z-20"></div>
           <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-slate-950 via-slate-950/95 via-slate-950/80 to-transparent pointer-events-none z-20"></div>
-          
+
           {/* Additional stronger fade overlays */}
           <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-slate-950 via-slate-950/90 to-transparent pointer-events-none z-25"></div>
           <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-slate-950 via-slate-950/90 to-transparent pointer-events-none z-25"></div>
-          
+
           {/* Solid edges to ensure clean cut */}
           <div className="absolute inset-x-0 top-0 h-3 bg-slate-950 pointer-events-none z-30"></div>
           <div className="absolute inset-x-0 bottom-0 h-3 bg-slate-950 pointer-events-none z-30"></div>

@@ -7,7 +7,7 @@ import { AnimatedCounter } from "@/components/ui/animated-counter";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-transparent">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-transparent pt-20 md:pt-0">
       {/* Gradient Fade Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950/20 via-transparent to-slate-950/30 pointer-events-none"></div>
       <div className="absolute inset-0 bg-gradient-to-tl from-slate-950/20 via-transparent to-slate-950/30 pointer-events-none"></div>
@@ -29,13 +29,13 @@ const HeroSection = () => {
 
           {/* Main Heading */}
           <div className="space-y-4">
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold">
               <span className="bg-gradient-to-r from-white via-purple-200 to-purple-400 bg-clip-text text-transparent">
                 Sayaji Infotech
               </span>
             </h1>
-            
-            <p className="text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-300 max-w-4xl mx-auto">
+
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-gray-300 max-w-4xl mx-auto">
               Transforming Ideas into{' '}
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Digital Excellence
@@ -44,15 +44,15 @@ const HeroSection = () => {
           </div>
 
           {/* Description */}
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            We build scalable web applications, mobile solutions, and enterprise software 
-            that drive business growth. From startups to Fortune 500 companies, we deliver 
+          <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed px-4">
+            We build scalable web applications, mobile solutions, and enterprise software
+            that drive business growth. From startups to Fortune 500 companies, we deliver
             cutting-edge technology solutions.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <button className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 px-4">
+            <button className="group relative inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105 w-full sm:w-auto">
               <span className="relative z-10 flex items-center space-x-2">
                 <span>Start Your Project</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -60,7 +60,7 @@ const HeroSection = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-purple-700 to-pink-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
 
-            <button className="group inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-white/10 border border-white/20 rounded-xl backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-105">
+            <button className="group inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold text-white bg-white/10 border border-white/20 rounded-xl backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-105 w-full sm:w-auto">
               <span className="flex items-center space-x-2">
                 <Play className="w-5 h-5" />
                 <span>Watch Demo</span>

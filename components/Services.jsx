@@ -112,20 +112,20 @@ const Services = () => {
 
         {/* Technologies Section */}
         <div className="text-center">
-          <h3 className="text-2xl sm:text-3xl font-bold text-white mb-12">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-8 sm:mb-12">
             {websiteData.services.technologies.title}
           </h3>
 
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
             {technologies.map((tech, index) => (
               <div
                 key={index}
-                className="group px-6 py-3 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 hover:scale-105 transition-all duration-300"
+                className="group px-3 sm:px-6 py-2 sm:py-3 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 hover:scale-105 transition-all duration-300"
               >
-                <div className="flex items-center space-x-2">
-                  <span className="text-white font-medium">{tech.name}</span>
-                  <span className="text-gray-500 text-sm">•</span>
-                  <span className="text-gray-400 text-sm">{tech.category}</span>
+                <div className="flex items-center space-x-1 sm:space-x-2">
+                  <span className="text-white font-medium text-sm sm:text-base">{tech.name}</span>
+                  <span className="text-gray-500 text-xs sm:text-sm hidden sm:inline">•</span>
+                  <span className="text-gray-400 text-xs sm:text-sm hidden sm:inline">{tech.category}</span>
                 </div>
               </div>
             ))}
