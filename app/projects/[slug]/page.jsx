@@ -20,7 +20,13 @@ import {
   Heart,
   Database,
   Globe,
-  Smartphone
+  Smartphone,
+  Activity,
+  Building,
+  Wifi,
+  Settings,
+  FileSearch,
+  Zap
 } from 'lucide-react';
 
 const iconMap = {
@@ -29,7 +35,13 @@ const iconMap = {
   Users,
   Smartphone,
   Globe,
-  Database
+  Database,
+  Activity,
+  Building,
+  Wifi,
+  Settings,
+  FileSearch,
+  Zap
 };
 
 const ProjectDetail = () => {
@@ -209,9 +221,19 @@ const ProjectDetail = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm">
             {/* Hero Image */}
-            <div className="relative h-64 sm:h-80 bg-gradient-to-br from-gray-800 to-gray-900">
-              <div className={`absolute inset-0 bg-gradient-to-br ${project?.color} opacity-20`}></div>
-              <div className="flex items-center justify-center h-full">
+            <div className="relative h-64 sm:h-80 bg-gradient-to-br from-gray-800 to-gray-900 overflow-hidden">
+              {project?.image ? (
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'flex';
+                  }}
+                />
+              ) : null}
+              <div className={`${project?.image ? 'hidden' : 'flex'} absolute inset-0 bg-gradient-to-br ${project?.color} opacity-20 items-center justify-center`}>
                 <IconComponent className="w-20 h-20 text-gray-600" />
               </div>
             </div>
@@ -230,6 +252,20 @@ const ProjectDetail = () => {
                 <div key={index} className="mb-12">
                   <h3 className="text-2xl font-bold text-white mb-4">{section.title}</h3>
                   <p className="text-gray-300 leading-relaxed mb-6">{section.content}</p>
+
+                  {/* Section Image */}
+                  {section.image && (
+                    <div className="mb-6">
+                      <img
+                        src={section.image}
+                        alt={section.title}
+                        className="w-full h-64 object-cover rounded-lg border border-white/10"
+                        onError={(e) => {
+                          e.target.src = '/api/placeholder/600/400';
+                        }}
+                      />
+                    </div>
+                  )}
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {section.features?.map((feature, idx) => (

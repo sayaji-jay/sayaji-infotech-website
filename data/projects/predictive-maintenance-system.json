@@ -1,0 +1,81 @@
+{
+  "id": 6,
+  "category": "Industrial IoT",
+  "description": "Predictive maintenance system leveraging sensors, smart algorithms, and real-time monitoring to prevent machine failures at L&T Hazira Plant.",
+  "image": "/images/blog/PdMSS/pdm.png",
+  "technologies": ["Python", "LimePi Zero", "React", "IoT Sensors", "Machine Learning"],
+  "features": ["Anomaly Detection", "Real-time Monitoring", "Predictive Analytics", "Sensor Integration"],
+  "icon": "Settings",
+  "color": "from-orange-500 to-red-500",
+  "stats": {
+    "users": "100+",
+    "rating": 4.9,
+    "reviews": 35
+  },
+  "links": {
+    "live": "#",
+    "github": "#"
+  },
+  "date": "2023-09-01",
+  "content": {
+    "overview": "In the ever-evolving industrial landscape, machine downtime can be a costly affair. At L&T Hazira, we successfully implemented a predictive maintenance system that leverages cutting-edge technology to ensure operational efficiency and minimize unexpected machine breakdowns.",
+    "sections": [
+      {
+        "title": "🔧 Sensor Integration & Data Collection",
+        "content": "Each machine is equipped with a variety of sensors to capture vital parameters including vibration, temperature, pressure, and many more critical metrics for comprehensive monitoring.",
+        "image": "/images/blog/PdMSS/1.png",
+        "features": [
+          "Multi-parameter sensor integration (vibration, temperature, pressure)",
+          "Real-time data collection from critical machine components",
+          "High-frequency data sampling for accurate monitoring",
+          "Sensor calibration and maintenance protocols"
+        ]
+      },
+      {
+        "title": "🧠 Smart Algorithm Processing",
+        "content": "The sensor data is transmitted in real-time to a LimePi Zero, a compact yet powerful custom-made gateway device. This device processes the data every second using advanced algorithms.",
+        "image": "/images/blog/PdMSS/4.png",
+        "features": [
+          "LimePi Zero gateway for real-time data processing",
+          "Advanced anomaly detection algorithms",
+          "Machine learning models for pattern recognition",
+          "Automated threshold analysis and trend detection"
+        ]
+      },
+      {
+        "title": "⚠️ Anomaly Detection & Alerts",
+        "content": "Custom-built algorithms analyze incoming data to detect any anomalies. When irregularities are identified, the system automatically triggers alarms and alerts, notifying operators about potential issues.",
+        "image": "/images/blog/PdMSS/5.png",
+        "features": [
+          "Real-time anomaly detection with custom algorithms",
+          "Automated alarm generation for critical thresholds",
+          "Multi-channel alert system (email, SMS, dashboard)",
+          "Escalation protocols for critical maintenance events"
+        ]
+      },
+      {
+        "title": "📊 Real-Time Monitoring Dashboard",
+        "content": "The processed data is visualized on a custom-built web application offering real-time monitoring, user-friendly dashboards, and historical data analysis to identify patterns and trends.",
+        "image": "/images/blog/PdMSS/pdm.png",
+        "features": [
+          "Real-time monitoring of all critical machine parameters",
+          "Intuitive dashboards with innovative data visualization",
+          "Historical data analysis and trend identification",
+          "Comprehensive reporting and analytics capabilities"
+        ]
+      }
+    ],
+    "technicalStack": {
+      "Hardware": ["LimePi Zero - Custom gateway device", "Industrial Sensors - Vibration, temperature, pressure", "Network Infrastructure - Reliable data transmission", "Edge Computing - Real-time processing capability"],
+      "Software": ["Python - Data processing and algorithms", "React - Web dashboard interface", "Machine Learning - Predictive models", "Real-time Analytics - Live data processing"],
+      "Algorithms": ["Anomaly Detection - Pattern recognition", "Threshold Analysis - Critical limit monitoring", "Trend Analysis - Long-term pattern identification", "Predictive Models - Failure prediction algorithms"],
+      "Dashboard": ["Real-time Visualization - Live parameter display", "Historical Analysis - Trend and pattern insights", "Alert Management - Notification and escalation", "Report Generation - Comprehensive maintenance reports"]
+    },
+    "businessImpact": [
+      "Reduced machine downtime through early detection of issues",
+      "Cost savings from proactive maintenance vs reactive repairs",
+      "Improved safety through real-time monitoring of critical parameters",
+      "Enhanced decision-making with data-driven maintenance insights"
+    ]
+  }
+}

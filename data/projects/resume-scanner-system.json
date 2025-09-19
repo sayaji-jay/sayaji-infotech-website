@@ -1,0 +1,81 @@
+{
+  "id": 7,
+  "category": "AI Solutions",
+  "description": "Intelligent resume scanning and candidate matching system powered by AI, automation, and semantic search for revolutionizing recruitment processes.",
+  "image": "/images/blog/resume_parser/resume_parser.png",
+  "technologies": ["React", "Frappe", "Gemini AI", "OpenSearch", "Python"],
+  "features": ["AI Data Extraction", "Semantic Search", "Automated Processing", "Candidate Matching"],
+  "icon": "FileSearch",
+  "color": "from-cyan-500 to-blue-500",
+  "stats": {
+    "users": "75+",
+    "rating": 4.8,
+    "reviews": 28
+  },
+  "links": {
+    "live": "#",
+    "github": "#"
+  },
+  "date": "2025-04-29",
+  "content": {
+    "overview": "At Sayaji Infotech, we implemented an intelligent resume scanning and candidate matching system for SearchEnds, delivering a cutting-edge recruitment platform powered by automation, AI, and semantic search that transforms traditional recruitment processes.",
+    "sections": [
+      {
+        "title": "🤖 AI-Powered Data Extraction",
+        "content": "By integrating Gemini AI, the system intelligently extracts critical information from diverse resume formats, transforming unstructured data into standardized schema capturing names, skills, experience, and other relevant details.",
+        "image": "/images/blog/resume_parser/resume_parser.png",
+        "features": [
+          "Gemini AI integration for intelligent data extraction",
+          "Support for diverse resume formats and layouts",
+          "Standardized JSON schema for consistent data structure",
+          "Advanced OCR capabilities for scanned documents"
+        ]
+      },
+      {
+        "title": "🔍 Advanced Semantic Search",
+        "content": "The platform leverages OpenSearch to provide powerful semantic search functionality, enabling hiring managers to find candidates whose experience and skills align closely with job requirements, going beyond basic keyword matching.",
+        "image": "/images/blog/resume_parser/ss_search.png",
+        "features": [
+          "OpenSearch-powered semantic search capabilities",
+          "Context-aware candidate matching algorithms",
+          "Advanced filtering and ranking mechanisms",
+          "Real-time search with instant results"
+        ]
+      },
+      {
+        "title": "⚡ Automated Resume Processing",
+        "content": "The system efficiently processes large volumes of PDF resumes from designated folders. A scheduler automatically scans and analyzes resumes, saving valuable time for HR teams and ensuring no potential candidate is overlooked.",
+        "image": "/images/blog/resume_parser/search-res.png",
+        "features": [
+          "Automated batch processing of PDF resumes",
+          "Scheduled scanning and analysis workflows",
+          "Bulk import capabilities with progress tracking",
+          "Error handling and recovery mechanisms"
+        ]
+      },
+      {
+        "title": "📊 Intuitive User Interface",
+        "content": "A custom-built React frontend displays detailed insights and analytics. The user-friendly interface empowers hiring managers to define search criteria, view comprehensive candidate profiles, and make informed decisions.",
+        "image": "/images/blog/resume_parser/share_candidate.png",
+        "features": [
+          "React-based responsive user interface",
+          "Dynamic search forms with custom criteria",
+          "Comprehensive candidate profile views",
+          "Collaborative tools for team-based hiring"
+        ]
+      }
+    ],
+    "technicalStack": {
+      "Backend": ["Frappe Framework - Robust data management", "Python - Server-side processing", "OpenSearch - Semantic search engine", "Automated Scheduling - Background job processing"],
+      "Frontend": ["React.js - Modern user interface", "Responsive Design - Mobile-first approach", "Interactive Components - Dynamic user experience", "Real-time Updates - Live search results"],
+      "AI/ML": ["Gemini AI - Advanced data extraction", "Natural Language Processing - Text analysis", "Machine Learning - Pattern recognition", "Semantic Analysis - Context understanding"],
+      "Features": ["Candidate Sharing - Team collaboration", "Profile Editing - Data management", "Search Analytics - Performance insights", "Export Capabilities - Data portability"]
+    },
+    "businessImpact": [
+      "Dramatically reduced resume screening time through automation",
+      "Increased precision in candidate matching with AI-powered search",
+      "Enhanced team collaboration through sharing and editing features",
+      "Improved hiring decision quality with comprehensive analytics"
+    ]
+  }
+}

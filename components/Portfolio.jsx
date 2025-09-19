@@ -177,12 +177,6 @@ const Portfolio = () => {
                   ))}
                 </div>
               </div>
-
-              <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-3 rounded-full shadow-lg">
-                  <ArrowRight className="w-4 h-4" />
-                </div>
-              </div>
             </Link>
           ))}
         </div>

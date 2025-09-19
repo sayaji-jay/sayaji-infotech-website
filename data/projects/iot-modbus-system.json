@@ -1,0 +1,79 @@
+{
+  "id": 5,
+  "category": "IoT Solutions",
+  "description": "Comprehensive IoT data collection system integrating Modbus TCP communication with REST API endpoints for industrial device monitoring.",
+  "image": "/images/blog/iot-modbus-system/feature.webp",
+  "technologies": ["FastAPI", "Python", "Modbus TCP", "REST API", "Shell Scripting"],
+  "features": ["Real-time Communication", "Offline Data Persistence", "Network Resilience", "Bulk Data Processing"],
+  "icon": "Wifi",
+  "color": "from-green-500 to-emerald-500",
+  "stats": {
+    "users": "25+",
+    "rating": 4.7,
+    "reviews": 18
+  },
+  "links": {
+    "live": "#",
+    "github": "#"
+  },
+  "date": "2024-01-15",
+  "content": {
+    "overview": "We developed a comprehensive IoT data collection system that integrates Modbus TCP communication with REST API endpoints. This system enables real-time monitoring and data collection from industrial devices through a robust, scalable architecture that handles both online and offline scenarios.",
+    "sections": [
+      {
+        "title": "📡 Real-time Modbus TCP Communication",
+        "content": "Direct integration with industrial devices using Modbus TCP protocol for reliable data acquisition. The system continuously reads 8 registers from RUT200 routers with comprehensive error handling.",
+        "image": "/images/blog/iot-modbus-system/feature.webp",
+        "features": [
+          "Direct Modbus TCP integration with industrial devices",
+          "Continuous monitoring of 8 device registers",
+          "Reliable data acquisition with error handling",
+          "Configurable device parameters and polling intervals"
+        ]
+      },
+      {
+        "title": "💾 Offline Data Persistence",
+        "content": "Local storage mechanism that preserves data during network outages, ensuring zero data loss with automatic synchronization when connectivity is restored.",
+        "features": [
+          "Local JSON-based data storage during network outages",
+          "Zero data loss guarantee with offline buffering",
+          "Automatic bulk synchronization when connectivity restored",
+          "Intelligent data queuing and retry mechanisms"
+        ]
+      },
+      {
+        "title": "🌐 RESTful API Endpoints",
+        "content": "FastAPI-based backend providing robust API endpoints for data ingestion, status monitoring, and bulk data processing with comprehensive logging system.",
+        "features": [
+          "FastAPI-based robust backend architecture",
+          "Single endpoint for efficient data ingestion",
+          "Support for both single and bulk data formats",
+          "Comprehensive error handling and logging system"
+        ]
+      },
+      {
+        "title": "🔄 Network Resilience",
+        "content": "Sophisticated offline handling with continuous connectivity monitoring, automatic fallback mechanisms, and intelligent error recovery for uninterrupted operations.",
+        "image": "/images/blog/iot-modbus-system/flow.png",
+        "features": [
+          "Continuous API server availability monitoring",
+          "Automatic fallback to offline storage mode",
+          "Intelligent error recovery and retry mechanisms",
+          "Network status tracking and reporting"
+        ]
+      }
+    ],
+    "technicalStack": {
+      "Backend": ["FastAPI - Python web framework", "Uvicorn - ASGI server for high performance", "Python JSON - Data processing and storage", "Custom Logging - Monitoring and debugging"],
+      "Communication": ["Modbus TCP - Industrial device communication", "REST APIs - HTTP-based data endpoints", "TCP/IP - Network communication protocol", "Shell Scripts - Device integration layer"],
+      "Storage": ["Local JSON - File-based data persistence", "Bulk Processing - Efficient data handling", "Timestamp Tracking - Data integrity assurance", "Offline Buffering - Network outage handling"],
+      "Monitoring": ["Real-time Status - Live system monitoring", "Error Logging - Comprehensive debugging", "Performance Metrics - System health tracking", "Alert System - Critical event notifications"]
+    },
+    "businessImpact": [
+      "99.9% data integrity with zero data loss during network outages",
+      "Real-time monitoring providing instant visibility into device status",
+      "Automated operations reducing manual intervention requirements",
+      "Scalable architecture supporting multiple devices and data types"
+    ]
+  }
+}

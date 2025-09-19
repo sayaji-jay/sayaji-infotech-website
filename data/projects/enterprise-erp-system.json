@@ -1,0 +1,80 @@
+{
+  "id": 4,
+  "category": "Enterprise Software",
+  "description": "Comprehensive Enterprise Resource Planning system with modern React frontend, ERPNext backend, and advanced task management capabilities.",
+  "image": "/images/blog/elite/feature.png",
+  "technologies": ["React 19", "ERPNext", "Frappe", "Tailwind CSS", "Python"],
+  "features": ["Task Management", "Real-time Dashboard", "Workflow Automation", "Custom Print Formats"],
+  "icon": "Building",
+  "color": "from-purple-500 to-pink-500",
+  "stats": {
+    "users": "200+",
+    "rating": 4.8,
+    "reviews": 45
+  },
+  "links": {
+    "live": "#",
+    "github": "#"
+  },
+  "date": "2024-12-19",
+  "content": {
+    "overview": "We developed a comprehensive Enterprise Resource Planning (ERP) system that seamlessly integrates ERPNext's powerful backend with a modern React-based frontend. This solution transforms traditional ERP workflows into intuitive, user-friendly experiences while maintaining enterprise-grade functionality.",
+    "sections": [
+      {
+        "title": "🏢 Enterprise ERP Integration",
+        "content": "Seamless ERPNext integration with custom Frappe hooks and APIs, providing automated workflow management from quotation to delivery with real-time data synchronization.",
+        "features": [
+          "Seamless ERPNext Integration with custom Frappe hooks and APIs",
+          "Automated Workflow Management from quotation to delivery",
+          "Real-time Data Synchronization between frontend and ERPNext backend",
+          "Role-based Access Control with comprehensive permissions"
+        ]
+      },
+      {
+        "title": "📊 Advanced Dashboard System",
+        "content": "Real-time analytics dashboard with live data visualization, performance metrics, and interactive charts showing business insights and custom KPIs with configurable thresholds.",
+        "image": "/images/blog/elite/feature.png",
+        "features": [
+          "Real-time Analytics Dashboard with live data visualization",
+          "Performance Metrics including customer growth and sales trends",
+          "Interactive Charts showing monthly trends and business insights",
+          "Custom KPIs with configurable metrics and thresholds"
+        ]
+      },
+      {
+        "title": "✅ Intelligent Task Management",
+        "content": "Kanban board system with drag-and-drop functionality, automated task creation triggered by business events, and smart task routing based on user roles and workload.",
+        "image": "/images/blog/elite/kanban.png",
+        "features": [
+          "Kanban Board System with drag-and-drop functionality",
+          "Automated Task Creation triggered by business events",
+          "Smart Task Routing based on user roles and workload",
+          "Real-time Notifications for task updates and deadlines"
+        ]
+      },
+      {
+        "title": "🔄 Business Process Automation",
+        "content": "Automated conversion workflows from quotation to sales order, delivery tracking with status updates, and customer survey integration with comprehensive feedback collection.",
+        "image": "/images/blog/elite/orderTask.png",
+        "features": [
+          "Quotation-to-Sales Order automated conversion workflow",
+          "Sales Order-to-Delivery tracking and status updates",
+          "Customer Survey Integration with feedback collection",
+          "Document Generation with custom print formats"
+        ]
+      }
+    ],
+    "technicalStack": {
+      "Backend": ["ERPNext Framework - Core business logic and data management", "Frappe Framework - Custom app development and API endpoints", "Python - Server-side business logic and automation", "MySQL/PostgreSQL - Robust data storage and transactions"],
+      "Frontend": ["React 19 - Modern hooks and functional components", "Vite - Lightning-fast development and optimized builds", "Tailwind CSS - Utility-first responsive styling", "Radix UI - Accessible component primitives"],
+      "Features": ["Lexical Editor - Rich text editing in task descriptions", "Date-fns - Comprehensive date manipulation", "React Router - Client-side navigation and routing", "Context API - Global state management"],
+      "Development": ["ESLint - Code quality and consistency", "Prettier - Automated code formatting", "TypeScript - Type safety and better development", "Jest - Comprehensive testing suite"]
+    },
+    "businessImpact": [
+      "60% reduction in task management time through automated workflows",
+      "Real-time collaboration enabling instant team updates",
+      "Automated document generation reducing manual work by 80%",
+      "Improved customer satisfaction through faster response times"
+    ]
+  }
+}
