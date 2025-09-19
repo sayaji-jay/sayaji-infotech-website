@@ -6,27 +6,42 @@ const websiteImages = [
   {
     id: 1,
     title: "TraxBee IoT Solutions",
-    image: "/modern-iot-dashboard-mobile-app-with-blue-theme.jpg",
+    image: "/images/screenshot/slider1.jpeg",
   },
   {
     id: 2,
-    title: "Deval Polymers",
-    image: "/green-industrial-website-mobile-view-with-packagin.jpg",
+    title: "Modern Web Design",
+    image: "/images/screenshot/slider2.jpeg",
   },
   {
     id: 3,
-    title: "LimePi Zero",
-    image: "/purple-tech-product-mobile-website-with-device-sho.jpg",
+    title: "Professional Portfolio",
+    image: "/images/screenshot/slider3.jpeg",
   },
   {
     id: 4,
-    title: "Sarjanam Organic",
-    image: "/green-organic-products-mobile-website-with-natural.jpg",
+    title: "Business Solution",
+    image: "/images/screenshot/slider4.jpeg",
   },
   {
     id: 5,
-    title: "Search Ends",
-    image: "/orange-job-portal-mobile-website-with-talent-match.jpg",
+    title: "Creative Design",
+    image: "/images/screenshot/slider5.jpeg",
+  },
+  {
+    id: 6,
+    title: "Enterprise Platform",
+    image: "/images/screenshot/slider7.jpeg",
+  },
+  {
+    id: 7,
+    title: "Digital Innovation",
+    image: "/images/screenshot/slider8.jpeg",
+  },
+  {
+    id: 8,
+    title: "Tech Solutions",
+    image: "/images/screenshot/slider9.jpeg",
   },
 ]
 
@@ -165,7 +180,7 @@ export default function WebsiteShowcase() {
                         <img
                           src={item.image || "/placeholder.svg"}
                           alt={item.title}
-                          className="w-full h-full object-cover transition-all duration-2000"
+                          className="w-full h-full object-cover object-center transition-all duration-2000"
                         />
 
                         {/* Browser Chrome */}
