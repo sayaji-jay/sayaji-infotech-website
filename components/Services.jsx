@@ -1,62 +1,41 @@
 'use client';
 
-import { 
-  Code2, 
-  Smartphone, 
-  Globe, 
-  Database, 
-  Cloud, 
-  Shield, 
-  Zap, 
+import {
+  Code2,
+  Smartphone,
+  Globe,
+  Database,
+  Cloud,
+  Shield,
+  Zap,
   Users,
   ArrowRight,
-  CheckCircle
+  CheckCircle,
+  Settings
 } from 'lucide-react';
 
-const Services = () => {
-  const services = [
-    {
-      icon: Code2,
-      title: "Web Development",
-      description: "Custom web applications built with modern frameworks like React, Next.js, and Node.js for optimal performance.",
-      features: ["Responsive Design", "SEO Optimized", "Performance Focused", "Scalable Architecture"],
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: Smartphone,
-      title: "Mobile Development", 
-      description: "Native and cross-platform mobile apps for iOS and Android using React Native and Flutter.",
-      features: ["Cross-Platform", "Native Performance", "Offline Support", "Push Notifications"],
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      icon: Cloud,
-      title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure and DevOps solutions on AWS, Google Cloud, and Azure platforms.",
-      features: ["Auto Scaling", "High Availability", "Cost Optimization", "Security First"],
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      icon: Database,
-      title: "Enterprise Software",
-      description: "Custom enterprise solutions including CRM, ERP, and workflow automation systems.",
-      features: ["Custom Integration", "Data Analytics", "Process Automation", "24/7 Support"],
-      color: "from-orange-500 to-red-500"
-    }
-  ];
+import { ShineBorder } from './ui/shine-border';
+import websiteData from '../data/website-data.json';
 
-  const technologies = [
-    { name: "React", category: "Frontend" },
-    { name: "Next.js", category: "Framework" },
-    { name: "Node.js", category: "Backend" },
-    { name: "Python", category: "Backend" },
-    { name: "PostgreSQL", category: "Database" },
-    { name: "MongoDB", category: "Database" },
-    { name: "AWS", category: "Cloud" },
-    { name: "Docker", category: "DevOps" },
-    { name: "TypeScript", category: "Language" },
-    { name: "GraphQL", category: "API" }
-  ];
+const Services = () => {
+  // Icon mapping for dynamic loading
+  const iconMap = {
+    Code2,
+    Smartphone,
+    Globe,
+    Cloud,
+    Database,
+    Settings,
+    Zap
+  };
+
+  // Map services from JSON with dynamic icons
+  const services = websiteData.services.servicesList.map(service => ({
+    ...service,
+    icon: iconMap[service.icon]
+  }));
+
+  const technologies = websiteData.services.technologies.techList;
 
 
   return (
@@ -73,19 +52,18 @@ const Services = () => {
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-full px-6 py-2 mb-6">
             <Zap className="w-4 h-4 text-purple-400" />
-            <span className="text-purple-300 text-sm font-medium">Our Services</span>
+            <span className="text-purple-300 text-sm font-medium">{websiteData.services.badge.text}</span>
           </div>
 
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Comprehensive{' '}
+            {websiteData.services.title.split(' ').slice(0, 1).join(' ')}{' '}
             <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
-              Digital Solutions
+              {websiteData.services.title.split(' ').slice(1).join(' ')}
             </span>
           </h2>
 
           <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            From concept to deployment, we provide end-to-end technology solutions
-            that help businesses thrive in the digital landscape.
+            {websiteData.services.subtitle}
           </p>
         </div>
 
@@ -96,6 +74,7 @@ const Services = () => {
               key={index}
               className="group relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 hover:-translate-y-2 transition-all duration-500"
             >
+              <ShineBorder shineColor="white" />
               {/* Hover Effect */}
               <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
               
@@ -137,7 +116,7 @@ const Services = () => {
         {/* Technologies Section */}
         <div className="text-center">
           <h3 className="text-2xl sm:text-3xl font-bold text-white mb-12">
-            Technologies We Master
+            {websiteData.services.technologies.title}
           </h3>
 
           <div className="flex flex-wrap justify-center gap-4">

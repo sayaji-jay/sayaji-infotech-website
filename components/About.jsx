@@ -98,7 +98,7 @@ const About = () => {
               {/* Logo - 50% */}
               <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
                 <Image
-                  src="/images/logo.png"
+                  src="/images/logo1.png"
                   alt="Sayaji Infotech Logo"
                   width={200}
                   height={200}

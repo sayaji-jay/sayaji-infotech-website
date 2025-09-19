@@ -2,91 +2,11 @@
 
 import { motion } from 'framer-motion';
 import { Quote, Star, MessageSquare } from 'lucide-react';
+import websiteData from '../data/website-data.json';
 
 const Testimonials = () => {
-  const testimonials = [
-    // Column 1
-    [
-      {
-        name: 'Jason Miller',
-        role: 'CEO, TechStart Inc.',
-        avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face',
-        platform: 'upwork',
-        rating: 5,
-        text: 'Sayaji Infotech delivered an exceptional mobile app that exceeded our expectations. Their attention to detail and professional approach made the entire process seamless. Highly recommended for any serious business venture.'
-      },
-      {
-        name: 'Dan Martin',
-        role: 'Founder, Digital Solutions',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face',
-        platform: 'upwork',
-        rating: 5,
-        text: 'Working with Sayaji Infotech has been a game-changer for our business. Their team combines technical expertise with excellent communication skills. The best development partner we\'ve ever worked with.'
-      },
-      {
-        name: 'Anthony Rodriguez',
-        role: 'Product Manager, InnovateCorp',
-        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face',
-        platform: 'upwork',
-        rating: 5,
-        text: 'Outstanding work quality and timely delivery. The team goes above and beyond to ensure client satisfaction. Would definitely work with them again on future projects.'
-      }
-    ],
-    // Column 2
-    [
-      {
-        name: 'Sarah Johnson',
-        role: 'CTO, HealthTech Solutions',
-        avatar: 'https://images.unsplash.com/photo-1494790108755-2616b056b8d4?w=80&h=80&fit=crop&crop=face',
-        platform: 'freelancer',
-        rating: 5,
-        text: 'Sayaji Infotech helped us build a robust healthcare platform that handles thousands of users daily. Their expertise in scalable architecture and security is impressive. Truly professional service.'
-      },
-      {
-        name: 'Michael Chen',
-        role: 'Entrepreneur, E-commerce Ventures',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face',
-        platform: 'upwork',
-        rating: 5,
-        text: 'The e-commerce platform they developed for us has significantly boosted our online sales. Clean code, modern design, and excellent performance. Couldn\'t be happier with the results.'
-      },
-      {
-        name: 'Lisa Thompson',
-        role: 'Director, Finance Plus',
-        avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face',
-        platform: 'freelancer',
-        rating: 5,
-        text: 'Their team delivered a complex financial dashboard with advanced analytics. The attention to UI/UX details and data security standards exceeded our expectations. Highly professional team.'
-      }
-    ],
-    // Column 3
-    [
-      {
-        name: 'Robert Kim',
-        role: 'VP Engineering, DataFlow Inc.',
-        avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face',
-        platform: 'upwork',
-        rating: 5,
-        text: 'Excellent technical skills and project management. They delivered our enterprise software on time and within budget. The team\'s proactive communication kept us informed throughout the development process.'
-      },
-      {
-        name: 'Jennifer Davis',
-        role: 'Marketing Director, GrowthLab',
-        avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80&h=80&fit=crop&crop=face',
-        platform: 'upwork',
-        rating: 5,
-        text: 'The marketing automation platform they built has transformed our lead generation process. Intuitive interface, powerful features, and seamless integrations. Outstanding development work.'
-      },
-      {
-        name: 'David Wilson',
-        role: 'Founder, LogisticsPro',
-        avatar: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=80&h=80&fit=crop&crop=face',
-        platform: 'freelancer',
-        rating: 5,
-        text: 'They developed a comprehensive logistics management system that streamlined our operations. Great problem-solving skills and innovative solutions. A pleasure to work with such a talented team.'
-      }
-    ]
-  ];
+  // Get testimonials data from JSON
+  const testimonials = websiteData.testimonials.testimonialColumns;
 
   const getPlatformIcon = (platform) => {
     switch (platform) {
@@ -133,11 +53,19 @@ const Testimonials = () => {
       {/* Author Info */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <img 
-            src={testimonial.avatar} 
-            alt={testimonial.name}
-            className="w-12 h-12 rounded-full object-cover ring-2 ring-purple-500/20 group-hover:ring-purple-500/40 transition-all duration-300"
-          />
+          {testimonial.avatar ? (
+            <img
+              src={testimonial.avatar}
+              alt={testimonial.name}
+              className="w-12 h-12 rounded-full object-cover ring-2 ring-purple-500/20 group-hover:ring-purple-500/40 transition-all duration-300"
+            />
+          ) : (
+            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center ring-2 ring-purple-500/20 group-hover:ring-purple-500/40 transition-all duration-300">
+              <span className="text-white font-semibold text-lg">
+                {testimonial.name.charAt(0)}
+              </span>
+            </div>
+          )}
           <div>
             <div className="text-white font-semibold text-sm group-hover:text-purple-200 transition-colors duration-300">
               {testimonial.name}
@@ -192,25 +120,24 @@ const Testimonials = () => {
             className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-full px-6 py-2 mb-6"
           >
             <MessageSquare className="w-4 h-4 text-purple-400" />
-            <span className="text-purple-300 text-sm font-medium">Client Testimonials</span>
+            <span className="text-purple-300 text-sm font-medium">{websiteData.testimonials.badge.text}</span>
           </div>
 
-          <h2 
+          <h2
             variants={itemVariants}
             className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6"
           >
-            What Our{' '}
+            {websiteData.testimonials.title.split(' ').slice(0, 2).join(' ')}{' '}
             <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
-              Clients Say
+              {websiteData.testimonials.title.split(' ').slice(2).join(' ')}
             </span>
           </h2>
-          
-          <motion.p 
+
+          <motion.p
             variants={itemVariants}
             className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed"
           >
-            Don't just take our word for it. Here's what our satisfied clients have to say 
-            about their experience working with Sayaji Infotech.
+            {websiteData.testimonials.subtitle}
           </motion.p>
         </div>
 

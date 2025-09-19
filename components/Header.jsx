@@ -4,10 +4,12 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const pathname = usePathname();
 
   const navItems = [
     { name: 'Home', href: '#home' },
@@ -17,26 +19,45 @@ const Header = () => {
     { name: 'Contact', href: '#contact' }
   ];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = navItems.map(item => item.href.substring(1));
-      const currentSection = sections.find(section => {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          return rect.top <= 100 && rect.bottom >= 100;
-        }
-        return false;
-      });
-      if (currentSection) {
-        setActiveSection(currentSection);
-      }
-    };
+  // Check if we're on a project page or any sub-page (not the main page)
+  const isOnSubPage = pathname !== '/';
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  // Function to get the correct href for navigation items
+  const getNavHref = (href) => {
+    if (isOnSubPage) {
+      // If on a sub-page, navigate to main page with the section hash
+      return `/${href}`;
+    }
+    // If on main page, use the hash directly
+    return href;
+  };
+
+  useEffect(() => {
+    // Only track scroll on main page
+    if (!isOnSubPage) {
+      const handleScroll = () => {
+        const sections = navItems.map(item => item.href.substring(1));
+        const currentSection = sections.find(section => {
+          const element = document.getElementById(section);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            return rect.top <= 100 && rect.bottom >= 100;
+          }
+          return false;
+        });
+        if (currentSection) {
+          setActiveSection(currentSection);
+        }
+      };
+
+      window.addEventListener('scroll', handleScroll);
+      handleScroll();
+      return () => window.removeEventListener('scroll', handleScroll);
+    } else {
+      // Reset active section when on sub-pages
+      setActiveSection('');
+    }
+  }, [isOnSubPage]);
 
   return (
     <header className="fixed top-4 left-4 right-4 z-50">
@@ -46,12 +67,12 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <div className="w-12 h-12 p-2 flex items-center justify-center">
+              <div className="w-25 h25 p-2 flex items-center justify-center">
                 <Image
                   src="/images/logo.png"
                   alt="Sayaji Infotech Logo"
-                  width={40}
-                  height={40}
+                  width={100}
+                  height={100}
                   className="w-full h-full object-contain filter brightness-110"
                   priority
                 />
@@ -64,15 +85,15 @@ const Header = () => {
             {navItems.map((item) => (
               <div key={item.name}>
                 <Link
-                  href={item.href}
+                  href={getNavHref(item.href)}
                   className={`relative px-3 py-2 rounded-full text-sm font-medium transition-all duration-300 group ${
-                    activeSection === item.href.substring(1)
+                    activeSection === item.href.substring(1) && !isOnSubPage
                       ? 'text-white bg-gradient-to-r from-purple-600/20 to-pink-600/20 ring-1 ring-purple-500/30 shadow-lg shadow-purple-500/25'
                       : 'text-gray-300 hover:text-white hover:bg-white/5'
                   }`}
                 >
                   <span className="relative z-10">{item.name}</span>
-                  {activeSection === item.href.substring(1) && (
+                  {activeSection === item.href.substring(1) && !isOnSubPage && (
                     <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600/10 to-pink-600/10 animate-pulse"></div>
                   )}
                 </Link>
@@ -83,7 +104,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link
-              href="#contact"
+              href={getNavHref('#contact')}
               className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
             >
               Get Started
@@ -107,9 +128,9 @@ const Header = () => {
             {navItems.map((item) => (
               <Link
                 key={item.name}
-                href={item.href}
+                href={getNavHref(item.href)}
                 className={`relative block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
-                  activeSection === item.href.substring(1)
+                  activeSection === item.href.substring(1) && !isOnSubPage
                     ? 'text-white bg-gradient-to-r from-purple-600/20 to-pink-600/20 ring-1 ring-purple-500/30'
                     : 'text-gray-300 hover:text-white hover:bg-white/5'
                 }`}
@@ -119,7 +140,7 @@ const Header = () => {
               </Link>
             ))}
             <Link
-              href="#contact"
+              href={getNavHref('#contact')}
               className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 mt-4"
               onClick={() => setIsMenuOpen(false)}
             >

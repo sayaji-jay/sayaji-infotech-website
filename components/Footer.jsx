@@ -60,12 +60,12 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-4">
-              <div className="w-14 h-14  p-2.5 flex items-center justify-center ">
+              <div className="w-40 h-20  p-2.5 flex items-center justify-center ">
                 <Image
                   src="/images/logo.png"
                   alt="Sayaji Infotech Logo"
-                  width={48}
-                  height={48}
+                  width={100}
+                  height={100}
                   className="w-full h-full object-contain filter brightness-110"
                 />
               </div>
@@ -79,11 +79,11 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-gray-300">
                 <Mail className="w-4 h-4 text-purple-400" />
-                <span className="text-sm">hello@sayajiinfotech.com</span>
+                <span className="text-sm">office@sayajiinfotech.com</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
                 <Phone className="w-4 h-4 text-purple-400" />
-                <span className="text-sm">+91 98765 43210</span>
+                <span className="text-sm">+87329 92181</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
                 <MapPin className="w-4 h-4 text-purple-400" />

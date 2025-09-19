@@ -1,0 +1,233 @@
+{
+  "trustedCompanies": {
+    "title": "Trusted by industry leaders worldwide",
+    "subtitle": "Join 500+ companies that trust us with their digital transformation",
+    "companies": [
+      {
+        "name": "L&T",
+        "text": "L&T",
+        "website": "https://larsentoubro.com",
+        "logo": "/clients/1.png"
+      },
+      {
+        "name": "L&T",
+        "text": "L&T",
+        "website": "https://larsentoubro.com",
+        "logo": "/clients/2.png"
+      },
+      {
+        "name": "L&T",
+        "text": "L&T",
+        "website": "https://larsentoubro.com",
+        "logo": "/clients/3.png"
+      },
+      {
+        "name": "L&T",
+        "text": "L&T",
+        "website": "https://larsentoubro.com",
+        "logo": "/clients/4.png"
+      }
+      
+    ]
+  },
+  "services": {
+    "badge": {
+      "text": "Our Services",
+      "icon": "Zap"
+    },
+    "title": "Comprehensive Digital Solutions",
+    "subtitle": "From concept to deployment, we provide end-to-end technology solutions that help businesses thrive in the digital landscape.",
+    "servicesList": [
+      {
+        "id": "enterprise-software",
+        "icon": "Database",
+        "title": "Enterprise Software (ERP & CRM)",
+        "description": "We build powerful ERPNext, CRM, and HRMS applications to streamline and automate your business processes.",
+        "features": [
+          "ERPNext & Frappe Framework",
+          "CRM Solutions",
+          "HRMS & Payroll",
+          "Custom Modules for Enterprises"
+        ],
+        "color": "from-indigo-500 to-blue-500",
+        "technologies": ["ERPNext", "Frappe", "Python", "FastAPI", "React"]
+      },
+      {
+        "id": "industry-4.0",
+        "icon": "Settings",
+        "title": "Industry 4.0 Apps",
+        "description": "We develop custom Industry 4.0 web applications.", 
+        "features": [
+          "Sensor Data Collection",
+          "Real-time Monitoring",
+          "Predictive Maintenance",
+          "Alarm & Dashboard Alerts"
+        ],
+        "color": "from-blue-500 to-cyan-500",
+        "technologies": ["IoT", "Python", "Node.js", "React"]
+      },
+      {
+        "id": "custom-business-apps",
+        "icon": "Code2",
+        "title": "Custom Business Apps",
+        "description": "Process optimization apps tailored to your business needs.", 
+        "features": [
+          "Workflow Automation",
+          "Business Logic Customized",
+          "Data-Driven Insights",
+          "Scalable Architecture"
+        ],
+        "color": "from-purple-500 to-pink-500",
+        "technologies": ["React", "Node.js", "PostgreSQL", "Python"]
+      },
+      {
+        "id": "website-development",
+        "icon": "Globe",
+        "title": "Website Development",
+        "description": "Theme based websites with hosting, deployable quickly to establish your online presence.",
+        "features": [
+          "Responsive Design",
+          "Fast Deployment",
+          "SEO Friendly",
+          "Modern UI/UX"
+        ],
+        "color": "from-green-500 to-emerald-500",
+        "technologies": ["HTML5", "CSS3", "React", "Next.js"]
+      }
+    ],
+    "technologies": {
+      "title": "Technologies We Master",
+      "techList": [
+        { "name": "React", "category": "Frontend" },
+        { "name": "Next.js", "category": "Framework" },
+        { "name": "JavaScript", "category": "Frontend" },
+        { "name": "Node.js", "category": "Backend" },
+        { "name": "Python", "category": "Backend" },
+        { "name": "FastAPI", "category": "Backend" },
+        { "name": "Frappe", "category": "ERP/Framework" },
+        { "name": "ERPNext", "category": "ERP/Framework" },
+        { "name": ".NET", "category": "Backend" },
+        { "name": "PostgreSQL", "category": "Database" },
+        { "name": "IoT", "category": "Hardware/Integration" },
+        { "name": "AI/ML", "category": "Artificial Intelligence" },
+        { "name": "LangChain", "category": "AI Framework" },
+        { "name": "OpenAI", "category": "AI API" }
+      ]
+    }
+  },
+  "testimonials": {
+    "badge": {
+      "text": "Client Testimonials",
+      "icon": "MessageSquare"
+    },
+    "title": "What Our Clients Say",
+    "subtitle": "Don't just take our word for it. Here's what our satisfied clients have to say about their experience working with Sayaji Infotech.",
+    "testimonialColumns": [
+      [
+        {
+          "id": "t1",
+          "name": "Ravi Kumar",
+          "role": "IT Head, L&T",
+          "avatar": "/avatars/ravi.png",
+          "platform": "direct",
+          "rating": 5,
+          "text": "Their ERPNext implementation helped us centralize operations and improve productivity by 40%.",
+          "projectType": "ERPNext Development",
+          "duration": "6 Months"
+        },
+        {
+          "id": "t2",
+          "name": "Priya Mehta",
+          "role": "CEO, TechVista",
+          "avatar": "/avatars/priya.png",
+          "platform": "linkedin",
+          "rating": 5,
+          "text": "Outstanding CRM solution for our sales team. Automation made everything seamless.",
+          "projectType": "CRM Solution",
+          "duration": "4 Months"
+        },
+        {
+          "id": "t3",
+          "name": "Arjun Patel",
+          "role": "Operations Head, SmartIoT Ltd.",
+          "avatar": "/avatars/arjun.png",
+          "platform": "direct",
+          "rating": 5,
+          "text": "Industry 4.0 dashboard transformed our factory monitoring with real-time alerts.",
+          "projectType": "Industry 4.0 App",
+          "duration": "3 Months"
+        }
+      ],
+      [
+        {
+          "id": "t4",
+          "name": "Neha Shah",
+          "role": "CTO, FinSoft",
+          "avatar": "/avatars/neha.png",
+          "platform": "direct",
+          "rating": 5,
+          "text": "Custom business app saved us 200+ hours per month with process automation.",
+          "projectType": "Custom Business App",
+          "duration": "5 Months"
+        },
+        {
+          "id": "t5",
+          "name": "Amit Joshi",
+          "role": "Manager, GreenEnergy",
+          "avatar": "/avatars/amit.png",
+          "platform": "linkedin",
+          "rating": 4,
+          "text": "IoT integration with predictive maintenance reduced downtime drastically.",
+          "projectType": "IoT Integration",
+          "duration": "7 Months"
+        },
+        {
+          "id": "t6",
+          "name": "Deepak Singh",
+          "role": "Director, EduTechPro",
+          "avatar": "/avatars/deepak.png",
+          "platform": "direct",
+          "rating": 5,
+          "text": "Website development team delivered a fast, SEO-friendly site ahead of schedule.",
+          "projectType": "Website Development",
+          "duration": "2 Months"
+        }
+      ],
+      [
+        {
+          "id": "t7",
+          "name": "Sonia Dsouza",
+          "role": "Founder, AIWorks",
+          "avatar": "/avatars/sonia.png",
+          "platform": "direct",
+          "rating": 5,
+          "text": "LangChain-powered AI chatbot transformed our customer support experience.",
+          "projectType": "AI Integration",
+          "duration": "4 Months"
+        },
+        {
+          "id": "t8",
+          "name": "Harsh Verma",
+          "role": "Product Manager, MedTech Solutions",
+          "avatar": "/avatars/harsh.png",
+          "platform": "direct",
+          "rating": 4,
+          "text": "FastAPI backend performance was top-notch and well optimized.",
+          "projectType": "Backend Development",
+          "duration": "3 Months"
+        },
+        {
+          "id": "t9",
+          "name": "Kiran Patel",
+          "role": "CEO, RetailNext",
+          "avatar": "/avatars/kiran.png",
+          "platform": "linkedin",
+          "rating": 5,
+          "text": "Custom ERP modules tailored for retail helped us manage inventory efficiently.",
+          "projectType": "ERP Customization",
+          "duration": "5 Months"
+        }
+      ]
+    ]
+  }
+}

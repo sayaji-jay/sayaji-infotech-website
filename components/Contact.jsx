@@ -17,28 +17,21 @@ const Contact = () => {
       icon: Phone,
       title: 'Phone',
       description: 'Our team is here to help.',
-      contact: '+91 98765 43210',
-      action: 'tel:+919876543210'
+      contact: '+87329 92181',
+      action: 'tel:+918732992181'
     },
     {
       icon: Mail,
       title: 'Email',
       description: 'Send us an email anytime!',
-      contact: 'hello@sayajiinfotech.com',
-      action: 'mailto:hello@sayajiinfotech.com'
+      contact: 'office@sayajiinfotech.com',
+      action: 'mailto:office@sayajiinfotech.com'
     },
     {
       icon: MapPin,
       title: 'Office',
       description: 'Visit our development center.',
-      contact: 'Pune, Maharashtra, India',
-      action: '#'
-    },
-    {
-      icon: Headphones,
-      title: 'Live Support',
-      description: '24/7 technical assistance.',
-      contact: 'Start Live Chat',
+      contact: 'SB-3, Race Course Towers, Race Course Rd, near Pashabhai Park,opp Natubhai Circle, Vadiwadi, Vadodara',
       action: '#'
     }
   ];
