@@ -1,6 +1,6 @@
 'use client';
 
-import { ReactLenis } from 'lenis/react';
+// import { ReactLenis } from 'lenis/react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import ClientLogos from '@/components/ClientLogos';
@@ -14,8 +14,7 @@ import TextMarque from '@/components/TextMarque';
 
 export default function Home() {
   return (
-    <ReactLenis root>
-      <div className="relative min-h-screen bg-slate-950">
+    <div className="relative min-h-screen bg-slate-950">
         <Header />
         
         <main className="relative">
@@ -59,6 +58,5 @@ export default function Home() {
         
         <Footer />
       </div>
-    </ReactLenis>
   );
 }
