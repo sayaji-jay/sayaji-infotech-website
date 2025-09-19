@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import ClientLogos from '@/components/ClientLogos';
 import Services from '@/components/Services';
+import WebsiteShowcase from '@/components/WebsiteShowcase';
 import Portfolio from '@/components/Portfolio';
 import About from '@/components/About';
 import Testimonials from '@/components/Testimonials';
@@ -30,6 +31,12 @@ export default function Home() {
           <section id="services">
             <TextMarque text="Our Services • Digital Solutions • Technology Excellence •" />
             <Services />
+          </section>
+
+          {/* Website Showcase Section */}
+          <section id="website-showcase">
+            <TextMarque text="Have a look beautiful websites we've designed•" />
+            <WebsiteShowcase />
           </section>
 
           {/* Portfolio Section */}
