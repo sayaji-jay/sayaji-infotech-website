@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import ImageWithFallback from './ui/image-with-fallback';
 
 const websiteImages = [
   {
@@ -193,9 +194,10 @@ export default function WebsiteShowcase() {
                         </div>
 
                         {/* Website Content */}
-                        <img
-                          src={item.image || "/placeholder.svg"}
+                        <ImageWithFallback
+                          src={item.image}
                           alt={item.title}
+                          fallbackSrc="/images/placeholder-website.svg"
                           className="w-full h-full object-cover object-center transition-all duration-2000 pt-10"
                         />
                       </div>

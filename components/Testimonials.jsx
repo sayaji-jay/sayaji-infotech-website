@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Quote, Star, MessageSquare, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import websiteData from '../data/website-data.json';
+import Avatar from './ui/avatar';
 
 const Testimonials = () => {
   // Get testimonials data from JSON
@@ -79,19 +80,14 @@ const Testimonials = () => {
       {/* Author Info */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
-          {testimonial.avatar ? (
-            <img
-              src={testimonial.avatar}
-              alt={testimonial.name}
-              className="w-12 h-12 rounded-full object-cover ring-2 ring-purple-500/20 group-hover:ring-purple-500/40 transition-all duration-300"
-            />
-          ) : (
-            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center ring-2 ring-purple-500/20 group-hover:ring-purple-500/40 transition-all duration-300">
-              <span className="text-white font-semibold text-lg">
-                {testimonial.name.charAt(0)}
-              </span>
-            </div>
-          )}
+          <Avatar
+            src={testimonial.avatar}
+            alt={testimonial.name}
+            name={testimonial.name}
+            size="md"
+            fallbackType="cartoon"
+            className="ring-2 ring-purple-500/20 group-hover:ring-purple-500/40 transition-all duration-300"
+          />
           <div>
             <div className="text-white font-semibold text-sm group-hover:text-purple-200 transition-colors duration-300">
               {testimonial.name}

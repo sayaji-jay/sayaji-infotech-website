@@ -6,8 +6,22 @@ import { Spotlight } from "@/components/ui/spotlight";
 import { AnimatedCounter } from "@/components/ui/animated-counter";
 
 const HeroSection = () => {
+  const scrollToContact = () => {
+    const contactSection = document.querySelector('section[class*="py-24"]');
+    if (contactSection) {
+      contactSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
+  const openLinkedIn = () => {
+    window.open('https://www.linkedin.com/company/sayaji-infotech/', '_blank');
+  };
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-transparent pt-20 md:pt-0">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-transparent pt-32 md:pt-0">
       {/* Gradient Fade Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950/20 via-transparent to-slate-950/30 pointer-events-none"></div>
       <div className="absolute inset-0 bg-gradient-to-tl from-slate-950/20 via-transparent to-slate-950/30 pointer-events-none"></div>
@@ -52,7 +66,10 @@ const HeroSection = () => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 px-4">
-            <button className="group relative inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105 w-full sm:w-auto">
+            <button
+              onClick={scrollToContact}
+              className="group relative inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105 w-full sm:w-auto"
+            >
               <span className="relative z-10 flex items-center space-x-2">
                 <span>Start Your Project</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -60,7 +77,10 @@ const HeroSection = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-purple-700 to-pink-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
 
-            <button className="group inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold text-white bg-white/10 border border-white/20 rounded-xl backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-105 w-full sm:w-auto">
+            <button
+              onClick={openLinkedIn}
+              className="group inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold text-white bg-white/10 border border-white/20 rounded-xl backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-105 w-full sm:w-auto"
+            >
               <span className="flex items-center space-x-2">
                 <Play className="w-5 h-5" />
                 <span>Watch Demo</span>

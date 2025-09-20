@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import websiteData from '../data/website-data.json';
+import ImageWithFallback from './ui/image-with-fallback';
 
 const ClientLogos = () => {
   // Get clients data from JSON
@@ -56,9 +57,10 @@ const ClientLogos = () => {
                   key={`${client.name}-${index}`}
                   className="flex-shrink-0 w-40 h-16 flex items-center justify-center"
                 >
-                  <img
+                  <ImageWithFallback
                     src={`/images${client.logo}`}
                     alt={client.name}
+                    fallbackSrc="/images/placeholder-logo.svg"
                     className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
                   />
                 </div>
@@ -92,9 +94,10 @@ const ClientLogos = () => {
                   key={`${client.name}-reverse-${index}`}
                   className="flex-shrink-0 w-40 h-16 flex items-center justify-center"
                 >
-                  <img
+                  <ImageWithFallback
                     src={`/images${client.logo}`}
                     alt={client.name}
+                    fallbackSrc="/images/placeholder-logo.svg"
                     className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
                   />
                 </div>

@@ -15,6 +15,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import Link from 'next/link';
+import ImageWithFallback from './ui/image-with-fallback';
 
 const iconMap = {
   ShoppingCart,
@@ -101,9 +102,10 @@ const Portfolio = () => {
             >
               <div className="relative h-48 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900">
-                  <img
+                  <ImageWithFallback
                     src={project.image}
                     alt={project.title}
+                    fallbackSrc="/images/placeholder-project.svg"
                     className="w-full h-full object-cover"
                   />
                 </div>
