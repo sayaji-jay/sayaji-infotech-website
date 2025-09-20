@@ -56,11 +56,11 @@ const Portfolio = () => {
 
   if (loading) {
     return (
-      <section className="py-24 bg-transparent relative overflow-hidden">
+      <section className="py-24 bg-transparent light:bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <div className="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500 mb-4"></div>
-            <p className="text-white light:text-gray-900">Loading projects...</p>
+            <p className="text-white light:text-purple-950">Loading projects...</p>
           </div>
         </div>
       </section>
@@ -68,7 +68,7 @@ const Portfolio = () => {
   }
 
   return (
-    <section className="py-24 bg-transparent relative overflow-hidden">
+    <section className="py-24 bg-transparent light:bg-white relative overflow-hidden">
       {/* Gradient Fade Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950/20 via-transparent to-slate-950/30 light:from-transparent light:to-transparent pointer-events-none"></div>
       <div className="absolute inset-0 bg-gradient-to-tl from-slate-950/20 via-transparent to-slate-950/30 light:from-transparent light:to-transparent pointer-events-none"></div>
@@ -76,18 +76,18 @@ const Portfolio = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-full px-6 py-2 mb-6">
-            <Code2 className="w-4 h-4 text-purple-400" />
-            <span className="text-purple-300 light:text-purple-700 text-sm font-medium">Our Portfolio</span>
+            <Code2 className="w-4 h-4 text-white light:text-black" />
+            <span className="text-white light:text-black text-sm font-medium">Our Portfolio</span>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white light:text-gray-900 mb-6">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white light:text-purple-950 mb-6">
             Featured{' '}
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 light:from-purple-600 light:via-pink-600 light:to-blue-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 light:from-purple-700 light:via-pink-700 light:to-blue-700 bg-clip-text text-transparent">
               Projects
             </span>
           </h2>
 
-          <p className="text-xl text-gray-400 light:text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-400 light:text-purple-950 max-w-3xl mx-auto leading-relaxed">
             Explore our latest work and see how we've helped businesses transform
             their digital presence with innovative solutions.
           </p>
@@ -98,7 +98,7 @@ const Portfolio = () => {
             <Link
               key={project.id}
               href={`/projects/${project.slug}`}
-              className="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm hover:bg-white/10 hover:-translate-y-2 hover:scale-105 transition-all duration-500 h-full flex flex-col cursor-pointer"
+              className="group relative bg-white/5 light:bg-white border border-white/10 light:border-gray-200 rounded-2xl overflow-hidden backdrop-blur-sm hover:bg-white/10 light:hover:bg-gray-50 hover:-translate-y-2 hover:scale-105 transition-all duration-500 h-full flex flex-col cursor-pointer light:shadow-lg"
             >
               <div className="relative h-48 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900">
@@ -138,23 +138,23 @@ const Portfolio = () => {
               </div>
 
               <div className="p-6 flex-1 flex flex-col">
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                <h3 className="text-xl font-bold text-white light:text-purple-950 mb-2 group-hover:text-purple-300 light:group-hover:text-purple-700 transition-colors">
                   {project.title}
                 </h3>
 
-                <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                <p className="text-gray-400 light:text-purple-950 text-sm leading-relaxed mb-4">
                   {project.description}
                 </p>
 
                 <div className="flex items-center justify-between mb-4 text-sm">
-                  <div className="flex items-center space-x-1 text-gray-400">
+                  <div className="flex items-center space-x-1 text-gray-400 light:text-purple-950">
                     <Users className="w-4 h-4" />
                     <span>{project.stats.users} users</span>
                   </div>
                   <div className="flex items-center space-x-1 text-yellow-400">
                     <Star className="w-4 h-4 fill-current" />
                     <span>{project.stats.rating}</span>
-                    <span className="text-gray-500">({project.stats.reviews})</span>
+                    <span className="text-gray-500 light:text-purple-950">({project.stats.reviews})</span>
                   </div>
                 </div>
 
@@ -162,13 +162,13 @@ const Portfolio = () => {
                   {project.technologies.slice(0, 3).map((tech, idx) => (
                     <span
                       key={idx}
-                      className="px-2 py-1 text-xs bg-white/10 text-gray-300 rounded-md"
+                      className="px-2 py-1 text-xs bg-white/10 light:bg-gray-100 text-gray-300 light:text-purple-950 rounded-md"
                     >
                       {tech}
                     </span>
                   ))}
                   {project.technologies.length > 3 && (
-                    <span className="px-2 py-1 text-xs bg-white/5 text-gray-400 rounded-md">
+                    <span className="px-2 py-1 text-xs bg-white/5 light:bg-gray-50 text-gray-400 light:text-purple-950 rounded-md">
                       +{project.technologies.length - 3} more
                     </span>
                   )}
@@ -178,7 +178,7 @@ const Portfolio = () => {
                   {project.features.slice(0, 4).map((feature, idx) => (
                     <div key={idx} className="flex items-center space-x-2">
                       <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${project.color}`}></div>
-                      <span className="text-xs text-gray-400 truncate">{feature}</span>
+                      <span className="text-xs text-gray-400 light:text-purple-950 truncate">{feature}</span>
                     </div>
                   ))}
                 </div>

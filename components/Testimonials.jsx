@@ -62,11 +62,11 @@ const Testimonials = () => {
     <div className="group bg-gradient-to-br from-white/10 to-white/5 light:from-gray-50 light:to-white backdrop-blur-sm border border-white/10 light:border-gray-200 rounded-2xl p-6 mb-6 hover:bg-gradient-to-br hover:from-white/15 hover:to-white/10 light:hover:from-gray-100 light:hover:to-gray-50 hover:border-purple-500/30 light:hover:border-purple-300 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/10 light:shadow-lg">
       {/* Quote Icon */}
       <div className="mb-4">
-        <Quote className="w-8 h-8 text-purple-400 group-hover:text-purple-300 transition-colors duration-300" />
+        <Quote className="w-8 h-8 text-purple-400 light:text-purple-950 group-hover:text-purple-300 light:group-hover:text-purple-700 transition-colors duration-300" />
       </div>
 
       {/* Testimonial Text */}
-      <p className="text-gray-300 light:text-gray-700 leading-relaxed mb-6 group-hover:text-gray-200 light:group-hover:text-gray-800 transition-colors duration-300">
+      <p className="text-gray-300 light:text-purple-950 leading-relaxed mb-6 group-hover:text-gray-200 light:group-hover:text-purple-800 transition-colors duration-300">
         "{testimonial.text}"
       </p>
 
@@ -89,15 +89,15 @@ const Testimonials = () => {
             className="ring-2 ring-purple-500/20 group-hover:ring-purple-500/40 transition-all duration-300"
           />
           <div>
-            <div className="text-white light:text-gray-900 font-semibold text-sm group-hover:text-purple-200 light:group-hover:text-purple-700 transition-colors duration-300">
+            <div className="text-white light:text-purple-950 font-semibold text-sm group-hover:text-purple-200 light:group-hover:text-purple-700 transition-colors duration-300">
               {testimonial.name}
             </div>
-            <div className="text-gray-400 light:text-gray-600 text-xs">
+            <div className="text-gray-400 light:text-purple-950 text-xs">
               {testimonial.role}
             </div>
           </div>
         </div>
-        <div className="text-purple-400 light:text-purple-600 group-hover:text-purple-300 light:group-hover:text-purple-700 transition-colors duration-300">
+        <div className="text-purple-400 light:text-purple-950 group-hover:text-purple-300 light:group-hover:text-purple-700 transition-colors duration-300">
           {getPlatformIcon(testimonial.platform)}
         </div>
       </div>
@@ -126,7 +126,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-24 bg-transparent relative overflow-hidden">
+    <section className="py-24 bg-transparent light:bg-white relative overflow-hidden">
       {/* Gradient Fade Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950/20 via-transparent to-slate-950/30 light:from-transparent light:to-transparent pointer-events-none"></div>
       <div className="absolute inset-0 bg-gradient-to-tl from-slate-950/20 via-transparent to-slate-950/30 light:from-transparent light:to-transparent pointer-events-none"></div>
@@ -138,23 +138,23 @@ const Testimonials = () => {
             variants={itemVariants}
             className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-full px-6 py-2 mb-6"
           >
-            <MessageSquare className="w-4 h-4 text-purple-400" />
-            <span className="text-purple-300 light:text-purple-700 text-sm font-medium">{websiteData.testimonials.badge.text}</span>
+            <MessageSquare className="w-4 h-4 text-white light:text-black" />
+            <span className="text-white light:text-black text-sm font-medium">{websiteData.testimonials.badge.text}</span>
           </div>
 
           <h2
             variants={itemVariants}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white light:text-gray-900 mb-6"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white light:text-purple-950 mb-6"
           >
             {websiteData.testimonials.title.split(' ').slice(0, 2).join(' ')}{' '}
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 light:from-purple-600 light:via-pink-600 light:to-blue-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 light:from-purple-700 light:via-pink-700 light:to-blue-700 bg-clip-text text-transparent">
               {websiteData.testimonials.title.split(' ').slice(2).join(' ')}
             </span>
           </h2>
 
           <motion.p
             variants={itemVariants}
-            className="text-xl text-gray-400 light:text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl text-gray-400 light:text-purple-950 max-w-3xl mx-auto leading-relaxed"
           >
             {websiteData.testimonials.subtitle}
           </motion.p>
@@ -181,15 +181,15 @@ const Testimonials = () => {
             {/* Navigation Buttons */}
             <button
               onClick={prevSlide}
-              className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center transition-all duration-300"
+              className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/10 light:bg-gray-100 hover:bg-white/20 light:hover:bg-gray-200 backdrop-blur-sm border border-white/20 light:border-gray-300 rounded-full flex items-center justify-center transition-all duration-300"
             >
-              <ChevronLeft className="w-5 h-5 text-white" />
+              <ChevronLeft className="w-5 h-5 text-white light:text-purple-950" />
             </button>
             <button
               onClick={nextSlide}
-              className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center transition-all duration-300"
+              className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/10 light:bg-gray-100 hover:bg-white/20 light:hover:bg-gray-200 backdrop-blur-sm border border-white/20 light:border-gray-300 rounded-full flex items-center justify-center transition-all duration-300"
             >
-              <ChevronRight className="w-5 h-5 text-white" />
+              <ChevronRight className="w-5 h-5 text-white light:text-purple-950" />
             </button>
 
             {/* Dots Indicator */}

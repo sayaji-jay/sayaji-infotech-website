@@ -7,11 +7,13 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { AnimatedThemeToggler } from '@/components/ui/animated-theme-toggler';
 import { ShineBorder } from '@/components/ui/shine-border';
+import { useTheme } from '@/contexts/ThemeContext';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const pathname = usePathname();
+  const { theme } = useTheme();
 
   const navItems = [
     { name: 'Home', href: '#home' },
@@ -75,7 +77,7 @@ const Header = () => {
                   alt="Sayaji Infotech Logo"
                   width={100}
                   height={100}
-                  className="w-full h-full object-contain filter brightness-110"
+                  className={`w-full h-full object-contain filter brightness-110 ${theme === 'light' ? 'invert' : ''}`}
                   priority
                 />
               </div>
@@ -103,13 +105,8 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Theme Toggle Button */}
-          <div className="hidden md:block">
-            <AnimatedThemeToggler className="p-3 rounded-full nav-item transition-all duration-300 transform hover:scale-105 hover:shadow-lg" />
-          </div>
-
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* CTA Button and Theme Toggle */}
+          <div className="hidden md:flex items-center space-x-3">
             <div className="relative">
               <ShineBorder
                 borderWidth={3}
@@ -124,6 +121,7 @@ const Header = () => {
                 Get Started
               </Link>
             </div>
+            <AnimatedThemeToggler className="p-3 rounded-full nav-item transition-all duration-300 transform hover:scale-105 hover:shadow-lg" />
           </div>
 
           {/* Mobile menu button */}

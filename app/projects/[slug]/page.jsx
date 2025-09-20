@@ -198,21 +198,25 @@ const ProjectDetail = () => {
 
             {/* Action Buttons */}
             <div className="flex items-center justify-center space-x-4">
-              <a
-                href={project?.links?.live}
-                className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
-              >
-                <ExternalLink className="w-4 h-4" />
-                <span>Live Demo</span>
-              </a>
+              {project?.links?.live && project.links.live !== '#' && project.links.live.trim() !== '' && (
+                <a
+                  href={project.links.live}
+                  className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  <span>Live Demo</span>
+                </a>
+              )}
 
-              <a
-                href={project?.links?.github}
-                className="inline-flex items-center space-x-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 border border-white/20"
-              >
-                <Github className="w-4 h-4" />
-                <span>View Code</span>
-              </a>
+              {project?.links?.github && project.links.github !== '#' && project.links.github.trim() !== '' && (
+                <a
+                  href={project.links.github}
+                  className="inline-flex items-center space-x-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 border border-white/20"
+                >
+                  <Github className="w-4 h-4" />
+                  <span>View Code</span>
+                </a>
+              )}
             </div>
           </div>
         </div>

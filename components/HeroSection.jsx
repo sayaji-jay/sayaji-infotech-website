@@ -1,12 +1,15 @@
 'use client';
 
-import React from "react";
+import React, { useState } from "react";
 import { ArrowRight, Play, Code2, Database, Globe, Smartphone } from "lucide-react";
 import { Spotlight } from "@/components/ui/spotlight";
 import { AnimatedCounter } from "@/components/ui/animated-counter";
 import { ShineBorder } from "@/components/ui/shine-border";
+import VideoModal from "@/components/ui/VideoModal";
 
 const HeroSection = () => {
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+
   const scrollToContact = () => {
     const contactSection = document.querySelector('section[class*="py-24"]');
     if (contactSection) {
@@ -17,12 +20,16 @@ const HeroSection = () => {
     }
   };
 
-  const openLinkedIn = () => {
-    window.open('https://www.linkedin.com/company/sayaji-infotech/', '_blank');
+  const openVideoModal = () => {
+    setIsVideoModalOpen(true);
+  };
+
+  const closeVideoModal = () => {
+    setIsVideoModalOpen(false);
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-transparent pt-32 md:pt-0">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-transparent light:bg-white pt-32 md:pt-0">
       {/* Gradient Fade Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950/20 via-transparent to-slate-950/30 light:hidden pointer-events-none"></div>
       <div className="absolute inset-0 bg-gradient-to-tl from-slate-950/20 via-transparent to-slate-950/30 light:hidden pointer-events-none"></div>
@@ -38,8 +45,8 @@ const HeroSection = () => {
         <div className="space-y-8">
           {/* Badge */}
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-full px-6 py-2">
-            <span className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></span>
-            <span className="text-purple-300 light:text-purple-700 text-sm font-medium">Enterprise-Ready Solutions</span>
+            <span className="w-2 h-2 text-white light:text-black rounded-full animate-pulse"></span>
+            <span className="text-white light:text-black text-sm font-medium">Enterprise-Ready Solutions</span>
           </div>
 
           {/* Main Heading */}
@@ -87,7 +94,7 @@ const HeroSection = () => {
             </div>
 
             <button
-              onClick={openLinkedIn}
+              onClick={openVideoModal}
               className="group inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold text-white light:text-gray-700 bg-white/10 light:bg-gray-100 border border-white/20 light:border-gray-300 rounded-xl backdrop-blur-sm transition-all duration-300 hover:bg-white/20 light:hover:bg-gray-200 hover:scale-105 w-full sm:w-auto"
             >
               <span className="flex items-center space-x-2">
@@ -119,7 +126,7 @@ const HeroSection = () => {
                     />
                   )}
                 </div>
-                <div className="text-sm text-gray-400 light:text-gray-800 mt-1">{stat.label}</div>
+                <div className="text-sm text-gray-400 light:text-purple-950 mt-1">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -128,6 +135,14 @@ const HeroSection = () => {
 
       {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-950 to-transparent light:hidden"></div>
+
+      {/* Video Modal */}
+      <VideoModal
+        isOpen={isVideoModalOpen}
+        onClose={closeVideoModal}
+        videoUrl="https://www.youtube.com/watch?v=dQw4w9WgXcQ" // Replace with your actual demo video URL
+        title="Sayaji Infotech - Company Demo"
+      />
     </section>
   );
 };

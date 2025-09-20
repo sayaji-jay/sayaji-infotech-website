@@ -11,8 +11,10 @@ import {
   MapPin,
   ArrowRight
 } from 'lucide-react';
+import { useTheme } from '@/contexts/ThemeContext';
 
 const Footer = () => {
+  const { theme } = useTheme();
 
   const socialLinks = [
     { name: 'Twitter', icon: Twitter, href: '#' },
@@ -37,7 +39,7 @@ const Footer = () => {
                   alt="Sayaji Infotech Logo"
                   width={120}
                   height={120}
-                  className="w-full h-full object-contain filter brightness-110"
+                  className={`w-full h-full object-contain filter brightness-110 ${theme === 'light' ? 'invert' : ''}`}
                 />
               </div>
             </Link>
