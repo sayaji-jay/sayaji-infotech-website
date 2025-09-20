@@ -126,106 +126,106 @@
       [
         {
           "id": "t1",
-          "name": "Ravi Kumar",
-          "role": "IT Head, L&T",
-          "avatar": "/avatars/ravi.png",
+          "name": "Sunny Khatri",
+          "role": "CEO, TraxBee",
+          "avatar": "/images/client/TB.png",
           "platform": "direct",
           "rating": 5,
-          "text": "Their ERPNext implementation helped us centralize operations and improve productivity by 40%.",
-          "projectType": "ERPNext Development",
+          "text": "Exceptional results, unparalleled innovation—our business soared to new heights with their custom solutions and unwavering commitment to excellence.",
+          "projectType": "Custom Solutions",
           "duration": "6 Months"
         },
         {
           "id": "t2",
-          "name": "Priya Mehta",
-          "role": "CEO, TechVista",
-          "avatar": "/avatars/priya.png",
-          "platform": "linkedin",
+          "name": "Nilesh Jambucha",
+          "role": "Founder, TraxBee",
+          "avatar": "/images/client/TB.png",
+          "platform": "direct",
           "rating": 5,
-          "text": "Outstanding CRM solution for our sales team. Automation made everything seamless.",
-          "projectType": "CRM Solution",
-          "duration": "4 Months"
+          "text": "Transformative and reliable—our partnership with this business has been a game-changer, delivering top-notch solutions that exceeded our expectations.",
+          "projectType": "Partnership Solutions",
+          "duration": "8 Months"
         },
         {
           "id": "t3",
-          "name": "Arjun Patel",
-          "role": "Operations Head, SmartIoT Ltd.",
-          "avatar": "/avatars/arjun.png",
+          "name": "Parth Acharya",
+          "role": "CTO, Nikka Instruments",
+          "avatar": "/images/client/nikka.png",
           "platform": "direct",
           "rating": 5,
-          "text": "Industry 4.0 dashboard transformed our factory monitoring with real-time alerts.",
-          "projectType": "Industry 4.0 App",
-          "duration": "3 Months"
+          "text": "Revolutionizing reliability with their predictive maintenance prowess, this team's foresight and precision have saved us time and resources, ensuring seamless operations and minimal downtime.",
+          "projectType": "Predictive Maintenance",
+          "duration": "5 Months"
         }
       ],
       [
         {
           "id": "t4",
-          "name": "Neha Shah",
-          "role": "CTO, FinSoft",
-          "avatar": "/avatars/neha.png",
+          "name": "Smit Patel",
+          "role": "Owner, Sayaji Bio Energies",
+          "avatar": "/images/client/sayajibio.png",
           "platform": "direct",
           "rating": 5,
-          "text": "Custom business app saved us 200+ hours per month with process automation.",
-          "projectType": "Custom Business App",
-          "duration": "5 Months"
+          "text": "From vision to reality—our website designed by this team is not just visually stunning but also seamlessly functional, elevating our online presence and user experience to unprecedented levels.",
+          "projectType": "Website Development",
+          "duration": "3 Months"
         },
         {
           "id": "t5",
-          "name": "Amit Joshi",
-          "role": "Manager, GreenEnergy",
-          "avatar": "/avatars/amit.png",
+          "name": "Rajesh Kumar",
+          "role": "Director, TechFlow Solutions",
+          "avatar": "/avatars/rajesh.png",
           "platform": "linkedin",
-          "rating": 4,
-          "text": "IoT integration with predictive maintenance reduced downtime drastically.",
-          "projectType": "IoT Integration",
+          "rating": 5,
+          "text": "Outstanding ERP implementation streamlined our entire workflow. Their technical expertise and dedication made the impossible possible.",
+          "projectType": "ERP Development",
           "duration": "7 Months"
         },
         {
           "id": "t6",
-          "name": "Deepak Singh",
-          "role": "Director, EduTechPro",
-          "avatar": "/avatars/deepak.png",
+          "name": "Priya Singh",
+          "role": "Operations Head, InnovateNow",
+          "avatar": "/avatars/priya.png",
           "platform": "direct",
           "rating": 5,
-          "text": "Website development team delivered a fast, SEO-friendly site ahead of schedule.",
-          "projectType": "Website Development",
-          "duration": "2 Months"
+          "text": "Incredible IoT solutions transformed our manufacturing process. Real-time monitoring and automation exceeded all expectations.",
+          "projectType": "IoT Integration",
+          "duration": "4 Months"
         }
       ],
       [
         {
           "id": "t7",
-          "name": "Sonia Dsouza",
-          "role": "Founder, AIWorks",
-          "avatar": "/avatars/sonia.png",
+          "name": "Manish Agarwal",
+          "role": "CEO, CloudFirst",
+          "avatar": "/avatars/manish.png",
           "platform": "direct",
           "rating": 5,
-          "text": "LangChain-powered AI chatbot transformed our customer support experience.",
-          "projectType": "AI Integration",
-          "duration": "4 Months"
+          "text": "Revolutionary cloud migration and custom applications. Their team delivered scalable solutions that boosted our productivity by 300%.",
+          "projectType": "Cloud Solutions",
+          "duration": "6 Months"
         },
         {
           "id": "t8",
-          "name": "Harsh Verma",
-          "role": "Product Manager, MedTech Solutions",
-          "avatar": "/avatars/harsh.png",
-          "platform": "direct",
-          "rating": 4,
-          "text": "FastAPI backend performance was top-notch and well optimized.",
-          "projectType": "Backend Development",
-          "duration": "3 Months"
+          "name": "Kavita Shah",
+          "role": "CTO, DataVision",
+          "avatar": "/avatars/kavita.png",
+          "platform": "linkedin",
+          "rating": 5,
+          "text": "Phenomenal AI and machine learning integration. Their cutting-edge solutions revolutionized our data analytics and decision-making process.",
+          "projectType": "AI & ML Development",
+          "duration": "5 Months"
         },
         {
           "id": "t9",
-          "name": "Kiran Patel",
-          "role": "CEO, RetailNext",
-          "avatar": "/avatars/kiran.png",
-          "platform": "linkedin",
+          "name": "Amit Verma",
+          "role": "Founder, NextGen Systems",
+          "avatar": "/avatars/amit.png",
+          "platform": "direct",
           "rating": 5,
-          "text": "Custom ERP modules tailored for retail helped us manage inventory efficiently.",
-          "projectType": "ERP Customization",
-          "duration": "5 Months"
+          "text": "Exceptional mobile app development with flawless user experience. Their innovative approach and attention to detail created a market-leading solution.",
+          "projectType": "Mobile App Development",
+          "duration": "4 Months"
         }
       ]
     ]

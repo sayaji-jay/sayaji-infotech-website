@@ -194,7 +194,7 @@ const Contact = () => {
               <div className="text-center p-4 rounded-xl bg-gradient-to-b from-white/5 to-white/[0.02] light:from-gray-50 light:to-white border border-white/10 light:border-gray-200 light:shadow-lg">
                 <Users className="w-8 h-8 text-blue-400 light:text-purple-950 mx-auto mb-2" />
                 <h4 className="text-white light:text-purple-950 font-semibold text-sm mb-1">Team Size</h4>
-                <p className="text-gray-400 light:text-purple-950 text-xs">50+ Experts</p>
+                <p className="text-gray-400 light:text-purple-950 text-xs">5+ Experts</p>
               </div>
             </div>
           </div>
