@@ -2,7 +2,7 @@
   "id": 5,
   "category": "IoT Solutions",
   "description": "Comprehensive IoT data collection system integrating Modbus TCP communication with REST API endpoints for industrial device monitoring.",
-  "image": "/images/blogs/elite/feature.png",
+  "image": "/images/blogs/iot-modbus-system/feature.webp",
   "technologies": ["FastAPI", "Python", "Modbus TCP", "REST API", "Shell Scripting"],
   "features": ["Real-time Communication", "Offline Data Persistence", "Network Resilience", "Bulk Data Processing"],
   "icon": "Wifi",
@@ -23,7 +23,7 @@
       {
         "title": "📡 Real-time Modbus TCP Communication",
         "content": "Direct integration with industrial devices using Modbus TCP protocol for reliable data acquisition. The system continuously reads 8 registers from RUT200 routers with comprehensive error handling.",
-        "image": "/images/blog/iot-modbus-system/feature.webp",
+        "image": "/images/blogs/iot-modbus-system/flow.png",
         "features": [
           "Direct Modbus TCP integration with industrial devices",
           "Continuous monitoring of 8 device registers",
@@ -54,7 +54,7 @@
       {
         "title": "🔄 Network Resilience",
         "content": "Sophisticated offline handling with continuous connectivity monitoring, automatic fallback mechanisms, and intelligent error recovery for uninterrupted operations.",
-        "image": "/images/blog/iot-modbus-system/flow.png",
+        "image": "/images/blogs/iot-modbus-system/image.png",
         "features": [
           "Continuous API server availability monitoring",
           "Automatic fallback to offline storage mode",

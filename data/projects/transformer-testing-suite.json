@@ -34,7 +34,6 @@
       {
         "title": "📊 Real-time Data Monitoring",
         "content": "Operators can monitor test parameters in real-time, allowing for immediate intervention if necessary. The system provides live visualization of all critical testing parameters.",
-        "image": "/images/blog/transformer-testing/2.png",
         "features": [
           "Live monitoring of all test parameters",
           "Real-time data visualization and analysis",
@@ -56,7 +55,6 @@
       {
         "title": "🖥️ User-friendly Interface",
         "content": "Designed with the end-user in mind, the interface is intuitive, reducing the learning curve and enhancing operational efficiency. The system provides easy navigation and clear visualization.",
-        "image": "/api/placeholder/600/400",
         "features": [
           "Intuitive interface design for ease of use",
           "Minimal learning curve for operators",

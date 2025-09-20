@@ -2,7 +2,7 @@
   "id": 6,
   "category": "Industrial IoT",
   "description": "Predictive maintenance system leveraging sensors, smart algorithms, and real-time monitoring to prevent machine failures at L&T Hazira Plant.",
-    "image": "/images/blogs/elite/feature.png",
+    "image": "/images/blogs/PdMSS/1.png",
   "technologies": ["Python", "LimePi Zero", "React", "IoT Sensors", "Machine Learning"],
   "features": ["Anomaly Detection", "Real-time Monitoring", "Predictive Analytics", "Sensor Integration"],
   "icon": "Settings",
@@ -23,7 +23,7 @@
       {
         "title": "🔧 Sensor Integration & Data Collection",
         "content": "Each machine is equipped with a variety of sensors to capture vital parameters including vibration, temperature, pressure, and many more critical metrics for comprehensive monitoring.",
-        "image": "/images/blog/PdMSS/1.png",
+        "image": "/images/blogs/PdMSS/2.png",
         "features": [
           "Multi-parameter sensor integration (vibration, temperature, pressure)",
           "Real-time data collection from critical machine components",
@@ -34,7 +34,7 @@
       {
         "title": "🧠 Smart Algorithm Processing",
         "content": "The sensor data is transmitted in real-time to a LimePi Zero, a compact yet powerful custom-made gateway device. This device processes the data every second using advanced algorithms.",
-        "image": "/images/blog/PdMSS/4.png",
+        "image": "/images/blogs/PdMSS/3.png",
         "features": [
           "LimePi Zero gateway for real-time data processing",
           "Advanced anomaly detection algorithms",
@@ -45,7 +45,7 @@
       {
         "title": "⚠️ Anomaly Detection & Alerts",
         "content": "Custom-built algorithms analyze incoming data to detect any anomalies. When irregularities are identified, the system automatically triggers alarms and alerts, notifying operators about potential issues.",
-        "image": "/images/blog/PdMSS/5.png",
+        "image": "/images/blogs/PdMSS/4.png",
         "features": [
           "Real-time anomaly detection with custom algorithms",
           "Automated alarm generation for critical thresholds",
@@ -56,7 +56,7 @@
       {
         "title": "📊 Real-Time Monitoring Dashboard",
         "content": "The processed data is visualized on a custom-built web application offering real-time monitoring, user-friendly dashboards, and historical data analysis to identify patterns and trends.",
-        "image": "/images/blog/PdMSS/pdm.png",
+        "image": "/images/blogs/PdMSS/pdm.png",
         "features": [
           "Real-time monitoring of all critical machine parameters",
           "Intuitive dashboards with innovative data visualization",

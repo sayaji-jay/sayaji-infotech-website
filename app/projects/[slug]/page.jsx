@@ -261,7 +261,7 @@ const ProjectDetail = () => {
                         alt={section.title}
                         className="w-full h-64 object-cover rounded-lg border border-white/10"
                         onError={(e) => {
-                          e.target.src = '/api/placeholder/600/400';
+                          e.target.src = '/api/placeholder';
                         }}
                       />
                     </div>

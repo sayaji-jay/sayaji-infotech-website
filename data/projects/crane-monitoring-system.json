@@ -2,7 +2,7 @@
   "id": 3,
   "category": "Industrial IoT",
   "description": "Intelligent crane monitoring system with real-time tracking, safety alerts, and advanced anti-collision technology at L&T Hazira Plant.",
-  "image": "/images/blogs/elite/feature.png",
+  "image": "/images/blogs/crane-monitor-system/1.png",
   "technologies": ["React", "Node.js", "LimeCore Pro", "VFD Monitoring", "Real-time Analytics"],
   "features": ["Real-time Monitoring", "Anti-Collision System", "VFD Parameters Tracking", "Safety Alerts"],
   "icon": "Activity",
@@ -23,7 +23,7 @@
       {
         "title": "🏗️ Real-Time Monitoring and Alerts",
         "content": "Our system tracks crane movements live on an intuitive web dashboard. It raises alarms and triggers alerts when safety locks are bypassed, actively preventing potential accidents and ensuring compliance with safety protocols.",
-        "image": "/images/blog/CraneMonSS/5.png",
+        "image": "/images/blogs/crane-monitor-system/2.png",
         "features": [
           "Live crane movement tracking on interactive dashboard",
           "Safety lock bypass detection and immediate alerts",
@@ -34,7 +34,7 @@
       {
         "title": "⚡ VFD Parameters Monitoring",
         "content": "By continuously monitoring the Variable Frequency Drive (VFD) parameters of crane motors, the system ensures optimal operation, reducing wear and tear and improving overall efficiency.",
-        "image": "/images/blog/CraneMonSS/8.png",
+        "image": "/images/blogs/crane-monitor-system/3.png",
         "features": [
           "Continuous VFD parameter monitoring for optimal performance",
           "Motor efficiency tracking and optimization",
@@ -45,7 +45,7 @@
       {
         "title": "🚫 Advanced Anti-Collision Technology",
         "content": "Safety is further enhanced by implementing innovative anti-collision mechanisms. These systems proactively prevent crane collisions, minimizing risks in high-activity zones.",
-        "image": "/images/blog/CraneMonSS/4.png",
+        "image":  "/images/blogs/crane-monitor-system/4.png",
         "features": [
           "Proactive collision detection and prevention",
           "Zone-based safety monitoring in high-activity areas",
@@ -56,7 +56,7 @@
       {
         "title": "📊 LimeCore Pro Gateway",
         "content": "The LimeCore Pro acts as the backbone of the system. It collects data, relays it seamlessly, and issues alarms when predefined thresholds are crossed, ensuring robust and reliable data flow.",
-        "image": "/images/blog/CraneMonSS/limepi.png",
+        "image": "/images/blogs/crane-monitor-system/limepi.png",
         "features": [
           "Custom-built gateway device for reliable data collection",
           "Seamless data transmission and processing",
