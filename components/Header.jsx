@@ -2,16 +2,15 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { useTheme } from '@/contexts/ThemeContext';
+import { AnimatedThemeToggler } from '@/components/ui/animated-theme-toggler';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const pathname = usePathname();
-  const { theme, toggleTheme } = useTheme();
 
   const navItems = [
     { name: 'Home', href: '#home' },
@@ -105,13 +104,7 @@ const Header = () => {
 
           {/* Theme Toggle Button */}
           <div className="hidden md:block">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg nav-item transition-all duration-300 transform hover:scale-105"
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
+            <AnimatedThemeToggler className="p-3 rounded-full nav-item transition-all duration-300 transform hover:scale-105 hover:shadow-lg" />
           </div>
 
           {/* CTA Button */}
@@ -160,13 +153,7 @@ const Header = () => {
               >
                 Get Started
               </Link>
-              <button
-                onClick={toggleTheme}
-                className="ml-3 p-2 rounded-lg nav-item transition-all duration-300"
-                aria-label="Toggle theme"
-              >
-                {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-              </button>
+              <AnimatedThemeToggler className="ml-3 p-2 rounded-full nav-item transition-all duration-300 hover:shadow-lg" />
             </div>
           </div>
         </div>

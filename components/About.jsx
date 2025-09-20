@@ -62,8 +62,8 @@ const About = () => {
   return (
     <section className="py-24 bg-transparent relative overflow-hidden">
       {/* Gradient Fade Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950/20 via-transparent to-slate-950/30 light:from-transparent light:to-transparent pointer-events-none"></div>
-      <div className="absolute inset-0 bg-gradient-to-tl from-slate-950/20 via-transparent to-slate-950/30 light:from-transparent light:to-transparent pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950/20 via-transparent to-slate-950/30 light:hidden pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-tl from-slate-950/20 via-transparent to-slate-950/30 light:hidden pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
@@ -76,7 +76,7 @@ const About = () => {
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
             Crafting Digital{' '}
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 light:from-purple-600 light:via-pink-600 light:to-blue-600 bg-clip-text text-transparent">
               Excellence
             </span>
           </h2>
@@ -123,15 +123,15 @@ const About = () => {
 
             {/* Quote Side */}
             <div className="relative">
-              <div className="relative p-8 lg:p-10 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 backdrop-blur-sm">
+              <div className="relative p-8 lg:p-10 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] light:from-white light:to-white border border-white/10 light:border-gray-200 backdrop-blur-sm light:shadow-lg">
                 {/* Quote Icon */}
-                <Quote className="w-12 h-12 text-purple-400 mb-6" />
+                <Quote className="w-12 h-12 text-purple-400 light:text-purple-600 mb-6" />
 
-                <blockquote className="text-base lg:text-lg text-gray-200 font-medium leading-relaxed mb-6">
+                <blockquote className="text-base lg:text-lg text-gray-800 light:text-gray-900 font-medium leading-relaxed mb-6">
                   "{motivationalQuote.text}"
                 </blockquote>
 
-                <footer className="text-purple-300 font-medium">
+                <footer className="text-purple-300 light:text-gray-800 font-medium">
                   — {motivationalQuote.author}
                 </footer>
 
@@ -148,13 +148,13 @@ const About = () => {
             {stats.map((stat, index) => (
               <div
                 key={stat.label}
-                className="text-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-500"
+                className="text-center p-6 rounded-2xl bg-white/5 light:bg-white border border-white/10 light:border-gray-200 backdrop-blur-sm hover:bg-white/10 light:hover:bg-gray-50 transition-all duration-500 light:shadow-lg"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-6 h-6 text-purple-400" />
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500/10 to-pink-500/10 light:from-purple-100 light:to-pink-100 border border-purple-500/20 light:border-purple-300 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="w-6 h-6 text-purple-400 light:text-purple-600" />
                 </div>
 
-                <h3 className="text-xl lg:text-2xl font-bold text-white mb-2">
+                <h3 className="text-xl lg:text-2xl font-bold text-white light:text-gray-900 mb-2">
                   <AnimatedCounter
                     value={stat.number}
                     suffix={stat.suffix}
@@ -164,11 +164,11 @@ const About = () => {
                   />
                 </h3>
 
-                <h4 className="text-sm lg:text-base font-semibold text-gray-200 mb-1">
+                <h4 className="text-sm lg:text-base font-semibold text-gray-700 light:text-gray-900 mb-1">
                   {stat.label}
                 </h4>
 
-                <p className="text-gray-400 text-xs lg:text-sm">
+                <p className="text-gray-400 light:text-gray-700 text-xs lg:text-sm">
                   {stat.description}
                 </p>
               </div>
@@ -178,7 +178,7 @@ const About = () => {
 
         {/* Expertise Section */}
         <div className="text-center">
-          <h3 className="text-xl sm:text-2xl font-bold text-white mb-8">
+          <h3 className="text-xl sm:text-2xl font-bold text-white light:text-gray-900 mb-8">
             Our Expertise
           </h3>
 
@@ -186,10 +186,10 @@ const About = () => {
             {expertise.map((skill, index) => (
               <div
                 key={index}
-                className="flex items-center space-x-3 p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
+                className="flex items-center space-x-3 p-4 rounded-xl bg-white/5 light:bg-white border border-white/10 light:border-gray-200 backdrop-blur-sm hover:bg-white/10 light:hover:bg-gray-50 transition-all duration-300 light:shadow-md"
               >
                 <CheckCircle2 className="w-5 h-5 text-purple-400 light:text-purple-600 flex-shrink-0" />
-                <span className="text-gray-300 font-medium text-sm lg:text-base">
+                <span className="text-gray-300 light:text-gray-700 font-medium text-sm lg:text-base">
                   {skill}
                 </span>
               </div>
@@ -201,7 +201,7 @@ const About = () => {
       </div>
 
       {/* Background Effects */}
-      <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none light:hidden">
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-purple-600/5 to-transparent rounded-full blur-3xl" />
         <div className="absolute top-1/2 right-0 w-96 h-96 bg-gradient-to-tl from-pink-600/5 to-transparent rounded-full blur-3xl" />
       </div>

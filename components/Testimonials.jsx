@@ -147,7 +147,7 @@ const Testimonials = () => {
             className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white light:text-gray-900 mb-6"
           >
             {websiteData.testimonials.title.split(' ').slice(0, 2).join(' ')}{' '}
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 light:from-purple-600 light:via-pink-600 light:to-blue-600 bg-clip-text text-transparent">
               {websiteData.testimonials.title.split(' ').slice(2).join(' ')}
             </span>
           </h2>
@@ -248,16 +248,16 @@ const Testimonials = () => {
           </div>
 
           {/* Enhanced Gradient Fades with better visibility */}
-          <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-slate-950 via-slate-950/95 via-slate-950/80 to-transparent pointer-events-none z-20"></div>
-          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-slate-950 via-slate-950/95 via-slate-950/80 to-transparent pointer-events-none z-20"></div>
+          <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-slate-950 via-slate-950/80 to-transparent light:from-slate-100 light:via-slate-100/80 light:to-transparent pointer-events-none z-20"></div>
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent light:from-slate-100 light:via-slate-100/80 light:to-transparent pointer-events-none z-20"></div>
 
           {/* Additional stronger fade overlays */}
-          <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-slate-950 via-slate-950/90 to-transparent pointer-events-none z-25"></div>
-          <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-slate-950 via-slate-950/90 to-transparent pointer-events-none z-25"></div>
+          <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-slate-950 via-slate-950/90 to-transparent light:from-slate-100 light:via-slate-100/90 light:to-transparent pointer-events-none z-25"></div>
+          <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-slate-950 via-slate-950/90 to-transparent light:from-slate-100 light:via-slate-100/90 light:to-transparent pointer-events-none z-25"></div>
 
           {/* Solid edges to ensure clean cut */}
-          <div className="absolute inset-x-0 top-0 h-3 bg-slate-950 pointer-events-none z-30"></div>
-          <div className="absolute inset-x-0 bottom-0 h-3 bg-slate-950 pointer-events-none z-30"></div>
+          <div className="absolute inset-x-0 top-0 h-3 bg-slate-950 light:bg-slate-100 pointer-events-none z-30"></div>
+          <div className="absolute inset-x-0 bottom-0 h-3 bg-slate-950 light:bg-slate-100 pointer-events-none z-30"></div>
         </motion.div>
 
       </div>

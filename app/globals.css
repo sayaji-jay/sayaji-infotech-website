@@ -6,7 +6,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 #type-font {
   font-family: 'Bonheur Royale', sans-serif;
 }
@@ -24,7 +23,7 @@
 /* Light theme variables */
 .light {
   --bg-primary: #ffffff;
-  --bg-secondary: #f8fafc;
+  --bg-secondary: #ffffff;
   --text-primary: #1e293b;
   --text-secondary: #475569;
   --text-muted: #64748b;
@@ -80,25 +79,43 @@
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
 }
 
-/* Fix all remaining dark backgrounds in light theme */
-.light .bg-transparent {
+/* Complete white background in light theme */
+.light {
   background-color: #ffffff !important;
 }
 
-.light .bg-slate-800,
-.light .bg-slate-800\/50,
-.light .bg-slate-900\/50 {
+.light body {
   background-color: #ffffff !important;
-  border: 1px solid #e5e7eb !important;
 }
 
-/* Fix gradient overlays */
-.light .bg-gradient-to-br,
-.light .bg-gradient-to-tl {
+/* Ensure all main containers have white background */
+.light main {
+  background-color: #ffffff !important;
+}
+
+.light .relative {
+  background-color: transparent !important;
+}
+
+/* Hide only dark overlay gradients, not text gradients */
+.light .bg-gradient-to-br.from-slate-950\/20,
+.light .bg-gradient-to-tl.from-slate-950\/20,
+.light .absolute.bg-gradient-to-br,
+.light .absolute.bg-gradient-to-tl {
   background: transparent !important;
 }
 
-/* Fix section backgrounds */
+/* Remove only absolute positioned dark background gradients */
+.light div.absolute[class*="bg-gradient"] {
+  background: transparent !important;
+}
+
+/* Remove all absolute positioned background effects */
+.light div[class*="absolute"][class*="bg-"] {
+  background: transparent !important;
+}
+
+/* Ensure all sections have white background */
 .light section {
   background-color: #ffffff !important;
 }
@@ -455,4 +472,9 @@ html, body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+::view-transition-old(root), ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
 }

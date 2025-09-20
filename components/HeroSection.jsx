@@ -23,8 +23,8 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-transparent pt-32 md:pt-0">
       {/* Gradient Fade Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950/20 via-transparent to-slate-950/30 light:from-transparent light:to-transparent pointer-events-none"></div>
-      <div className="absolute inset-0 bg-gradient-to-tl from-slate-950/20 via-transparent to-slate-950/30 light:from-transparent light:to-transparent pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950/20 via-transparent to-slate-950/30 light:hidden pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-tl from-slate-950/20 via-transparent to-slate-950/30 light:hidden pointer-events-none"></div>
 
       {/* Spotlight Effects */}
       <Spotlight className="-top-40 left-0 md:-top-20 md:left-60" fill="rgb(147, 51, 234)" />
@@ -44,14 +44,14 @@ const HeroSection = () => {
           {/* Main Heading */}
           <div className="space-y-4">
             <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold">
-              <span className="bg-gradient-to-r from-white via-purple-200 to-purple-400 light:from-gray-900 light:via-purple-700 light:to-purple-900 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-white via-purple-200 to-purple-400 light:from-black light:via-gray-900 light:to-gray-800 bg-clip-text">
                 Sayaji Infotech
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-gray-300 light:text-gray-700 max-w-4xl mx-auto">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-gray-300 light:text-gray-800 max-w-4xl mx-auto">
               Transforming Ideas into{' '}
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 light:from-purple-600 light:to-purple-800 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 light:from-purple-600 light:to-pink-600 bg-clip-text text-transparent">
                 Digital Excellence
               </span>
             </p>
@@ -97,7 +97,7 @@ const HeroSection = () => {
               { number: 24, suffix: "/7", label: "Support Available" },
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 light:from-gray-800 light:to-black bg-clip-text text-transparent">
                   {typeof stat.number === 'string' ? (
                     stat.number
                   ) : (
@@ -110,7 +110,7 @@ const HeroSection = () => {
                     />
                   )}
                 </div>
-                <div className="text-sm text-gray-400 light:text-gray-600 mt-1">{stat.label}</div>
+                <div className="text-sm text-gray-400 light:text-gray-800 mt-1">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -118,7 +118,7 @@ const HeroSection = () => {
       </div>
 
       {/* Bottom Gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-950 to-transparent light:from-transparent light:to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-950 to-transparent light:hidden"></div>
     </section>
   );
 };
