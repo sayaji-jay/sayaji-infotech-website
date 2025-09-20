@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono, Kalam } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 
 
 const geistSans = Geist({
@@ -27,10 +28,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${kalam.variable} antialiased min-h-screen bg-slate-950 relative`}
+        className={`${geistSans.variable} ${geistMono.variable} ${kalam.variable} antialiased min-h-screen relative`}
       >
-        
-        {children}
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

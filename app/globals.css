@@ -21,6 +21,107 @@
   --text-muted: #9ca3af;
 }
 
+/* Light theme variables */
+.light {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+}
+
+/* Global light theme overrides */
+.light .text-white {
+  color: #1e293b !important;
+}
+
+.light .text-gray-300 {
+  color: #475569 !important;
+}
+
+.light .text-gray-400 {
+  color: #64748b !important;
+}
+
+.light .text-gray-500 {
+  color: #6b7280 !important;
+}
+
+.light .bg-white\/5,
+.light .bg-white\/10 {
+  background-color: rgba(243, 244, 246, 0.8) !important;
+}
+
+.light .border-white\/10,
+.light .border-white\/20 {
+  border-color: rgba(209, 213, 219, 0.8) !important;
+}
+
+.light .bg-slate-900 {
+  background-color: #ffffff !important;
+}
+
+.light .bg-slate-950 {
+  background-color: #ffffff !important;
+}
+
+/* Fix gradients for light theme */
+.light .from-slate-950\/20 {
+  --tw-gradient-from: rgba(0, 0, 0, 0.05) var(--tw-gradient-from-position) !important;
+}
+
+.light .to-slate-950\/30 {
+  --tw-gradient-to: rgba(0, 0, 0, 0.1) var(--tw-gradient-to-position) !important;
+}
+
+.light .shadow-purple-500\/10,
+.light .shadow-purple-500\/20,
+.light .shadow-purple-500\/25 {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Fix all remaining dark backgrounds in light theme */
+.light .bg-transparent {
+  background-color: #ffffff !important;
+}
+
+.light .bg-slate-800,
+.light .bg-slate-800\/50,
+.light .bg-slate-900\/50 {
+  background-color: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+/* Fix gradient overlays */
+.light .bg-gradient-to-br,
+.light .bg-gradient-to-tl {
+  background: transparent !important;
+}
+
+/* Fix section backgrounds */
+.light section {
+  background-color: #ffffff !important;
+}
+
+/* Fix any remaining text colors */
+.light .text-slate-300,
+.light .text-slate-400,
+.light .text-slate-500 {
+  color: #374151 !important;
+}
+
+/* Fix hover states */
+.light .hover\:bg-white\/10:hover,
+.light .hover\:bg-white\/20:hover {
+  background-color: rgba(243, 244, 246, 0.8) !important;
+}
+
+/* Fix backdrop blur elements */
+.light .backdrop-blur-sm,
+.light .backdrop-blur-lg {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -37,6 +138,7 @@ body {
   color: var(--text-primary);
   background: var(--bg-primary);
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Custom Tailwind spacing for the specific design */
@@ -244,6 +346,73 @@ html, body {
     background-position: 0% 0%;
     }
   }
+}
+
+/* Theme-specific component classes using direct CSS */
+.header-bg {
+  background-color: rgba(2, 6, 23, 0.8);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(139, 92, 246, 0.1);
+  ring: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.5s;
+}
+
+.light .header-bg {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(209, 213, 219, 0.5);
+  ring: 1px solid rgba(209, 213, 219, 0.2);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item {
+  color: #d1d5db;
+  transition: all 0.3s;
+}
+
+.nav-item:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.light .nav-item {
+  color: #374151;
+}
+
+.light .nav-item:hover {
+  color: #111827;
+  background-color: rgba(243, 244, 246, 0.5);
+}
+
+.nav-item-active {
+  color: #ffffff;
+  background: linear-gradient(to right, rgba(147, 51, 234, 0.2), rgba(236, 72, 153, 0.2));
+  ring: 1px solid rgba(147, 51, 234, 0.3);
+  box-shadow: 0 10px 15px -3px rgba(147, 51, 234, 0.25);
+}
+
+.light .nav-item-active {
+  color: #7c3aed;
+}
+
+.mobile-menu-bg {
+  background-color: rgba(2, 6, 23, 0.95);
+}
+
+.light .mobile-menu-bg {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* Testimonials fade mask fix */
+.testimonials-mask {
+  mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+.light .testimonials-mask {
+  mask-image: linear-gradient(to bottom, transparent 0%, white 15%, white 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, white 15%, white 85%, transparent 100%);
 }
 
 @layer base {

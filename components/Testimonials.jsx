@@ -59,14 +59,14 @@ const Testimonials = () => {
   };
 
   const TestimonialCard = ({ testimonial }) => (
-    <div className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 mb-6 hover:bg-gradient-to-br hover:from-white/15 hover:to-white/10 hover:border-purple-500/30 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/10">
+    <div className="group bg-gradient-to-br from-white/10 to-white/5 light:from-gray-50 light:to-white backdrop-blur-sm border border-white/10 light:border-gray-200 rounded-2xl p-6 mb-6 hover:bg-gradient-to-br hover:from-white/15 hover:to-white/10 light:hover:from-gray-100 light:hover:to-gray-50 hover:border-purple-500/30 light:hover:border-purple-300 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/10 light:shadow-lg">
       {/* Quote Icon */}
       <div className="mb-4">
         <Quote className="w-8 h-8 text-purple-400 group-hover:text-purple-300 transition-colors duration-300" />
       </div>
 
       {/* Testimonial Text */}
-      <p className="text-gray-300 leading-relaxed mb-6 group-hover:text-gray-200 transition-colors duration-300">
+      <p className="text-gray-300 light:text-gray-700 leading-relaxed mb-6 group-hover:text-gray-200 light:group-hover:text-gray-800 transition-colors duration-300">
         "{testimonial.text}"
       </p>
 
@@ -89,10 +89,10 @@ const Testimonials = () => {
             className="ring-2 ring-purple-500/20 group-hover:ring-purple-500/40 transition-all duration-300"
           />
           <div>
-            <div className="text-white font-semibold text-sm group-hover:text-purple-200 transition-colors duration-300">
+            <div className="text-white light:text-gray-900 font-semibold text-sm group-hover:text-purple-200 light:group-hover:text-purple-700 transition-colors duration-300">
               {testimonial.name}
             </div>
-            <div className="text-gray-400 text-xs">
+            <div className="text-gray-400 light:text-gray-600 text-xs">
               {testimonial.role}
             </div>
           </div>
@@ -128,8 +128,8 @@ const Testimonials = () => {
   return (
     <section className="py-24 bg-transparent relative overflow-hidden">
       {/* Gradient Fade Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950/20 via-transparent to-slate-950/30 pointer-events-none"></div>
-      <div className="absolute inset-0 bg-gradient-to-tl from-slate-950/20 via-transparent to-slate-950/30 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950/20 via-transparent to-slate-950/30 light:from-transparent light:to-transparent pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-tl from-slate-950/20 via-transparent to-slate-950/30 light:from-transparent light:to-transparent pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header Section */}
@@ -139,12 +139,12 @@ const Testimonials = () => {
             className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-full px-6 py-2 mb-6"
           >
             <MessageSquare className="w-4 h-4 text-purple-400" />
-            <span className="text-purple-300 text-sm font-medium">{websiteData.testimonials.badge.text}</span>
+            <span className="text-purple-300 light:text-purple-700 text-sm font-medium">{websiteData.testimonials.badge.text}</span>
           </div>
 
           <h2
             variants={itemVariants}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white light:text-gray-900 mb-6"
           >
             {websiteData.testimonials.title.split(' ').slice(0, 2).join(' ')}{' '}
             <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
@@ -154,7 +154,7 @@ const Testimonials = () => {
 
           <motion.p
             variants={itemVariants}
-            className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl text-gray-400 light:text-gray-600 max-w-3xl mx-auto leading-relaxed"
           >
             {websiteData.testimonials.subtitle}
           </motion.p>
@@ -215,11 +215,7 @@ const Testimonials = () => {
           whileInView={{ opacity: 1, filter: 'blur(0px)' }}
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true }}
-          className="hidden md:block relative h-[600px] overflow-hidden rounded-2xl"
-          style={{
-            maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)',
-            WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)'
-          }}
+          className="hidden md:block relative h-[600px] overflow-hidden rounded-2xl testimonials-mask"
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 h-full">
             {testimonials.map((column, columnIndex) => (

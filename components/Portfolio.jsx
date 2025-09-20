@@ -60,7 +60,7 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <div className="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-purple-500 mb-4"></div>
-            <p className="text-white">Loading projects...</p>
+            <p className="text-white light:text-gray-900">Loading projects...</p>
           </div>
         </div>
       </section>
@@ -70,24 +70,24 @@ const Portfolio = () => {
   return (
     <section className="py-24 bg-transparent relative overflow-hidden">
       {/* Gradient Fade Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950/20 via-transparent to-slate-950/30 pointer-events-none"></div>
-      <div className="absolute inset-0 bg-gradient-to-tl from-slate-950/20 via-transparent to-slate-950/30 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950/20 via-transparent to-slate-950/30 light:from-transparent light:to-transparent pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-tl from-slate-950/20 via-transparent to-slate-950/30 light:from-transparent light:to-transparent pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-full px-6 py-2 mb-6">
             <Code2 className="w-4 h-4 text-purple-400" />
-            <span className="text-purple-300 text-sm font-medium">Our Portfolio</span>
+            <span className="text-purple-300 light:text-purple-700 text-sm font-medium">Our Portfolio</span>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white light:text-gray-900 mb-6">
             Featured{' '}
             <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
               Projects
             </span>
           </h2>
 
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-400 light:text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Explore our latest work and see how we've helped businesses transform
             their digital presence with innovative solutions.
           </p>

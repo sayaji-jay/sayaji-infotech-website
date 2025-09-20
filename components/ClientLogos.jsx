@@ -11,8 +11,8 @@ const ClientLogos = () => {
   return (
     <section className="py-16 bg-transparent relative overflow-hidden">
       {/* Gradient Fade Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950/20 via-transparent to-slate-950/30 pointer-events-none"></div>
-      <div className="absolute inset-0 bg-gradient-to-tl from-slate-950/20 via-transparent to-slate-950/30 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950/20 via-transparent to-slate-950/30 light:from-transparent light:to-transparent pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-tl from-slate-950/20 via-transparent to-slate-950/30 light:from-transparent light:to-transparent pointer-events-none"></div>
 
       {/* Full Width Container */}
       <div className="w-full relative z-10">
@@ -23,7 +23,7 @@ const ClientLogos = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-gray-400 text-lg font-medium"
+            className="text-gray-400 light:text-gray-700 text-lg font-medium"
           >
             {websiteData.trustedCompanies.title}
           </motion.p>
@@ -61,7 +61,7 @@ const ClientLogos = () => {
                     src={`/images${client.logo}`}
                     alt={client.name}
                     fallbackSrc="/images/placeholder-logo.svg"
-                    className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
+                    className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 light:invert light:grayscale transition-all duration-300 opacity-70 hover:opacity-100"
                   />
                 </div>
               ))}
@@ -98,7 +98,7 @@ const ClientLogos = () => {
                     src={`/images${client.logo}`}
                     alt={client.name}
                     fallbackSrc="/images/placeholder-logo.svg"
-                    className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
+                    className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 light:invert light:grayscale transition-all duration-300 opacity-70 hover:opacity-100"
                   />
                 </div>
               ))}
@@ -114,7 +114,7 @@ const ClientLogos = () => {
           viewport={{ once: true }}
           className="text-center mt-12 px-4"
         >
-          <p className="text-gray-500 text-sm">
+          <p className="text-gray-500 light:text-gray-600 text-sm">
             {websiteData.trustedCompanies.subtitle}
           </p>
         </motion.div>

@@ -41,25 +41,25 @@ const Services = () => {
   return (
     <section className="py-24 bg-transparent relative overflow-hidden">
       {/* Gradient Fade Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950/20 via-transparent to-slate-950/30 pointer-events-none"></div>
-      <div className="absolute inset-0 bg-gradient-to-tl from-slate-950/20 via-transparent to-slate-950/30 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950/20 via-transparent to-slate-950/30 light:from-transparent light:to-transparent pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-tl from-slate-950/20 via-transparent to-slate-950/30 light:from-transparent light:to-transparent pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header Section */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-full px-6 py-2 mb-6">
             <Zap className="w-4 h-4 text-purple-400" />
-            <span className="text-purple-300 text-sm font-medium">{websiteData.services.badge.text}</span>
+            <span className="text-purple-300 light:text-purple-700 text-sm font-medium">{websiteData.services.badge.text}</span>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white light:text-gray-900 mb-6">
             {websiteData.services.title.split(' ').slice(0, 1).join(' ')}{' '}
             <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
               {websiteData.services.title.split(' ').slice(1).join(' ')}
             </span>
           </h2>
 
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-400 light:text-gray-600 max-w-3xl mx-auto leading-relaxed">
             {websiteData.services.subtitle}
           </p>
         </div>
@@ -69,7 +69,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 hover:-translate-y-2 transition-all duration-500"
+              className="group relative p-8 rounded-2xl bg-white/5 light:bg-white border border-white/10 light:border-gray-200 backdrop-blur-sm hover:bg-white/10 light:hover:bg-gray-50 hover:-translate-y-2 transition-all duration-500 light:shadow-lg"
             >
               <ShineBorder shineColor="white" />
               {/* Hover Effect */}
@@ -82,11 +82,11 @@ const Services = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors">
+                <h3 className="text-2xl font-bold text-white light:text-gray-900 mb-4 group-hover:text-purple-300 light:group-hover:text-purple-700 transition-colors">
                   {service.title}
                 </h3>
                 
-                <p className="text-gray-400 leading-relaxed mb-6">
+                <p className="text-gray-400 light:text-gray-600 leading-relaxed mb-6">
                   {service.description}
                 </p>
 
@@ -95,13 +95,13 @@ const Services = () => {
                   {service.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center space-x-2">
                       <CheckCircle className="w-4 h-4 text-green-400" />
-                      <span className="text-sm text-gray-300">{feature}</span>
+                      <span className="text-sm text-gray-300 light:text-gray-700">{feature}</span>
                     </div>
                   ))}
                 </div>
 
                 {/* Learn More Button */}
-                <button className="group/btn inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 font-medium transition-colors">
+                <button className="group/btn inline-flex items-center space-x-2 text-purple-400 light:text-purple-600 hover:text-purple-300 light:hover:text-purple-700 font-medium transition-colors">
                   <span>Learn More</span>
                   <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                 </button>
@@ -112,7 +112,7 @@ const Services = () => {
 
         {/* Technologies Section */}
         <div className="text-center">
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-8 sm:mb-12">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white light:text-gray-900 mb-8 sm:mb-12">
             {websiteData.services.technologies.title}
           </h3>
 
@@ -120,12 +120,12 @@ const Services = () => {
             {technologies.map((tech, index) => (
               <div
                 key={index}
-                className="group px-3 sm:px-6 py-2 sm:py-3 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 hover:scale-105 transition-all duration-300"
+                className="group px-3 sm:px-6 py-2 sm:py-3 rounded-full bg-white/5 light:bg-gray-100 border border-white/10 light:border-gray-300 backdrop-blur-sm hover:bg-white/10 light:hover:bg-gray-200 hover:scale-105 transition-all duration-300"
               >
                 <div className="flex items-center space-x-1 sm:space-x-2">
-                  <span className="text-white font-medium text-sm sm:text-base">{tech.name}</span>
+                  <span className="text-white light:text-gray-900 font-medium text-sm sm:text-base">{tech.name}</span>
                   <span className="text-gray-500 text-xs sm:text-sm hidden sm:inline">•</span>
-                  <span className="text-gray-400 text-xs sm:text-sm hidden sm:inline">{tech.category}</span>
+                  <span className="text-gray-400 light:text-gray-600 text-xs sm:text-sm hidden sm:inline">{tech.category}</span>
                 </div>
               </div>
             ))}
