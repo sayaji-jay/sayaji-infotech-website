@@ -4,6 +4,7 @@ import React from "react";
 import { ArrowRight, Play, Code2, Database, Globe, Smartphone } from "lucide-react";
 import { Spotlight } from "@/components/ui/spotlight";
 import { AnimatedCounter } from "@/components/ui/animated-counter";
+import { ShineBorder } from "@/components/ui/shine-border";
 
 const HeroSection = () => {
   const scrollToContact = () => {
@@ -66,16 +67,24 @@ const HeroSection = () => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 px-4">
-            <button
-              onClick={scrollToContact}
-              className="group relative inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105 w-full sm:w-auto"
-            >
-              <span className="relative z-10 flex items-center space-x-2">
-                <span>Start Your Project</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-700 to-pink-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </button>
+            <div className="relative w-full sm:w-auto">
+              <ShineBorder
+                borderWidth={4}
+                duration={12}
+                shineColor={["rgba(59, 130, 246, 1)", "rgba(147, 197, 253, 0.8)", "rgba(255, 255, 255, 1)"]}
+                className="rounded-full"
+              />
+              <button
+                onClick={scrollToContact}
+                className="group relative inline-flex items-center justify-center px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-semibold text-blue-900 bg-gradient-to-r from-white via-blue-50 to-blue-100 hover:from-blue-50 hover:via-blue-100 hover:to-white rounded-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/25 hover:scale-105 w-full sm:w-auto border-2 border-blue-300/70 hover:border-blue-400/90"
+              >
+                <span className="relative z-10 flex items-center space-x-2">
+                  <span>Start Your Project</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-100 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </button>
+            </div>
 
             <button
               onClick={openLinkedIn}

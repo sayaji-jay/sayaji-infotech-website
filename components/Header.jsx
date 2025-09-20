@@ -6,6 +6,7 @@ import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { AnimatedThemeToggler } from '@/components/ui/animated-theme-toggler';
+import { ShineBorder } from '@/components/ui/shine-border';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -109,12 +110,20 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Link
-              href={getNavHref('#contact')}
-              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
-            >
-              Get Started
-            </Link>
+            <div className="relative">
+              <ShineBorder
+                borderWidth={3}
+                duration={8}
+                shineColor={["rgba(59, 130, 246, 0.8)", "rgba(147, 197, 253, 0.6)", "rgba(255, 255, 255, 0.9)"]}
+                className="rounded-full"
+              />
+              <Link
+                href={getNavHref('#contact')}
+                className="relative bg-gradient-to-r from-white via-blue-50 to-blue-100 hover:from-blue-50 hover:via-blue-100 hover:to-white text-blue-900 px-8 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl border-2 border-blue-300/60 hover:border-blue-400/80"
+              >
+                Get Started
+              </Link>
+            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -146,13 +155,21 @@ const Header = () => {
               </Link>
             ))}
             <div className="flex items-center justify-between mt-4">
-              <Link
-                href={getNavHref('#contact')}
-                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 flex-1"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Get Started
-              </Link>
+              <div className="relative flex-1">
+                <ShineBorder
+                  borderWidth={2}
+                  duration={8}
+                  shineColor={["rgba(59, 130, 246, 0.7)", "rgba(147, 197, 253, 0.5)", "rgba(255, 255, 255, 0.8)"]}
+                  className="rounded-full"
+                />
+                <Link
+                  href={getNavHref('#contact')}
+                  className="relative bg-gradient-to-r from-white via-blue-50 to-blue-100 hover:from-blue-50 hover:via-blue-100 hover:to-white text-blue-900 px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-300 block text-center border-2 border-blue-300/60 hover:border-blue-400/80"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Get Started
+                </Link>
+              </div>
               <AnimatedThemeToggler className="ml-3 p-2 rounded-full nav-item transition-all duration-300 hover:shadow-lg" />
             </div>
           </div>

@@ -1,15 +1,16 @@
 'use client';
 
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Send, 
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
   MessageCircle,
   Clock,
   Users,
   Headphones
 } from 'lucide-react';
+import { ShineBorder } from '@/components/ui/shine-border';
 
 const Contact = () => {
   const contactInfo = [
@@ -129,13 +130,21 @@ const Contact = () => {
                   ></textarea>
                 </div>
                 
-                <button
-                  type="submit"
-                  className="w-full py-3 px-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 mt-auto"
-                >
-                  Send Message
-                  <Send className="w-4 h-4" />
-                </button>
+                <div className="relative mt-auto">
+                  <ShineBorder
+                    borderWidth={3}
+                    duration={10}
+                    shineColor={["rgba(59, 130, 246, 0.9)", "rgba(147, 197, 253, 0.7)", "rgba(255, 255, 255, 1)"]}
+                    className="rounded-full"
+                  />
+                  <button
+                    type="submit"
+                    className="relative w-full py-4 px-8 bg-gradient-to-r from-white via-blue-50 to-blue-100 hover:from-blue-50 hover:via-blue-100 hover:to-white text-blue-900 rounded-full font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 border-2 border-blue-300/70 hover:border-blue-400/90"
+                  >
+                    Send Message
+                    <Send className="w-5 h-5" />
+                  </button>
+                </div>
               </form>
             </div>
 
