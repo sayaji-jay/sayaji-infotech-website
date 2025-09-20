@@ -62,8 +62,8 @@ const About = () => {
   return (
     <section className="py-24 bg-transparent relative overflow-hidden">
       {/* Gradient Fade Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950/20 via-transparent to-slate-950/30 pointer-events-none"></div>
-      <div className="absolute inset-0 bg-gradient-to-tl from-slate-950/20 via-transparent to-slate-950/30 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950/20 via-transparent to-slate-950/30 light:from-transparent light:to-transparent pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-tl from-slate-950/20 via-transparent to-slate-950/30 light:from-transparent light:to-transparent pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
@@ -113,8 +113,8 @@ const About = () => {
                   <p className="text-gray-400 text-sm lg:text-base opacity-80 font-medium mb-2">
                     Crafting Digital Excellence Since 2015
                   </p>
-                  <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-full px-4 py-2">
-                    <MapPin className="w-4 h-4 text-green-400" />
+                  <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 border border-purple-500/30 rounded-full px-4 py-2">
+                    <MapPin className="w-4 h-4 text-purple-400 light:text-purple-600" />
                     <span className="">Vadodara, Gujarat</span>
                   </div>
                 </div>
@@ -188,7 +188,7 @@ const About = () => {
                 key={index}
                 className="flex items-center space-x-3 p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
               >
-                <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-purple-400 light:text-purple-600 flex-shrink-0" />
                 <span className="text-gray-300 font-medium text-sm lg:text-base">
                   {skill}
                 </span>

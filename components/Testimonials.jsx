@@ -97,7 +97,7 @@ const Testimonials = () => {
             </div>
           </div>
         </div>
-        <div className="text-green-400 group-hover:text-green-300 transition-colors duration-300">
+        <div className="text-purple-400 light:text-purple-600 group-hover:text-purple-300 light:group-hover:text-purple-700 transition-colors duration-300">
           {getPlatformIcon(testimonial.platform)}
         </div>
       </div>

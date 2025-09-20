@@ -94,7 +94,7 @@ const Services = () => {
                 <div className="grid grid-cols-2 gap-2 mb-6">
                   {service.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center space-x-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <CheckCircle className="w-4 h-4 text-purple-400 light:text-purple-600" />
                       <span className="text-sm text-gray-300 light:text-gray-700">{feature}</span>
                     </div>
                   ))}
