@@ -1,5 +1,6 @@
 'use client';
 
+import { useForm, ValidationError } from '@formspree/react';
 import {
   Mail,
   Phone,
@@ -8,11 +9,15 @@ import {
   MessageCircle,
   Clock,
   Users,
-  Headphones
+  Headphones,
+  CheckCircle,
+  AlertCircle
 } from 'lucide-react';
 import { ShineBorder } from '@/components/ui/shine-border';
 
 const Contact = () => {
+  const [state, handleSubmit] = useForm("mzzjbblz");
+
   const contactInfo = [
     {
       icon: Phone,
@@ -73,63 +78,111 @@ const Contact = () => {
             <div className="bg-gradient-to-b from-white/5 to-white/[0.02] light:from-gray-50 light:to-white border border-white/10 light:border-gray-200 backdrop-blur-sm rounded-3xl p-6 lg:p-8 h-full flex flex-col light:shadow-lg">
               <h3 className="text-2xl font-bold text-white light:text-purple-950 mb-6">Send us a message</h3>
               
-              <form className="space-y-4 lg:space-y-6 flex-1 flex flex-col">
+              <form onSubmit={handleSubmit} className="space-y-4 lg:space-y-6 flex-1 flex flex-col">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 light:text-purple-950 mb-2">
+                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 light:text-purple-950 mb-2">
                       First Name
                     </label>
                     <input
+                      id="firstName"
                       type="text"
+                      name="firstName"
+                      required
                       className="w-full px-4 py-3 bg-white/10 light:bg-white border border-white/20 light:border-gray-300 rounded-lg text-white light:text-purple-950 placeholder-gray-400 light:placeholder-gray-500 focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
                       placeholder="John"
                     />
+                    <ValidationError
+                      prefix="First Name"
+                      field="firstName"
+                      errors={state.errors}
+                    />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 light:text-purple-950 mb-2">
+                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-300 light:text-purple-950 mb-2">
                       Last Name
                     </label>
                     <input
+                      id="lastName"
                       type="text"
+                      name="lastName"
+                      required
                       className="w-full px-4 py-3 bg-white/10 light:bg-white border border-white/20 light:border-gray-300 rounded-lg text-white light:text-purple-950 placeholder-gray-400 light:placeholder-gray-500 focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
                       placeholder="Doe"
                     />
+                    <ValidationError
+                      prefix="Last Name"
+                      field="lastName"
+                      errors={state.errors}
+                    />
                   </div>
                 </div>
-                
+
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 light:text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 light:text-gray-700 mb-2">
                     Email
                   </label>
                   <input
+                    id="email"
                     type="email"
+                    name="email"
+                    required
                     className="w-full px-4 py-3 bg-white/10 light:bg-white border border-white/20 light:border-gray-300 rounded-lg text-white light:text-purple-950 placeholder-gray-400 light:placeholder-gray-500 focus:outline-none focus:border-green-500/50 focus:ring-2 focus:ring-green-500/20 transition-all duration-300"
                     placeholder="john@example.com"
                   />
+                  <ValidationError
+                    prefix="Email"
+                    field="email"
+                    errors={state.errors}
+                  />
                 </div>
-                
+
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 light:text-gray-700 mb-2">
+                  <label htmlFor="subject" className="block text-sm font-medium text-gray-300 light:text-gray-700 mb-2">
                     Subject
                   </label>
                   <input
+                    id="subject"
                     type="text"
+                    name="subject"
+                    required
                     className="w-full px-4 py-3 bg-white/10 light:bg-white border border-white/20 light:border-gray-300 rounded-lg text-white light:text-purple-950 placeholder-gray-400 light:placeholder-gray-500 focus:outline-none focus:border-green-500/50 focus:ring-2 focus:ring-green-500/20 transition-all duration-300"
                     placeholder="How can we help?"
                   />
+                  <ValidationError
+                    prefix="Subject"
+                    field="subject"
+                    errors={state.errors}
+                  />
                 </div>
-                
+
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 light:text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 light:text-gray-700 mb-2">
                     Message
                   </label>
                   <textarea
+                    id="message"
                     rows="5"
+                    name="message"
+                    required
                     className="w-full px-4 py-3 bg-white/10 light:bg-white border border-white/20 light:border-gray-300 rounded-lg text-white light:text-purple-950 placeholder-gray-400 light:placeholder-gray-500 focus:outline-none focus:border-green-500/50 focus:ring-2 focus:ring-green-500/20 transition-all duration-300 resize-none"
                     placeholder="Tell us about your project..."
                   ></textarea>
+                  <ValidationError
+                    prefix="Message"
+                    field="message"
+                    errors={state.errors}
+                  />
                 </div>
                 
+                {/* Success Message */}
+                {state.succeeded && (
+                  <div className="flex items-center gap-3 p-4 bg-green-500/20 border border-green-500/30 rounded-lg text-green-400">
+                    <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                    <p className="text-sm">Thank you! Your message has been sent successfully. We'll get back to you soon!</p>
+                  </div>
+                )}
+
                 <div className="relative mt-auto">
                   <ShineBorder
                     borderWidth={3}
@@ -139,10 +192,11 @@ const Contact = () => {
                   />
                   <button
                     type="submit"
-                    className="relative w-full py-4 px-8 bg-gradient-to-r from-white via-blue-50 to-blue-100 hover:from-blue-50 hover:via-blue-100 hover:to-white text-blue-900 rounded-full font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 border-2 border-blue-300/70 hover:border-blue-400/90"
+                    disabled={state.submitting}
+                    className="relative w-full py-4 px-8 bg-gradient-to-r from-white via-blue-50 to-blue-100 hover:from-blue-50 hover:via-blue-100 hover:to-white text-blue-900 rounded-full font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 border-2 border-blue-300/70 hover:border-blue-400/90 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                   >
-                    Send Message
-                    <Send className="w-5 h-5" />
+                    {state.submitting ? 'Sending...' : 'Send Message'}
+                    <Send className={`w-5 h-5 ${state.submitting ? 'animate-pulse' : ''}`} />
                   </button>
                 </div>
               </form>
@@ -154,7 +208,7 @@ const Contact = () => {
 
           {/* Contact Information */}
           <div className="space-y-4 lg:space-y-6">
-            {contactInfo.map((info, index) => (
+            {contactInfo.map((info) => (
               <div
                 key={info.title}
                 className="group relative p-4 lg:p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/[0.02] light:from-gray-50 light:to-white border border-white/10 light:border-gray-200 backdrop-blur-sm hover:bg-gradient-to-b hover:from-purple-900/10 hover:to-pink-900/10 light:hover:from-purple-50 light:hover:to-purple-25 hover:border-purple-500/20 transition-all duration-500 light:shadow-lg"

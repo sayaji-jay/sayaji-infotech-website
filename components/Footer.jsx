@@ -33,13 +33,13 @@ const Footer = () => {
           {/* Left Side - Logo and Company Info */}
           <div className="flex flex-col">
             <Link href="/" className="inline-block mb-6">
-              <div className="w-48 h-24 p-2.5 flex items-center justify-center">
+              <div className={`${theme === 'light' ? 'w-56 h-28' : 'w-48 h-24'} p-2.5 flex items-center justify-center`}>
                 <Image
-                  src="/images/logo.png"
+                  src={theme === 'light' ? "/images/logo black.png" : "/images/logo.png"}
                   alt="Sayaji Infotech Logo"
-                  width={120}
-                  height={120}
-                  className={`w-full h-full object-contain filter brightness-110 ${theme === 'light' ? 'invert' : ''}`}
+                  width={theme === 'light' ? 140 : 120}
+                  height={theme === 'light' ? 140 : 120}
+                  className="w-full h-full object-contain filter brightness-110"
                 />
               </div>
             </Link>

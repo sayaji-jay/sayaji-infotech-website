@@ -71,13 +71,13 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <div className="w-25 h25 p-2 flex items-center justify-center">
+              <div className={`${theme === 'light' ? 'w-32 h-32' : 'w-25 h-25'} p-2 flex items-center justify-center`}>
                 <Image
-                  src="/images/logo.png"
+                  src={theme === 'light' ? "/images/logo black.png" : "/images/logo.png"}
                   alt="Sayaji Infotech Logo"
-                  width={100}
-                  height={100}
-                  className={`w-full h-full object-contain filter brightness-110 ${theme === 'light' ? 'invert' : ''}`}
+                  width={theme === 'light' ? 120 : 100}
+                  height={theme === 'light' ? 120 : 100}
+                  className="w-full h-full object-contain filter brightness-110"
                   priority
                 />
               </div>

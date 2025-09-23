@@ -4,30 +4,47 @@
     "subtitle": "Join 500+ companies that trust us with their digital transformation",
     "companies": [
       {
-        "name": "L&T",
-        "text": "L&T",
-        "website": "https://larsentoubro.com",
+        "name": "Client 1",
+        "text": "Client 1",
+        "website": "#",
         "logo": "/clients/1.png"
       },
       {
-        "name": "L&T",
-        "text": "L&T",
-        "website": "https://larsentoubro.com",
+        "name": "Client 2",
+        "text": "Client 2",
+        "website": "#",
         "logo": "/clients/2.png"
       },
       {
-        "name": "L&T",
-        "text": "L&T",
-        "website": "https://larsentoubro.com",
+        "name": "Client 3",
+        "text": "Client 3",
+        "website": "#",
         "logo": "/clients/3.png"
       },
       {
-        "name": "L&T",
-        "text": "L&T",
-        "website": "https://larsentoubro.com",
+        "name": "Client 4",
+        "text": "Client 4",
+        "website": "#",
         "logo": "/clients/4.png"
+      },
+      {
+        "name": "Client 5",
+        "text": "Client 5",
+        "website": "#",
+        "logo": "/clients/5.webp"
+      },
+      {
+        "name": "Client 6",
+        "text": "Client 6",
+        "website": "#",
+        "logo": "/clients/6.svg"
+      },
+      {
+        "name": "Client 7",
+        "text": "Client 7",
+        "website": "#",
+        "logo": "/clients/7.svg"
       }
-      
     ]
   },
   "services": {
